@@ -1,0 +1,383 @@
+测评频道: https://t.me/vps_reviews                    
+版本：2023.11.07
+更新日志：VPS融合怪测试(集百家之长)                       
+---------------------基础信息查询--感谢所有开源项目---------------------
+ CPU 型号          : Intel(R) Xeon(R) CPU E5-2697 v2 @ 2.70GHz
+ CPU 核心数        : 1
+ CPU 频率          : 2699.998 MHz
+ CPU 缓存          : L1: 64.00 KB / L2: 256.00 KB / L3: 30.00 MB
+ 硬盘空间          : 2.39 GiB / 38.60 GiB
+ 启动盘路径        : /dev/vda1
+ 内存              : 250.18 MiB / 976.79 MiB
+ Swap              : [ no swap partition or swap file detected ]
+ 系统在线时间      : 22 days, 18 hour 51 min
+ 负载              : 0.38, 0.35, 0.15
+ 系统              : Ubuntu 20.04.4 LTS (x86_64)
+ AES-NI指令集      : ✔ Enabled
+ VM-x/AMD-V支持    : ✔ Enabled
+ 架构              : x86_64 (64 Bit)
+ 内核              : 5.4.0-110-generic
+ TCP加速方式       : bbr
+ 虚拟化架构        : KVM
+ NAT类型           : 独立映射,独立过滤,支持回环
+ IPV4 ASN          : AS398478 PEG TECH INC
+ IPV4 位置         : Hong Kong / Central and Western / HK
+---------------------CPU测试--感谢lemonbench开源------------------------
+ -> CPU 测试中 (Fast Mode, 1-Pass @ 5sec)
+ 1 线程测试(1核)得分: 		692 Scores
+---------------------内存测试--感谢lemonbench开源-----------------------
+ -> 内存测试 Test (Fast Mode, 1-Pass @ 5sec)
+ 单线程读测试:		13872.95 MB/s
+ 单线程写测试:		11285.97 MB/s
+------------------磁盘dd读写测试--感谢lemonbench开源--------------------
+ -> 磁盘IO测试中 (4K Block/1M Block, Direct Mode)
+ 测试操作		写速度					读速度
+ 100MB-4K Block		28.1 MB/s (6872 IOPS, 3.73s)		4.1 MB/s (1001 IOPS, 25.56s)
+ 1GB-1M Block		156 MB/s (149 IOPS, 6.71s)		104 MB/s (99 IOPS, 10.05s)
+---------------------磁盘fio读写测试--感谢yabs开源----------------------
+Block Size | 4k            (IOPS) | 64k           (IOPS)
+  ------   | ---            ----  | ----           ---- 
+Read       | 34.51 MB/s    (8.6k) | 152.37 MB/s   (2.3k)
+Write      | 34.62 MB/s    (8.6k) | 153.17 MB/s   (2.3k)
+Total      | 69.13 MB/s   (17.2k) | 305.55 MB/s   (4.7k)           |                      |                     
+Block Size | 512k          (IOPS) | 1m            (IOPS)
+  ------   | ---            ----  | ----           ---- 
+Read       | 245.77 MB/s    (480) | 215.49 MB/s    (210)
+Write      | 258.83 MB/s    (505) | 229.85 MB/s    (224)
+Total      | 504.60 MB/s    (985) | 445.34 MB/s    (434)
+---------------------流媒体解锁--感谢sjlleo开源-------------------------
+以下测试的解锁地区是准确的，但是不是完整解锁的判断可能有误，这方面仅作参考使用
+----------------Youtube----------------
+[IPv4]
+连接方式: Youtube Video Server
+视频缓存节点地域: 中国香港(HKG33S01)
+Youtube识别地域: 无信息(null)
+----------------Netflix----------------
+[IPv4]
+您的出口IP可以使用Netflix，但仅可看Netflix自制剧
+NF所识别的IP地域信息：香港
+[IPv6]
+您的网络可能没有正常配置IPv6，或者没有IPv6网络接入
+---------------DisneyPlus---------------
+[IPv4]
+当前IPv4出口解锁DisneyPlus
+区域：香港区
+解锁Youtube，Netflix，DisneyPlus上面和下面进行比较，不同之处自行判断
+----------------流媒体解锁--感谢RegionRestrictionCheck开源--------------
+ 以下为IPV4网络测试，若无IPV4网络则无输出
+============[ Multination ]============
+ Dazn:					No
+ HotStar:				No
+ Disney+:				No
+ Netflix:				Originals Only
+ YouTube Premium:			Yes
+ Amazon Prime Video:			Yes (Region: HK)
+ TVBAnywhere+:				No
+ iQyi Oversea Region:			HK
+ Viu.com:				No
+ YouTube CDN:				Hong Kong 
+ Netflix Preferred CDN:			Singapore  
+ Spotify Registration:			No
+ Steam Currency:			CNY
+ ChatGPT:				Yes
+=======================================
+ 以下为IPV6网络测试，若无IPV6网络则无输出
+---------------TikTok解锁--感谢lmc999的源脚本及fscarmen PR--------------
+ Tiktok Region:		【US】
+-------------------欺诈分数以及IP质量检测--本脚本原创-------------------
+数据仅作参考，不代表100%准确，如果和实际情况不一致请手动查询多个数据库比对
+以下为各数据库编号，输出结果后将自带数据库来源对应的编号
+ipinfo数据库 ①  | scamalytics数据库 ②  | virustotal数据库 ③  | abuseipdb数据库 ④  | ip2location数据库   ⑤
+ip-api数据库 ⑥  | ipwhois数据库     ⑦  | ipregistry数据库 ⑧  | ipdata数据库    ⑨  | ipgeolocation数据库 ⑩
+欺诈分数(越低越好): 0②
+abuse得分(越低越好): 0④
+IP类型: 
+  使用类型(usage_type):hosting①  Data Center/Web Hosting/Transit⑤  hosting⑧  business⑨  
+  公司类型(company_type):hosting①  
+  云服务提供商(cloud_provider):  Yes⑧ 
+  数据中心(datacenter):  No② ⑥ ⑨ 
+  移动网络(mobile):  No⑥ 
+  代理(proxy):  No① ②   Yes⑥ ⑦ ⑧ ⑨ 
+  VPN(vpn):  No①   Yes② ⑦ ⑧ 
+  TOR(tor):  No① ② ⑦ ⑧ ⑨ 
+  TOR出口(tor_exit):  No⑧ 
+  搜索引擎机器人(search_engine_robot):  No② 
+  匿名代理(anonymous):  Yes⑦ ⑧   No⑨ 
+  攻击方(attacker):  No⑧ ⑨ 
+  滥用者(abuser):  No⑧ ⑨ 
+  威胁(threat):  No⑧ ⑨ 
+  iCloud中继(icloud_relay):  No① ⑧ ⑨ 
+  未分配IP(bogon):  No⑧ ⑨ 
+黑名单记录统计(有多少个黑名单网站有记录): 无害0 恶意0 可疑0 未检测88 ③
+Google搜索可行性：YES
+端口25检测:
+  本地: No
+  163邮箱: Yes
+  gmail邮箱: Yes
+  outlook邮箱: Yes
+  yandex邮箱: Yes
+  qq邮箱: Yes
+----------------三网回程--感谢zhanghanyun/backtrace开源-----------------
+国家: HK 城市: Hong Kong 服务商: AS398478 PEG TECH INC
+北京电信 219.141.136.12  电信CN2 [优质线路]           
+北京联通 202.106.50.1    联通4837[普通线路]           
+北京移动 221.179.155.161 移动CMI [普通线路]           
+上海电信 202.96.209.133  电信CN2 [优质线路]           
+上海联通 210.22.97.1     电信163 [普通线路]           
+上海移动 211.136.112.200 测试超时
+广州电信 58.60.188.222   电信163 [普通线路]           
+广州联通 210.21.196.6    电信163 [普通线路]           
+广州移动 120.196.165.24  移动CMI [普通线路]           
+成都电信 61.139.2.69     电信CN2 [优质线路]           
+成都联通 119.6.6.6       电信163 [普通线路]           
+成都移动 211.137.96.205  移动CMI [普通线路]           
+---------------------回程路由--感谢fscarmen开源及PR---------------------
+依次测试电信/联通/移动经过的地区及线路，核心程序来自ipip.net或nexttrace，请知悉!
+广州电信 58.60.188.222
+0.32 ms 	* RFC1918
+0.51 ms 	AS398478 [PT-82] 中国 香港 raksmart.com
+1.56 ms 	* RFC1918
+106.15 ms 	AS4134 [CHINANET-BB] 中国 广东省 广州市 X-I chinatelecom.com.cn 电信
+109.55 ms 	AS4134 [CHINANET-BB] 中国 广东省 广州市 chinatelecom.com.cn 电信
+13.81 ms 	AS4134 [CHINANET-GD] 中国 广东省 深圳市 chinatelecom.com.cn 电信
+10.99 ms 	AS4134 中国 广东省 深圳市 福田区 chinatelecom.com.cn 电信
+广州联通 210.21.196.6
+0.30 ms 	* RFC1918
+0.63 ms 	AS398478 [PT-82] 中国 香港 raksmart.com
+1.51 ms 	* RFC1918
+208.17 ms 	AS4134 [CHINANET-BB] 中国 广东省 广州市 chinatelecom.com.cn 电信
+110.09 ms 	AS4134 [CHINANET-BB] 中国 广东省 广州市 chinatelecom.com.cn 电信
+8.41 ms 	AS4134 [CHINANET-BB] 中国 广东省 广州市 chinatelecom.com.cn 电信
+14.38 ms 	AS4134 [CHINANET-BB] 中国 广东省 广州市 chinatelecom.com.cn 电信
+15.19 ms 	AS17816 [APNIC-AP] 中国 广东省 深圳市 chinaunicom.cn 联通
+17.95 ms 	AS17623 [APNIC-AP] 中国 广东省 深圳市 chinaunicom.cn 联通
+16.41 ms 	AS17623 [APNIC-AP] 中国 广东省 深圳市 宝安区 chinaunicom.cn 联通
+广州移动 120.196.165.24
+0.18 ms 	* RFC1918
+0.65 ms 	AS398478 [PT-82] 中国 香港 raksmart.com
+1.15 ms 	* RFC1918
+1.17 ms 	* RFC1918
+1.47 ms 	AS64050 [BCPL-SG] 中国 香港 bgp.net
+36.25 ms 	AS64050 [BCPL-SG] 新加坡 bgp.net
+54.32 ms 	AS7473 [SINGTEL-IX] 新加坡 singtel.com
+35.49 ms 	AS7473 [SINGTEL-IX] 中国 香港 singtel.com
+35.86 ms 	AS7473 [SINGTEL-IX] 新加坡 singtel.com
+36.70 ms 	AS7473 [SINGTEL-IX] 新加坡 singtel.com
+137.29 ms 	AS58453 [CMI-INT] 中国 香港 cmi.chinamobile.com 移动
+42.35 ms 	AS58453 [CMI-INT] 中国 广东省 广州市 cmi.chinamobile.com 移动
+41.97 ms 	AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+43.06 ms 	AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+248.22 ms 	AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+43.96 ms 	AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+46.35 ms 	AS9808 [CMNET] 中国 海南省 海口市 chinamobile.com 移动
+44.27 ms 	AS56040 [APNIC-AP] 中国 广东省 深圳市 chinamobile.com 移动
+--------------------自动更新测速节点列表--本脚本原创--------------------
+位置		 上传速度	 下载速度	 延迟	  丢包率
+Speedtest.net	 2.76 Mbps	 3.29 Mbps	 31.99	  0.0%
+中国香港	 1.38 Mbps	 3.38 Mbps	 18.52	  NULL
+新加坡		 2.77 Mbps	 2.84 Mbps	 36.10	  0.0%
+联通WuXi	 2.93 Mbps	 2.98 Mbps	 37.46	  0.0%
+联通郑州5G	 2.57 Mbps	 2.84 Mbps	 53.97	  NULL
+电信浙江	 2.77 Mbps	 2.78 Mbps	 28.68	  NULL
+电信江苏5G	 2.72 Mbps	 2.81 Mbps	 43.09	  0.9%
+移动硬核通信	 2.77 Mbps	 2.83 Mbps	 24.90	  NULL
+------------------------------------------------------------------------
+ 总共花费      : 6 分 54 秒
+ 时间          : Tue Nov 14 06:14:02 UTC 2023
+------------------------------------------------------------------------
+
+----------------------------------------------------------------------
+北京电信
+traceroute to 219.141.147.210 (219.141.147.210), 30 hops max, 32 byte packets
+ 1  _gateway (10.1.239.1)  0.27 ms  *  LAN Address
+ 2  104.233.253.158  3.12 ms  AS398478  China, Hong Kong, petaexpress.com
+ 3  10.255.248.205  2.17 ms  *  LAN Address
+ 4  121.59.101.41  1.24 ms  *  China, Hong Kong, ChinaTelecom
+ 5  69.194.169.37  1.77 ms  *  China, Hong Kong, ChinaTelecom
+ 6  203.22.178.98  36.00 ms  *  China, Hong Kong, ChinaTelecom
+ 7  59.43.38.101  35.56 ms  *  China, Beijing, ChinaTelecom
+ 8  59.43.131.253  40.96 ms  *  China, Beijing, ChinaTelecom
+ 9  *
+10  *
+11  6.254.120.106.static.bjtelecom.net (106.120.254.6)  137.44 ms  AS4847  China, Beijing, ChinaTelecom
+12  bj141-147-210.bjtelecom.net (219.141.147.210)  42.34 ms  AS4847  China, Beijing, ChinaTelecom
+
+----------------------------------------------------------------------
+上海电信
+traceroute to 202.96.209.133 (202.96.209.133), 30 hops max, 32 byte packets
+ 1  _gateway (10.1.239.1)  0.26 ms  *  LAN Address
+ 2  104.233.253.158  14.97 ms  AS398478  China, Hong Kong, petaexpress.com
+ 3  10.255.248.205  1.05 ms  *  LAN Address
+ 4  121.59.101.41  1.11 ms  *  China, Hong Kong, ChinaTelecom
+ 5  69.194.169.37  1.86 ms  *  China, Hong Kong, ChinaTelecom
+ 6  203.22.178.82  26.80 ms  *  China, Hong Kong, ChinaTelecom
+ 7  59.43.39.189  26.97 ms  *  China, Shanghai, ChinaTelecom
+ 8  *
+ 9  101.95.88.46  34.42 ms  AS4812  China, Shanghai, ChinaTelecom
+10  61.152.1.166  30.66 ms  AS4812  China, Shanghai, ChinaTelecom
+11  ns-pd.online.sh.cn (202.96.209.133)  26.31 ms  AS4812  China, Shanghai, ChinaTelecom
+
+----------------------------------------------------------------------
+深圳电信
+traceroute to 58.60.188.222 (58.60.188.222), 30 hops max, 32 byte packets
+ 1  _gateway (10.1.239.1)  0.34 ms  *  LAN Address
+ 2  104.233.253.158  1.37 ms  AS398478  China, Hong Kong, petaexpress.com
+ 3  10.1.10.60  18.36 ms  *  LAN Address
+ 4  *
+ 5  *
+ 6  *
+ 7  *
+ 8  *
+ 9  *
+10  202.105.158.29  21.79 ms  AS4134  China, Guangdong, Shenzhen, ChinaTelecom
+11  *
+12  58.60.188.222  11.04 ms  AS4134  China, Guangdong, Shenzhen, ChinaTelecom
+
+----------------------------------------------------------------------
+北京联通
+traceroute to 202.106.50.1 (202.106.50.1), 30 hops max, 32 byte packets
+ 1  _gateway (10.1.239.1)  0.39 ms  *  LAN Address
+ 2  104.233.253.158  0.55 ms  AS398478  China, Hong Kong, petaexpress.com
+ 3  10.1.10.60  1.42 ms  *  LAN Address
+ 4  *
+ 5  *
+ 6  *
+ 7  *
+ 8  *
+ 9  *
+10  *
+11  *
+12  *
+13  *
+14  202.106.50.1  43.51 ms  AS4808  China, Beijing, ChinaUnicom
+
+----------------------------------------------------------------------
+上海联通
+traceroute to 210.22.97.1 (210.22.97.1), 30 hops max, 32 byte packets
+ 1  _gateway (10.1.239.1)  0.25 ms  *  LAN Address
+ 2  104.233.253.158  0.71 ms  AS398478  China, Hong Kong, petaexpress.com
+ 3  10.1.10.60  3.17 ms  *  LAN Address
+ 4  *
+ 5  *
+ 6  *
+ 7  *
+ 8  202.97.12.181  28.81 ms  AS4134  China, Shanghai, ChinaTelecom
+ 9  *
+10  *
+11  202.97.17.198  38.68 ms  AS4134  China, Shanghai, ChinaTelecom
+12  *
+13  *
+14  *
+15  210.22.97.1  31.99 ms  AS17621  China, Shanghai, ChinaUnicom
+
+----------------------------------------------------------------------
+深圳联通
+traceroute to 210.21.196.6 (210.21.196.6), 30 hops max, 32 byte packets
+ 1  _gateway (10.1.239.1)  0.32 ms  *  LAN Address
+ 2  104.233.253.158  0.50 ms  AS398478  China, Hong Kong, petaexpress.com
+ 3  10.1.10.60  1.64 ms  *  LAN Address
+ 4  *
+ 5  *
+ 6  *
+ 7  202.97.95.173  6.28 ms  AS4134  China, Guangdong, Guangzhou, ChinaTelecom
+ 8  *
+ 9  202.97.89.217  14.71 ms  AS4134  China, Guangdong, Guangzhou, ChinaTelecom
+10  *
+11  202.97.17.158  16.60 ms  AS4134  China, Guangdong, Guangzhou, ChinaTelecom
+12  *
+13  120.82.0.170  34.62 ms  AS17816  China, Guangdong, Shenzhen, ChinaUnicom
+14  120.80.147.254  174.97 ms  AS17623  China, Guangdong, Shenzhen, ChinaUnicom
+15  dns2-ftcg.gdsz.cncnet.net (210.21.196.6)  20.65 ms  AS17623  China, Guangdong, Shenzhen, ChinaUnicom
+
+----------------------------------------------------------------------
+北京移动
+traceroute to 221.179.155.161 (221.179.155.161), 30 hops max, 32 byte packets
+ 1  _gateway (10.1.239.1)  0.27 ms  *  LAN Address
+ 2  104.233.253.158  13.41 ms  AS398478  China, Hong Kong, petaexpress.com
+ 3  10.255.248.205  1.48 ms  *  LAN Address
+ 4  172.20.13.40  1.15 ms  *  LAN Address
+ 5  ae0-0.r01.shtnhk01.hk.bb.bgp.net (103.198.146.45)  3.86 ms  AS64050  China, Hong Kong, bgp.net
+ 6  xe-1-3-2.r01.glswsg01.sg.bb.bgp.net (103.198.145.57)  38.02 ms  AS64050  Singapore, bgp.net
+ 7  203.208.190.97  37.73 ms  AS7473  Singapore, singtel.com
+ 8  203.208.151.38  37.98 ms  AS7473  Singapore, singtel.com
+ 9  203.208.154.142  37.65 ms  AS7473  Singapore, singtel.com
+10  223.121.2.53  110.46 ms  AS58453  China, Hong Kong, ChinaMobile
+11  223.120.2.117  105.55 ms  AS58453  China, Hong Kong, ChinaMobile
+12  223.120.22.142  138.18 ms  AS58453  China, Beijing, ChinaMobile
+13  221.183.55.106  132.68 ms  AS9808  China, Beijing, ChinaMobile
+14  221.183.46.250  142.88 ms  AS9808  China, Beijing, ChinaMobile
+15  221.183.89.98  149.38 ms  AS9808  China, Beijing, ChinaMobile
+16  221.183.46.174  162.69 ms  AS9808  China, Beijing, ChinaMobile
+17  *
+18  cachedns03.bj.chinamobile.com (221.179.155.161)  164.40 ms  AS56048  China, Beijing, ChinaMobile
+
+----------------------------------------------------------------------
+上海移动
+traceroute to 211.136.112.200 (211.136.112.200), 30 hops max, 32 byte packets
+ 1  _gateway (10.1.239.1)  0.34 ms  *  LAN Address
+ 2  104.233.253.158  1.26 ms  AS398478  China, Hong Kong, petaexpress.com
+ 3  10.255.248.205  1.17 ms  *  LAN Address
+ 4  172.20.13.40  1.84 ms  *  LAN Address
+ 5  ae0-0.r01.shtnhk01.hk.bb.bgp.net (103.198.146.45)  1.94 ms  AS64050  China, Hong Kong, bgp.net
+ 6  xe-1-3-2.r01.glswsg01.sg.bb.bgp.net (103.198.145.57)  36.36 ms  AS64050  Singapore, bgp.net
+ 7  203.208.190.97  37.52 ms  AS7473  Singapore, singtel.com
+ 8  203.208.151.122  37.86 ms  AS7473  China, Hong Kong, singtel.com
+ 9  203.208.151.93  37.74 ms  AS7473  China, Hong Kong, singtel.com
+10  203.208.152.190  41.18 ms  AS7473  China, Hong Kong, singtel.com
+11  223.120.2.117  38.05 ms  AS58453  China, Hong Kong, ChinaMobile
+12  223.120.3.194  63.83 ms  AS58453  China, Shanghai, ChinaMobile
+13  221.183.89.182  63.78 ms  AS9808  China, Shanghai, ChinaMobile
+14  221.183.89.69  64.40 ms  AS9808  China, Shanghai, ChinaMobile
+15  221.183.89.50  65.83 ms  AS9808  China, Shanghai, ChinaMobile
+16  221.183.39.138  66.78 ms  AS9808  China, Shanghai, ChinaMobile
+17  211.136.190.234  67.85 ms  AS24400  China, Shanghai, ChinaMobile
+18  211.136.112.252  65.98 ms  AS24400  China, Shanghai, ChinaMobile
+19  211.136.112.200  66.94 ms  AS24400  China, Shanghai, ChinaMobile
+
+----------------------------------------------------------------------
+深圳移动
+traceroute to 120.196.165.24 (120.196.165.24), 30 hops max, 32 byte packets
+ 1  _gateway (10.1.239.1)  0.37 ms  *  LAN Address
+ 2  104.233.253.158  18.98 ms  AS398478  China, Hong Kong, petaexpress.com
+ 3  10.255.248.205  1.53 ms  *  LAN Address
+ 4  172.20.13.40  1.19 ms  *  LAN Address
+ 5  ae0-0.r01.shtnhk01.hk.bb.bgp.net (103.198.146.45)  3.24 ms  AS64050  China, Hong Kong, bgp.net
+ 6  xe-1-3-2.r01.glswsg01.sg.bb.bgp.net (103.198.145.57)  36.36 ms  AS64050  Singapore, bgp.net
+ 7  203.208.190.97  51.36 ms  AS7473  Singapore, singtel.com
+ 8  203.208.158.94  38.10 ms  AS7473  China, Hong Kong, singtel.com
+ 9  203.208.151.93  36.14 ms  AS7473  China, Hong Kong, singtel.com
+10  203.208.152.190  37.37 ms  AS7473  China, Hong Kong, singtel.com
+11  *
+12  223.120.2.82  42.08 ms  AS58453  China, Guangdong, Guangzhou, ChinaMobile
+13  221.183.55.82  42.02 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+14  221.183.92.21  46.02 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+15  221.183.89.246  43.76 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+16  221.183.71.82  44.01 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+17  221.183.110.170  46.26 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+18  ns6.gd.cnmobile.net (120.196.165.24)  44.34 ms  AS56040  China, Guangdong, Shenzhen, ChinaMobile
+
+----------------------------------------------------------------------
+成都教育网
+traceroute to 202.112.14.151 (202.112.14.151), 30 hops max, 32 byte packets
+ 1  _gateway (10.1.239.1)  0.29 ms  *  LAN Address
+ 2  104.233.253.158  0.62 ms  AS398478  China, Hong Kong, petaexpress.com
+ 3  10.1.10.60  1.55 ms  *  LAN Address
+ 4  *
+ 5  *
+ 6  *
+ 7  202.97.25.229  26.55 ms  AS4134  China, Shanghai, ChinaTelecom
+ 8  *
+ 9  *
+10  *
+11  *
+12  *
+13  *
+14  *
+15  101.4.117.53  60.47 ms  AS4538  China, Sichuan, Chengdu, CHINAEDU
+16  101.4.112.194  82.68 ms  AS4538  China, Ningxia, Yinchuan, CHINAEDU
+17  *
+18  *
+19  *
+20  202.112.14.151  58.59 ms  AS24355  China, Sichuan, Chengdu, CHINAEDU
+
+----------------------------------------------------------------------
