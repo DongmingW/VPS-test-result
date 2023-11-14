@@ -1,0 +1,454 @@
+测评频道: https://t.me/vps_reviews                    
+版本：2023.11.07
+更新日志：VPS融合怪测试(集百家之长)                       
+---------------------基础信息查询--感谢所有开源项目---------------------
+ CPU 型号          : DO-Regular
+ CPU 核心数        : 1
+ CPU 频率          : 1995.311 MHz
+ CPU 缓存          : L1: 32.00 KB / L2: 4.00 MB / L3: 0.00 KB
+ 硬盘空间          : 1.65 GiB / 24.05 GiB
+ 启动盘路径        : /dev/vda1
+ 内存              : 244.43 MiB / 969.45 MiB
+ Swap              : [ no swap partition or swap file detected ]
+ 系统在线时间      : 0 days, 0 hour 4 min
+ 负载              : 0.50, 0.32, 0.14
+ 系统              : Ubuntu 22.04.2 LTS (x86_64)
+ AES-NI指令集      : ✔ Enabled
+ VM-x/AMD-V支持    : ✔ Enabled
+ 架构              : x86_64 (64 Bit)
+ 内核              : 5.15.0-67-generic
+ TCP加速方式       : cubic
+ 虚拟化架构        : KVM
+ NAT类型           : 开放型
+ IPV4 ASN          : AS14061 DigitalOcean, LLC
+ IPV4 位置         : Sydney / New South Wales / AU
+ IPV6 ASN          : AS14061 Digital Ocean
+ IPV6 位置         : Sydney / New South Wales
+---------------------CPU测试--感谢lemonbench开源------------------------
+ -> CPU 测试中 (Fast Mode, 1-Pass @ 5sec)
+ 1 线程测试(1核)得分: 		2045 Scores
+---------------------内存测试--感谢lemonbench开源-----------------------
+ -> 内存测试 Test (Fast Mode, 1-Pass @ 5sec)
+ 单线程读测试:		16942.10 MB/s
+ 单线程写测试:		11913.01 MB/s
+------------------磁盘dd读写测试--感谢lemonbench开源--------------------
+ -> 磁盘IO测试中 (4K Block/1M Block, Direct Mode)
+ 测试操作		写速度					读速度
+ 100MB-4K Block		15.1 MB/s (3698 IOPS, 6.92s)		24.3 MB/s (5923 IOPS, 4.32s)
+ 1GB-1M Block		282 MB/s (269 IOPS, 3.71s)		461 MB/s (439 IOPS, 2.27s)
+---------------------磁盘fio读写测试--感谢yabs开源----------------------
+Block Size | 4k            (IOPS) | 64k           (IOPS)
+  ------   | ---            ----  | ----           ---- 
+Read       | 96.01 MB/s   (24.0k) | 503.40 MB/s   (7.8k)
+Write      | 96.26 MB/s   (24.0k) | 506.05 MB/s   (7.9k)
+Total      | 192.28 MB/s  (48.0k) | 1.00 GB/s    (15.7k)           |                      |                     
+Block Size | 512k          (IOPS) | 1m            (IOPS)
+  ------   | ---            ----  | ----           ---- 
+Read       | 648.32 MB/s   (1.2k) | 562.05 MB/s    (548)
+Write      | 682.77 MB/s   (1.3k) | 599.48 MB/s    (585)
+Total      | 1.33 GB/s     (2.5k) | 1.16 GB/s     (1.1k)
+---------------------流媒体解锁--感谢sjlleo开源-------------------------
+以下测试的解锁地区是准确的，但是不是完整解锁的判断可能有误，这方面仅作参考使用
+----------------Youtube----------------
+[IPv4]
+连接方式: Youtube Video Server
+视频缓存节点地域: 澳大利亚 悉尼(SYD15S07)
+Youtube识别地域: 澳大利亚(AU)
+[IPv6]
+连接方式: Youtube Video Server
+视频缓存节点地域: 澳大利亚 悉尼(SYD15S07)
+Youtube识别地域: 澳大利亚(AU)
+----------------Netflix----------------
+[IPv4]
+您的出口IP可以使用Netflix，但仅可看Netflix自制剧
+NF所识别的IP地域信息：澳大利亚
+[IPv6]
+您的出口IP可以使用Netflix，但仅可看Netflix自制剧
+NF所识别的IP地域信息：澳大利亚
+---------------DisneyPlus---------------
+[IPv4]
+当前IPv4出口解锁DisneyPlus
+区域：澳大利亚区
+[IPv6]
+当前IPv6出口解锁DisneyPlus
+区域：澳大利亚区
+解锁Youtube，Netflix，DisneyPlus上面和下面进行比较，不同之处自行判断
+----------------流媒体解锁--感谢RegionRestrictionCheck开源--------------
+ 以下为IPV4网络测试，若无IPV4网络则无输出
+============[ Multination ]============
+ Dazn:					Yes (Region: AU)
+ HotStar:				No
+ Disney+:				No
+ Netflix:				Originals Only
+ YouTube Premium:			Yes (Region: AU)
+ Amazon Prime Video:			Yes (Region: US)
+ TVBAnywhere+:				Yes
+ iQyi Oversea Region:			AU
+ Viu.com:				No
+ YouTube CDN:				Sydney, N.S.W. 
+ Netflix Preferred CDN:			Sydney, N.S.W.  
+ Spotify Registration:			Yes (Region: AU)
+ Steam Currency:			AUD
+ ChatGPT:				Yes
+=======================================
+ 以下为IPV6网络测试，若无IPV6网络则无输出
+============[ Multination ]============
+ Dazn:					Failed (Network Connection)
+ HotStar:				No
+ Disney+:				Yes (Region: AU)
+ Netflix:				Originals Only
+ YouTube Premium:			Yes (Region: AU)
+ Amazon Prime Video:			Unsupported
+ TVBAnywhere+:				Failed (Network Connection)
+ iQyi Oversea Region:			Failed
+ Viu.com:				Failed
+ YouTube CDN:				Sydney, N.S.W. 
+ Netflix Preferred CDN:			Sydney, N.S.W.  
+ Spotify Registration:			Yes (Region: AU)
+ Steam Currency:			Failed (Network Connection)
+ ChatGPT:				Yes
+=======================================
+---------------TikTok解锁--感谢lmc999的源脚本及fscarmen PR--------------
+ Tiktok Region:		【AU】
+-------------------欺诈分数以及IP质量检测--本脚本原创-------------------
+数据仅作参考，不代表100%准确，如果和实际情况不一致请手动查询多个数据库比对
+以下为各数据库编号，输出结果后将自带数据库来源对应的编号
+ipinfo数据库 ①  | scamalytics数据库 ②  | virustotal数据库 ③  | abuseipdb数据库 ④  | ip2location数据库   ⑤
+ip-api数据库 ⑥  | ipwhois数据库     ⑦  | ipregistry数据库 ⑧  | ipdata数据库    ⑨  | ipgeolocation数据库 ⑩
+欺诈分数(越低越好): 28②
+abuse得分(越低越好): 0④
+IP类型: 
+  使用类型(usage_type):hosting①  Data Center/Web Hosting/Transit⑤  hosting⑧  business⑨  
+  公司类型(company_type):hosting①  hosting⑧  
+  云服务提供商(cloud_provider):  Yes⑧ 
+  数据中心(datacenter):  Yes② ⑥   No⑨ 
+  移动网络(mobile):  No⑥ 
+  代理(proxy):  No① ② ⑥ ⑦ ⑧ ⑨ 
+  VPN(vpn):  No① ② ⑦ ⑧ 
+  TOR(tor):  No① ② ⑦ ⑧ ⑨ 
+  TOR出口(tor_exit):  No⑧ 
+  搜索引擎机器人(search_engine_robot):  No② 
+  匿名代理(anonymous):  No⑦ ⑧ ⑨ 
+  攻击方(attacker):  No⑧ ⑨ 
+  滥用者(abuser):  No⑧ ⑨ 
+  威胁(threat):  No⑧ ⑨ 
+  iCloud中继(icloud_relay):  No① ⑧ ⑨ 
+  未分配IP(bogon):  No⑧ ⑨ 
+Google搜索可行性：YES
+端口25检测:
+  本地: No
+  163邮箱：No
+------以下为IPV6检测------
+欺诈分数(越低越好): 33②
+abuse得分(越低越好): 0④
+IP类型: Data Center/Web Hosting/Transit⑤
+----------------三网回程--感谢zhanghanyun/backtrace开源-----------------
+国家: AU 城市: Sydney 服务商: AS14061 DigitalOcean, LLC
+北京电信 219.141.136.12  测试超时
+北京联通 202.106.50.1    联通4837[普通线路]           
+北京移动 221.179.155.161 移动CMI [普通线路]           
+上海电信 202.96.209.133  电信163 [普通线路]           
+上海联通 210.22.97.1     联通4837[普通线路]           
+上海移动 211.136.112.200 移动CMI [普通线路]           
+广州电信 58.60.188.222   电信163 [普通线路]           
+广州联通 210.21.196.6    联通4837[普通线路]           
+广州移动 120.196.165.24  移动CMI [普通线路]           
+成都电信 61.139.2.69     电信163 [普通线路]           
+成都联通 119.6.6.6       测试超时
+成都移动 211.137.96.205  移动CMI [普通线路]           
+---------------------回程路由--感谢fscarmen开源及PR---------------------
+依次测试电信/联通/移动经过的地区及线路，核心程序来自ipip.net或nexttrace，请知悉!
+广州电信 58.60.188.222
+18.80 ms 	* RFC1918
+0.53 ms 	* 澳大利亚 新南威尔士州 悉尼
+0.73 ms 	AS14061 澳大利亚 新南威尔士州 悉尼 digitalocean.com
+0.77 ms 	AS14061 澳大利亚 新南威尔士州 悉尼 digitalocean.com
+* ms 	AS4826 [VOCUS-AP] 澳大利亚 新南威尔士州 悉尼 vocus.com.au
+247.92 ms 	AS3356 美国 加利福尼亚州 圣何塞 Level3-CT-Peer level3.com
+402.48 ms 	AS4134 [CHINANET-BB] 中国 广东省 广州市 chinatelecom.com.cn 电信
+405.06 ms 	AS4134 [CHINANET-BB] 中国 广东省 广州市 chinatelecom.com.cn 电信
+309.02 ms 	AS4134 [CHINANET-BB] 中国 广东省 广州市 chinatelecom.com.cn 电信
+306.83 ms 	AS4134 [APNIC-AP] 中国 广东省 深圳市 chinatelecom.com.cn 电信
+315.12 ms 	AS4134 中国 广东省 深圳市 福田区 chinatelecom.com.cn 电信
+广州联通 210.21.196.6
+2.08 ms 	* RFC1918
+1.22 ms 	* 澳大利亚 新南威尔士州 悉尼
+1.50 ms 	AS14061 澳大利亚 新南威尔士州 悉尼 digitalocean.com
+0.57 ms 	AS14061 澳大利亚 新南威尔士州 悉尼 digitalocean.com
+* ms 	AS4826 [VOCUS-AP] 澳大利亚 新南威尔士州 悉尼 vocus.com.au
+92.45 ms 	* [VOCUS-AP] 澳大利亚 西澳大利亚州 珀斯
+93.12 ms 	AS4826 [VOCUS-AU] 新加坡 vocus.com.au
+92.05 ms 	AS5511 [OPENTRANSIT-BACKBONE] 法国 法兰西岛大区 巴黎 internationalcarriers.orange.com
+249.49 ms 	AS5511 [OPENTRANSIT-BACKBONE] 德国 黑森州 美因河畔法兰克福 internationalcarriers.orange.com
+371.60 ms 	AS5511 [OPENTRANSIT-BACKBONE] 法国 大东部大区 斯特拉斯堡 internationalcarriers.orange.com
+345.68 ms 	AS4837 [CU169-BACKBONE] 中国 广东省 广州市 chinaunicom.cn
+376.04 ms 	AS4837 [CU169-BACKBONE] 中国 广东省 广州市 chinaunicom.cn 联通
+380.29 ms 	AS4837 [CU169-BACKBONE] 中国 广东省 广州市 chinaunicom.cn 联通
+383.70 ms 	AS17816 [APNIC-AP] 中国 广东省 深圳市 chinaunicom.cn 联通
+378.53 ms 	AS17623 [APNIC-AP] 中国 广东省 深圳市 chinaunicom.cn 联通
+369.20 ms 	AS17623 [APNIC-AP] 中国 广东省 深圳市 宝安区 chinaunicom.cn 联通
+广州移动 120.196.165.24
+1.37 ms 	* RFC1918
+1.24 ms 	* 澳大利亚 新南威尔士州 悉尼
+1.53 ms 	AS14061 澳大利亚 新南威尔士州 悉尼 digitalocean.com
+0.63 ms 	AS14061 澳大利亚 新南威尔士州 悉尼 digitalocean.com
+102.29 ms 	AS4826 [VOCUS-AP] 澳大利亚 新南威尔士州 悉尼 vocus.com.au
+1.30 ms 	AS4826 [VOCUS-AU] 澳大利亚 新南威尔士州 悉尼 vocus.com.au
+1.94 ms 	AS58453 [CMI-INT] 澳大利亚 新南威尔士州 悉尼 cmi.chinamobile.com 移动
+1.95 ms 	AS58453 [CMI-INT] 澳大利亚 新南威尔士州 悉尼 cmi.chinamobile.com 移动
+93.81 ms 	AS58453 [CMI-INT] 新加坡 cmi.chinamobile.com 移动
+133.58 ms 	AS58453 [CMI-INT] 中国 广东省 广州市 cmi.chinamobile.com 移动
+134.52 ms 	AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+134.59 ms 	AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+138.69 ms 	AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+138.20 ms 	AS9808 [CMNET] 中国 北京市 chinamobile.com 移动
+136.74 ms 	AS56040 [APNIC-AP] 中国 广东省 深圳市 chinamobile.com 移动
+--------------------自动更新测速节点列表--本脚本原创--------------------
+位置		 上传速度	 下载速度	 延迟	  丢包率
+Speedtest.net	 1993.52 Mbps	 14466.79 Mbps	 0.30	  0.0%
+新加坡		 922.94 Mbps	 8752.47 Mbps	 93.98	  0.0%
+日本东京	 622.79 Mbps	 563.67 Mbps	 137.55	  0.0%
+联通海南	 1.47 Mbps	 374.49 Mbps	 349.09	  NULL
+电信江苏5G	 27.96 Mbps	 1906.95 Mbps	 290.17	  0.0%
+电信Suzhou5G	 551.49 Mbps	 2828.00 Mbps	 281.75	  NULL
+移动硬核通信	 358.87 Mbps	 696.15 Mbps	 146.82	  NULL
+------------------------------------------------------------------------
+ 总共花费      : 6 分 40 秒
+ 时间          : Tue Nov 14 05:14:10 UTC 2023
+------------------------------------------------------------------------
+
+----------------------------------------------------------------------
+北京电信
+traceroute to 219.141.147.210 (219.141.147.210), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.90.2.244  1.22 ms  *  LAN Address
+ 3  143.244.192.0  1.03 ms  *  United States, digitalocean.com
+ 4  143.244.224.176  1.74 ms  AS14061  Australia, New South Wales, Sydney, digitalocean.com
+ 5  143.244.224.175  0.52 ms  AS14061  Australia, New South Wales, Sydney, digitalocean.com
+ 6  *
+ 7  *
+ 8  *
+ 9  *
+10  4.15.125.54  147.87 ms  AS3356  United States, California, San Jose, level3.com
+11  *
+12  *
+13  202.97.34.73  297.42 ms  AS4134  China, Beijing, ChinaTelecom
+14  *
+15  2.254.120.106.static.bjtelecom.net (106.120.254.2)  313.85 ms  AS4847  China, Beijing, ChinaTelecom
+16  bj141-147-210.bjtelecom.net (219.141.147.210)  294.96 ms  AS4847  China, Beijing, ChinaTelecom
+
+----------------------------------------------------------------------
+上海电信
+traceroute to 202.96.209.133 (202.96.209.133), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.90.2.244  1.33 ms  *  LAN Address
+ 3  143.244.192.0  1.08 ms  *  United States, digitalocean.com
+ 4  143.244.224.184  1.16 ms  AS14061  Australia, New South Wales, Sydney, digitalocean.com
+ 5  143.244.224.181  0.62 ms  AS14061  Australia, New South Wales, Sydney, digitalocean.com
+ 6  ip-249.71.254.124.VOCUS.net.au (124.254.71.249)  1.40 ms  AS4826  Australia, New South Wales, Sydney, vocus.com.au
+ 7  *
+ 8  *
+ 9  ae60.edge9.SanJose1.Level3.net (4.16.45.169)  182.42 ms  AS3356  United States, California, San Jose, level3.com
+10  4.15.125.54  147.41 ms  AS3356  United States, California, San Jose, level3.com
+11  *
+12  202.97.33.153  292.52 ms  AS4134  China, Shanghai, ChinaTelecom
+13  *
+14  *
+15  124.74.229.238  286.78 ms  AS4812  China, Shanghai, ChinaTelecom
+16  ns-pd.online.sh.cn (202.96.209.133)  288.64 ms  AS4812  China, Shanghai, ChinaTelecom
+
+----------------------------------------------------------------------
+深圳电信
+traceroute to 58.60.188.222 (58.60.188.222), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.90.2.238  0.94 ms  *  LAN Address
+ 3  143.244.192.6  3.93 ms  *  United States, digitalocean.com
+ 4  143.244.224.186  0.75 ms  AS14061  Australia, New South Wales, Sydney, digitalocean.com
+ 5  143.244.224.183  0.69 ms  AS14061  Australia, New South Wales, Sydney, digitalocean.com
+ 6  202-137-109-73.ip.vocus.network (202.137.109.73)  1.37 ms  AS4826  Australia, New South Wales, Sydney, vocus.com.au
+ 7  *
+ 8  *
+ 9  ae60.edge9.SanJose1.Level3.net (4.16.45.169)  143.49 ms  AS3356  United States, California, San Jose, level3.com
+10  4.15.125.54  147.59 ms  AS3356  United States, California, San Jose, level3.com
+11  202.97.43.117  301.95 ms  AS4134  China, Guangdong, Guangzhou, ChinaTelecom
+12  *
+13  *
+14  183.56.65.22  313.37 ms  AS4134  China, Guangdong, Shenzhen, ChinaTelecom
+15  *
+16  58.60.188.222  317.08 ms  AS4134  China, Guangdong, Shenzhen, ChinaTelecom
+
+----------------------------------------------------------------------
+北京联通
+traceroute to 202.106.50.1 (202.106.50.1), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.90.2.244  18.31 ms  *  LAN Address
+ 3  143.244.192.4  0.96 ms  *  United States, digitalocean.com
+ 4  143.244.224.186  0.88 ms  AS14061  Australia, New South Wales, Sydney, digitalocean.com
+ 5  143.244.224.181  0.48 ms  AS14061  Australia, New South Wales, Sydney, digitalocean.com
+ 6  ip-249.71.254.124.VOCUS.net.au (124.254.71.249)  1.44 ms  AS4826  Australia, New South Wales, Sydney, vocus.com.au
+ 7  *
+ 8  be203.lsr01.brdg.nsw.vocus.network (103.1.77.38)  93.00 ms  *  Australia, New South Wales, Sydney, nextgengroup.com.au
+ 9  be803.lsr01.stpk.wa.vocus.network (103.1.76.145)  91.53 ms  *  Australia, Western Australia, Perth, nextgengroup.com.au
+10  be201.cor01.per04.wa.vocus.network (103.1.77.105)  91.15 ms  *  Australia, Western Australia, Perth, nextgengroup.com.au
+11  be201.bdr01.sin01.sin.vocus.network (114.31.206.51)  91.94 ms  AS4826  Singapore, vocus.com.au
+12  193.251.248.35  91.42 ms  AS5511  ORANGE.COM 骨干网, orange.com
+13  ae324-0.ffttr7.frankfurt.opentransit.net (193.251.240.102)  248.60 ms  AS5511  Germany, Hesse, Frankfurt, orange.com
+14  *
+15  219.158.15.161  343.24 ms  AS4837  China, Beijing, ChinaUnicom
+16  219.158.3.181  345.03 ms  AS4837  China, Beijing, ChinaUnicom
+17  *
+18  *
+19  202.106.50.1  338.56 ms  AS4808  China, Beijing, ChinaUnicom
+
+----------------------------------------------------------------------
+上海联通
+traceroute to 210.22.97.1 (210.22.97.1), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.90.2.236  0.63 ms  *  LAN Address
+ 3  143.244.192.4  6.44 ms  *  United States, digitalocean.com
+ 4  143.244.224.178  1.47 ms  AS14061  Australia, New South Wales, Sydney, digitalocean.com
+ 5  143.244.224.173  0.51 ms  AS14061  Australia, New South Wales, Sydney, digitalocean.com
+ 6  ip-249.71.254.124.VOCUS.net.au (124.254.71.249)  0.83 ms  AS4826  Australia, New South Wales, Sydney, vocus.com.au
+ 7  be151.cor03.syd14.nsw.vocus.network (114.31.192.78)  92.29 ms  AS4826  Australia, New South Wales, Sydney, vocus.com.au
+ 8  *
+ 9  be803.lsr01.prth.wa.vocus.network (103.1.76.147)  93.91 ms  *  Australia, Western Australia, Perth, nextgengroup.com.au
+10  be200.cor01.per04.wa.vocus.network (103.1.77.113)  92.02 ms  *  Australia, Western Australia, Perth, nextgengroup.com.au
+11  be201.bdr01.sin01.sin.vocus.network (114.31.206.51)  93.16 ms  AS4826  Singapore, vocus.com.au
+12  193.251.248.35  91.69 ms  AS5511  ORANGE.COM 骨干网, orange.com
+13  ae324-0.ffttr7.frankfurt.opentransit.net (193.251.240.102)  248.60 ms  AS5511  Germany, Hesse, Frankfurt, orange.com
+14  *
+15  219.158.6.21  345.28 ms  AS4837  China, Beijing, ChinaUnicom
+16  219.158.111.134  354.10 ms  AS4837  China, Shanghai, ChinaUnicom
+17  219.158.8.173  362.15 ms  AS4837  China, Shanghai, ChinaUnicom
+18  *
+19  *
+20  112.64.250.202  339.02 ms  AS17621  China, Shanghai, ChinaUnicom
+21  210.22.97.1  343.05 ms  AS17621  China, Shanghai, ChinaUnicom
+
+----------------------------------------------------------------------
+深圳联通
+traceroute to 210.21.196.6 (210.21.196.6), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.90.2.236  1.94 ms  *  LAN Address
+ 3  143.244.192.4  3.50 ms  *  United States, digitalocean.com
+ 4  143.244.224.178  0.83 ms  AS14061  Australia, New South Wales, Sydney, digitalocean.com
+ 5  143.244.224.175  0.57 ms  AS14061  Australia, New South Wales, Sydney, digitalocean.com
+ 6  202-137-109-73.ip.vocus.network (202.137.109.73)  1.06 ms  AS4826  Australia, New South Wales, Sydney, vocus.com.au
+ 7  *
+ 8  be202.lsr01.brdg.nsw.vocus.network (103.1.77.6)  93.13 ms  *  Australia, New South Wales, Sydney, nextgengroup.com.au
+ 9  *
+10  be201.cor01.per04.wa.vocus.network (103.1.77.105)  91.75 ms  *  Australia, Western Australia, Perth, nextgengroup.com.au
+11  be201.bdr01.sin01.sin.vocus.network (114.31.206.51)  94.11 ms  AS4826  Singapore, vocus.com.au
+12  193.251.248.35  94.18 ms  AS5511  ORANGE.COM 骨干网, orange.com
+13  ae324-0.ffttr7.frankfurt.opentransit.net (193.251.240.102)  252.54 ms  AS5511  Germany, Hesse, Frankfurt, orange.com
+14  *
+15  219.158.6.21  346.06 ms  AS4837  China, Beijing, ChinaUnicom
+16  219.158.115.122  381.21 ms  AS4837  China, Guangdong, Guangzhou, ChinaUnicom
+17  219.158.103.33  377.01 ms  AS4837  China, Guangdong, Guangzhou, ChinaUnicom
+18  *
+19  120.82.0.170  383.18 ms  AS17816  China, Guangdong, Shenzhen, ChinaUnicom
+20  120.80.147.254  378.19 ms  AS17623  China, Guangdong, Shenzhen, ChinaUnicom
+21  dns2-ftcg.gdsz.cncnet.net (210.21.196.6)  369.46 ms  AS17623  China, Guangdong, Shenzhen, ChinaUnicom
+
+----------------------------------------------------------------------
+北京移动
+traceroute to 221.179.155.161 (221.179.155.161), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.90.2.242  25.82 ms  *  LAN Address
+ 3  143.244.192.2  0.99 ms  *  United States, digitalocean.com
+ 4  143.244.224.184  1.24 ms  AS14061  Australia, New South Wales, Sydney, digitalocean.com
+ 5  143.244.224.181  0.63 ms  AS14061  Australia, New South Wales, Sydney, digitalocean.com
+ 6  ip-249.71.254.124.VOCUS.net.au (124.254.71.249)  1.13 ms  AS4826  Australia, New South Wales, Sydney, vocus.com.au
+ 7  *
+ 8  be2.bdr02.syd03.nsw.vocus.network (114.31.192.95)  1.12 ms  AS4826  Australia, New South Wales, Sydney, vocus.com.au
+ 9  223.119.48.10  1.73 ms  AS58453  Australia, New South Wales, Sydney, ChinaMobile
+10  223.118.4.86  1.62 ms  AS58453  Australia, New South Wales, Sydney, ChinaMobile
+11  223.118.4.217  93.42 ms  AS58453  Singapore, ChinaMobile
+12  223.120.22.142  165.71 ms  AS58453  China, Beijing, ChinaMobile
+13  221.183.55.106  167.31 ms  AS9808  China, Beijing, ChinaMobile
+14  221.183.46.250  173.55 ms  AS9808  China, Beijing, ChinaMobile
+15  221.183.89.102  173.25 ms  AS9808  China, Beijing, ChinaMobile
+16  221.183.46.178  172.27 ms  AS9808  China, Beijing, ChinaMobile
+17  *
+18  cachedns03.bj.chinamobile.com (221.179.155.161)  176.40 ms  AS56048  China, Beijing, ChinaMobile
+
+----------------------------------------------------------------------
+上海移动
+traceroute to 211.136.112.200 (211.136.112.200), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.90.2.242  0.64 ms  *  LAN Address
+ 3  143.244.192.2  9.95 ms  *  United States, digitalocean.com
+ 4  143.244.224.176  0.79 ms  AS14061  Australia, New South Wales, Sydney, digitalocean.com
+ 5  143.244.224.173  0.83 ms  AS14061  Australia, New South Wales, Sydney, digitalocean.com
+ 6  *
+ 7  *
+ 8  be2.bdr02.syd03.nsw.vocus.network (114.31.192.95)  1.07 ms  AS4826  Australia, New South Wales, Sydney, vocus.com.au
+ 9  223.119.48.10  1.62 ms  AS58453  Australia, New South Wales, Sydney, ChinaMobile
+10  223.118.4.86  1.64 ms  AS58453  Australia, New South Wales, Sydney, ChinaMobile
+11  223.118.4.217  92.76 ms  AS58453  Singapore, ChinaMobile
+12  223.120.22.114  154.96 ms  AS58453  China, Shanghai, ChinaMobile
+13  *
+14  *
+15  *
+16  *
+17  211.136.190.234  157.57 ms  AS24400  China, Shanghai, ChinaMobile
+18  211.136.112.252  159.01 ms  AS24400  China, Shanghai, ChinaMobile
+19  211.136.112.200  159.48 ms  AS24400  China, Shanghai, ChinaMobile
+
+----------------------------------------------------------------------
+深圳移动
+traceroute to 120.196.165.24 (120.196.165.24), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.90.2.244  1.43 ms  *  LAN Address
+ 3  143.244.192.0  1.83 ms  *  United States, digitalocean.com
+ 4  143.244.224.184  0.98 ms  AS14061  Australia, New South Wales, Sydney, digitalocean.com
+ 5  143.244.224.181  0.62 ms  AS14061  Australia, New South Wales, Sydney, digitalocean.com
+ 6  *
+ 7  *
+ 8  be1.bdr02.syd03.nsw.vocus.network (114.31.192.39)  1.33 ms  AS4826  Australia, New South Wales, Sydney, vocus.com.au
+ 9  223.119.48.10  1.93 ms  AS58453  Australia, New South Wales, Sydney, ChinaMobile
+10  223.118.4.86  2.18 ms  AS58453  Australia, New South Wales, Sydney, ChinaMobile
+11  223.118.4.217  93.13 ms  AS58453  Singapore, ChinaMobile
+12  223.120.2.10  133.54 ms  AS58453  China, Guangdong, Guangzhou, ChinaMobile
+13  221.183.68.125  134.50 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+14  221.183.92.17  134.44 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+15  *
+16  221.183.71.78  139.05 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+17  221.183.110.166  139.59 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+18  ns6.gd.cnmobile.net (120.196.165.24)  136.62 ms  AS56040  China, Guangdong, Shenzhen, ChinaMobile
+
+----------------------------------------------------------------------
+成都教育网
+traceroute to 202.112.14.151 (202.112.14.151), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.90.2.240  0.94 ms  *  LAN Address
+ 3  143.244.192.4  20.42 ms  *  United States, digitalocean.com
+ 4  143.244.224.178  0.79 ms  AS14061  Australia, New South Wales, Sydney, digitalocean.com
+ 5  143.244.224.175  0.37 ms  AS14061  Australia, New South Wales, Sydney, digitalocean.com
+ 6  ae10.alx-edge421.sydney.telstra.net (110.145.196.153)  1.12 ms  AS1221  Australia, New South Wales, Sydney, telstra.com
+ 7  bundle-ether50.stl-core30.sydney.telstra.net (203.50.12.132)  2.76 ms  AS1221  Australia, New South Wales, Sydney, telstra.com
+ 8  bundle-ether2.pad-gw30.sydney.telstra.net (203.50.6.116)  2.45 ms  AS1221  Australia, New South Wales, Sydney, telstra.com
+ 9  203.50.13.86  3.21 ms  AS1221  Australia, New South Wales, Sydney, telstra.com
+10  203.50.13.86  1.63 ms  AS1221  Australia, New South Wales, Sydney, telstra.com
+11  i-10201.sydp-core04.telstraglobal.net (202.84.222.134)  3.37 ms  AS4637  Australia, New South Wales, Sydney, telstra.com
+12  i-10201.sydp-core04.telstraglobal.net (202.84.222.134)  147.17 ms  AS4637  Australia, New South Wales, Sydney, telstra.com
+13  i-20802.eqnx-core02.telstraglobal.net (202.84.141.25)  148.28 ms  AS4637  United States, California, San Jose, telstra.com
+14  i-92.eqnx03.telstraglobal.net (202.84.247.17)  179.59 ms  AS4637  United States, California, San Jose, telstra.com
+15  *
+16  *
+17  port-channel4.core4.lax2.he.net (184.105.223.226)  199.88 ms  AS6939  United States, California, Los Angeles, he.net
+18  erx-cernet-bkb-as4538.e0-25.switch7.lax2.he.net (216.218.244.106)  147.90 ms  AS6939  United States, California, Los Angeles, he.net
+19  101.4.117.185  168.83 ms  AS4538  United States, California, Los Angeles, CHINAEDU
+20  101.4.117.213  409.88 ms  AS4538  China, Beijing, CHINAEDU
+21  *
+22  *
+23  *
+24  101.4.116.106  421.64 ms  AS4538  China, Hubei, Wuhan, CHINAEDU
+25  101.4.112.29  438.88 ms  AS4538  China, Chongqing, CHINAEDU
+26  *
+27  *
+28  *
+29  *
+30  *
+
+----------------------------------------------------------------------
