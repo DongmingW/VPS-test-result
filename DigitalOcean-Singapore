@@ -1,0 +1,216 @@
+测评频道: https://t.me/vps_reviews                    
+版本：2023.11.07
+更新日志：VPS融合怪测试(集百家之长)                       
+---------------------基础信息查询--感谢所有开源项目---------------------
+ CPU 型号          : DO-Regular
+ CPU 核心数        : 1
+ CPU 频率          : 2494.140 MHz
+ CPU 缓存          : L1: 32.00 KB / L2: 4.00 MB / L3: 0.00 KB
+ 硬盘空间          : 1.68 GiB / 48.28 GiB
+ 启动盘路径        : /dev/vda1
+ 内存              : 270.03 MiB / 1.93 GiB
+ Swap              : [ no swap partition or swap file detected ]
+ 系统在线时间      : 0 days, 0 hour 22 min
+ 负载              : 1.17, 0.47, 0.22
+ 系统              : Ubuntu 22.04.2 LTS (x86_64)
+ AES-NI指令集      : ✔ Enabled
+ VM-x/AMD-V支持    : ✔ Enabled
+ 架构              : x86_64 (64 Bit)
+ 内核              : 5.15.0-67-generic
+ TCP加速方式       : cubic
+ 虚拟化架构        : KVM
+ NAT类型           : 开放型
+ IPV4 ASN          : AS14061 DigitalOcean, LLC
+ IPV4 位置         : Singapore / Singapore / SG
+---------------------CPU测试--感谢lemonbench开源------------------------
+ -> CPU 测试中 (Fast Mode, 1-Pass @ 5sec)
+ 1 线程测试(1核)得分: 		986 Scores
+---------------------内存测试--感谢lemonbench开源-----------------------
+ -> 内存测试 Test (Fast Mode, 1-Pass @ 5sec)
+ 单线程读测试:		19662.04 MB/s
+ 单线程写测试:		15177.00 MB/s
+------------------磁盘dd读写测试--感谢lemonbench开源--------------------
+ -> 磁盘IO测试中 (4K Block/1M Block, Direct Mode)
+ 测试操作		写速度					读速度
+ 100MB-4K Block		19.0 MB/s (4628 IOPS, 5.53s)		44.2 MB/s (10779 IOPS, 2.37s)
+ 1GB-1M Block		287 MB/s (274 IOPS, 3.65s)		1.1 GB/s (1043 IOPS, 0.96s)
+---------------------磁盘fio读写测试--感谢yabs开源----------------------
+Block Size | 4k            (IOPS) | 64k           (IOPS)
+  ------   | ---            ----  | ----           ---- 
+Read       | 123.11 MB/s  (30.7k) | 754.83 MB/s  (11.7k)
+Write      | 123.43 MB/s  (30.8k) | 758.80 MB/s  (11.8k)
+Total      | 246.54 MB/s  (61.6k) | 1.51 GB/s    (23.6k)           |                      |                     
+Block Size | 512k          (IOPS) | 1m            (IOPS)
+  ------   | ---            ----  | ----           ---- 
+Read       | 728.81 MB/s   (1.4k) | 827.38 MB/s    (807)
+Write      | 767.54 MB/s   (1.4k) | 882.48 MB/s    (861)
+Total      | 1.49 GB/s     (2.9k) | 1.70 GB/s     (1.6k)
+---------------------流媒体解锁--感谢sjlleo开源-------------------------
+以下测试的解锁地区是准确的，但是不是完整解锁的判断可能有误，这方面仅作参考使用
+----------------Youtube----------------
+[IPv4]
+连接方式: Youtube Video Server
+视频缓存节点地域: 新加坡 新加坡/樟宜  (SIN10S14)
+Youtube识别地域: 新加坡(SG)
+[IPv6]
+连接方式: Youtube Video Server
+视频缓存节点地域: 新加坡 新加坡/樟宜  (SIN10S14)
+Youtube识别地域: 新加坡(SG)
+----------------Netflix----------------
+[IPv4]
+您的出口IP可以使用Netflix，但仅可看Netflix自制剧
+NF所识别的IP地域信息：新加坡
+[IPv6]
+您的出口IP可以使用Netflix，但仅可看Netflix自制剧
+NF所识别的IP地域信息：新加坡
+---------------DisneyPlus---------------
+[IPv4]
+当前IPv4出口解锁DisneyPlus
+区域：新加坡区
+[IPv6]
+当前IPv6出口解锁DisneyPlus
+区域：新加坡区
+解锁Youtube，Netflix，DisneyPlus上面和下面进行比较，不同之处自行判断
+----------------流媒体解锁--感谢RegionRestrictionCheck开源--------------
+ 以下为IPV4网络测试，若无IPV4网络则无输出
+============[ Multination ]============
+ Dazn:					Yes (Region: SG)
+ HotStar:				No
+ Disney+:				No
+ Netflix:				Originals Only
+ YouTube Premium:			Yes (Region: SG)
+ Amazon Prime Video:			Yes (Region: SG)
+ TVBAnywhere+:				Yes
+ iQyi Oversea Region:			SG
+ Viu.com:				Yes (Region: SG)
+ YouTube CDN:				Singapore 
+ Netflix Preferred CDN:			Singapore  
+ Spotify Registration:			Yes (Region: SG)
+ Steam Currency:			SGD
+ ChatGPT:				Yes
+=======================================
+ 以下为IPV6网络测试，若无IPV6网络则无输出
+============[ Multination ]============
+ Dazn:					Failed (Network Connection)
+ HotStar:				No
+ Disney+:				Yes (Region: SG)
+ Netflix:				Originals Only
+ YouTube Premium:			Yes (Region: SG)
+ Amazon Prime Video:			Unsupported
+ TVBAnywhere+:				Failed (Network Connection)
+ iQyi Oversea Region:			Failed
+ Viu.com:				Failed
+ YouTube CDN:				Singapore 
+ Netflix Preferred CDN:			Singapore  
+ Spotify Registration:			Yes (Region: SG)
+ Steam Currency:			Failed (Network Connection)
+ ChatGPT:				Yes
+=======================================
+---------------TikTok解锁--感谢lmc999的源脚本及fscarmen PR--------------
+ Tiktok Region:		【SG】
+-------------------欺诈分数以及IP质量检测--本脚本原创-------------------
+数据仅作参考，不代表100%准确，如果和实际情况不一致请手动查询多个数据库比对
+以下为各数据库编号，输出结果后将自带数据库来源对应的编号
+ipinfo数据库 ①  | scamalytics数据库 ②  | virustotal数据库 ③  | abuseipdb数据库 ④  | ip2location数据库   ⑤
+ip-api数据库 ⑥  | ipwhois数据库     ⑦  | ipregistry数据库 ⑧  | ipdata数据库    ⑨  | ipgeolocation数据库 ⑩
+欺诈分数(越低越好): 28②
+abuse得分(越低越好): 0④
+IP类型: 
+  使用类型(usage_type):hosting①  Data Center/Web Hosting/Transit⑤  hosting⑧  business⑨  
+  公司类型(company_type):hosting①  hosting⑧  
+  云服务提供商(cloud_provider):  Yes⑧ 
+  数据中心(datacenter):  Yes② ⑥   No⑨ 
+  移动网络(mobile):  No⑥ 
+  代理(proxy):  No① ② ⑥ ⑦ ⑧ ⑨ ⑩ 
+  VPN(vpn):  Yes①   No② ⑦ ⑧ 
+  TOR(tor):  No① ② ⑦ ⑧ ⑨ 
+  TOR出口(tor_exit):  No⑧ 
+  搜索引擎机器人(search_engine_robot):  No② 
+  匿名代理(anonymous):  No⑦ ⑧ ⑨ 
+  攻击方(attacker):  No⑧ ⑨ 
+  滥用者(abuser):  No⑧ ⑨ 
+  威胁(threat):  No⑧ ⑨ 
+  iCloud中继(icloud_relay):  No① ⑧ ⑨ 
+  未分配IP(bogon):  No⑧ ⑨ 
+Google搜索可行性：NO
+端口25检测:
+  本地: No
+  163邮箱：No
+------以下为IPV6检测------
+欺诈分数(越低越好): 33②
+abuse得分(越低越好): 0④
+IP类型: Data Center/Web Hosting/Transit⑤
+----------------三网回程--感谢zhanghanyun/backtrace开源-----------------
+国家: SG 城市: Singapore 服务商: AS14061 DigitalOcean, LLC
+北京电信 219.141.136.12  测试超时
+北京联通 202.106.50.1    联通4837[普通线路]           
+北京移动 221.179.155.161 移动CMI [普通线路]           
+上海电信 202.96.209.133  电信163 [普通线路]           
+上海联通 210.22.97.1     联通4837[普通线路]           
+上海移动 211.136.112.200 移动CMI [普通线路]           
+广州电信 58.60.188.222   电信163 [普通线路]           
+广州联通 210.21.196.6    联通4837[普通线路]           
+广州移动 120.196.165.24  移动CMI [普通线路]           
+成都电信 61.139.2.69     测试超时
+成都联通 119.6.6.6       联通4837[普通线路]           
+成都移动 211.137.96.205  移动CMI [普通线路]           
+---------------------回程路由--感谢fscarmen开源及PR---------------------
+依次测试电信/联通/移动经过的地区及线路，核心程序来自ipip.net或nexttrace，请知悉!
+广州电信 58.60.188.222
+0.78 ms 	* RFC1918
+0.43 ms 	* [DIGITALOCEAN-143] 新加坡
+0.42 ms 	* 新加坡
+0.87 ms 	AS14061 新加坡 digitalocean.com
+0.68 ms 	AS14061 新加坡 digitalocean.com
+163.72 ms 	AS1299 [ARELION-NET] 美国 加利福尼亚州 圣何塞 arelion.com
+164.93 ms 	AS4134 [CHINANET-US] 美国 加利福尼亚州 圣何塞 Cogent/Telia-CT-PoP chinatelecom.com.cn 电信
+314.22 ms 	AS4134 [CHINANET-BB] 中国 香港 chinatelecom.com.cn 电信
+415.97 ms 	AS4134 [CHINANET-BB] 中国 chinatelecom.com.cn 电信
+321.85 ms 	AS4134 [CHINANET-BB] 中国 广东省 广州市 chinatelecom.com.cn 电信
+324.46 ms 	AS134774 [CHINANET-GD] 中国 广东省 深圳市 chinatelecom.cn 电信
+324.88 ms 	AS4134 中国 广东省 深圳市 福田区 chinatelecom.com.cn 电信
+广州联通 210.21.196.6
+1.08 ms 	* RFC1918
+0.93 ms 	* [DIGITALOCEAN-143] 新加坡
+0.89 ms 	* 新加坡
+0.96 ms 	AS14061 新加坡 digitalocean.com
+0.70 ms 	AS14061 新加坡 digitalocean.com
+165.22 ms 	AS1299 [ARELION-NET] 法国 普罗旺斯-阿尔卑斯-蓝色海岸大区 马赛 arelion.com
+166.94 ms 	AS1299 [ARELION-NET] 德国 黑森州 美因河畔法兰克福 arelion.com
+168.41 ms 	AS1299 [ARELION-NET] 德国 黑森州 美因河畔法兰克福 arelion.com
+331.58 ms 	AS4837 [CU169-BACKBONE] 中国 北京市 chinaunicom.cn 联通
+327.58 ms 	AS4837 [CU169-BACKBONE] 中国 广东省 广州市 chinaunicom.cn 联通
+315.57 ms 	AS4837 [CU169-BACKBONE] 中国 广东省 广州市 chinaunicom.cn 联通
+436.51 ms 	AS4837 [CU169-BACKBONE] 中国 广东省 广州市 chinaunicom.cn 联通
+334.78 ms 	AS17816 [APNIC-AP] 中国 广东省 深圳市 chinaunicom.cn 联通
+335.79 ms 	AS17623 [APNIC-AP] 中国 广东省 深圳市 chinaunicom.cn 联通
+331.02 ms 	AS17623 [APNIC-AP] 中国 广东省 深圳市 宝安区 chinaunicom.cn 联通
+广州移动 120.196.165.24
+1.40 ms 	* RFC1918
+0.94 ms 	* [DIGITALOCEAN-143] 新加坡
+1.03 ms 	* 新加坡
+1.39 ms 	AS14061 新加坡 digitalocean.com
+0.67 ms 	AS14061 新加坡 digitalocean.com
+110.16 ms 	AS1299 [ARELION-NET] 日本 东京都 东京 arelion.com
+209.62 ms 	AS1299 [ARELION-NET] 美国 加利福尼亚州 洛杉矶 arelion.com
+196.50 ms 	AS1299 [ARELION-NET] 美国 加利福尼亚州 洛杉矶 arelion.com
+224.85 ms 	AS58453 [CMI-INT] 美国 加利福尼亚州 洛杉矶 cmi.chinamobile.com 移动
+253.28 ms 	AS58453 [CMI-INT] 中国 广东省 广州市 cmi.chinamobile.com 移动
+259.06 ms 	AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+261.59 ms 	AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+276.27 ms 	AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+271.29 ms 	AS9808 [CMNET] 中国 海南省 海口市 chinamobile.com 移动
+265.75 ms 	AS56040 [APNIC-AP] 中国 广东省 深圳市 chinamobile.com 移动
+--------------------自动更新测速节点列表--本脚本原创--------------------
+位置		 上传速度	 下载速度	 延迟	  丢包率
+Speedtest.net	 1996.10 Mbps	 12434.03 Mbps	 0.54	  0.0%
+新加坡		 1996.36 Mbps	 9417.37 Mbps	 1.14	  0.0%
+日本东京	 813.26 Mbps	 641.27 Mbps	 73.94	  0.0%
+联通Fuzhou	 5.57 Mbps	 135.81 Mbps	 254.44	  NULL
+联通WuXi	 4.38 Mbps	 8.63 Mbps	 234.34	  0.4%
+电信浙江	 213.90 Mbps	 130.47 Mbps	 301.25	  NULL
+电信江苏5G	 79.68 Mbps	 2325.68 Mbps	 303.74	  0.0%
+------------------------------------------------------------------------
+ 总共花费      : 6 分 25 秒
+ 时间          : Tue Nov 14 03:58:02 UTC 2023
+------------------------------------------------------------------------
