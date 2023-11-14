@@ -1,0 +1,420 @@
+测评频道: https://t.me/vps_reviews                    
+版本：2023.11.07
+更新日志：VPS融合怪测试(集百家之长)                       
+---------------------基础信息查询--感谢所有开源项目---------------------
+ CPU 型号          : DO-Regular
+ CPU 核心数        : 1
+ CPU 频率          : 2294.608 MHz
+ CPU 缓存          : L1: 32.00 KB / L2: 4.00 MB / L3: 0.00 KB
+ 硬盘空间          : 1.65 GiB / 24.05 GiB
+ 启动盘路径        : /dev/vda1
+ 内存              : 221.41 MiB / 969.45 MiB
+ Swap              : [ no swap partition or swap file detected ]
+ 系统在线时间      : 0 days, 0 hour 6 min
+ 负载              : 0.48, 0.57, 0.30
+ 系统              : Ubuntu 22.04.2 LTS (x86_64)
+ AES-NI指令集      : ✔ Enabled
+ VM-x/AMD-V支持    : ✔ Enabled
+ 架构              : x86_64 (64 Bit)
+ 内核              : 5.15.0-67-generic
+ TCP加速方式       : cubic
+ 虚拟化架构        : KVM
+ NAT类型           : 开放型
+ IPV4 ASN          : AS14061 DigitalOcean, LLC
+ IPV4 位置         : Clifton / New Jersey / US
+ IPV6 ASN          : AS14061 Digital Ocean
+ IPV6 位置         : Clifton / New Jersey
+---------------------CPU测试--感谢lemonbench开源------------------------
+ -> CPU 测试中 (Fast Mode, 1-Pass @ 5sec)
+ 1 线程测试(1核)得分: 		999 Scores
+---------------------内存测试--感谢lemonbench开源-----------------------
+ -> 内存测试 Test (Fast Mode, 1-Pass @ 5sec)
+ 单线程读测试:		16580.35 MB/s
+ 单线程写测试:		10169.31 MB/s
+------------------磁盘dd读写测试--感谢lemonbench开源--------------------
+ -> 磁盘IO测试中 (4K Block/1M Block, Direct Mode)
+ 测试操作		写速度					读速度
+ 100MB-4K Block		15.2 MB/s (3721 IOPS, 6.88s)		27.1 MB/s (6614 IOPS, 3.87s)
+ 1GB-1M Block		211 MB/s (201 IOPS, 4.97s)		675 MB/s (643 IOPS, 1.55s)
+---------------------磁盘fio读写测试--感谢yabs开源----------------------
+Block Size | 4k            (IOPS) | 64k           (IOPS)
+  ------   | ---            ----  | ----           ---- 
+Read       | 77.20 MB/s   (19.3k) | 496.47 MB/s   (7.7k)
+Write      | 77.41 MB/s   (19.3k) | 499.08 MB/s   (7.7k)
+Total      | 154.62 MB/s  (38.6k) | 995.56 MB/s  (15.5k)           |                      |                     
+Block Size | 512k          (IOPS) | 1m            (IOPS)
+  ------   | ---            ----  | ----           ---- 
+Read       | 424.09 MB/s    (828) | 579.21 MB/s    (565)
+Write      | 446.63 MB/s    (872) | 617.78 MB/s    (603)
+Total      | 870.72 MB/s   (1.7k) | 1.19 GB/s     (1.1k)
+---------------------流媒体解锁--感谢sjlleo开源-------------------------
+以下测试的解锁地区是准确的，但是不是完整解锁的判断可能有误，这方面仅作参考使用
+----------------Youtube----------------
+[IPv4]
+连接方式: Youtube Video Server
+视频缓存节点地域: LGA(LGA25S82)
+Youtube识别地域: 无信息(null)
+[IPv6]
+连接方式: Youtube Video Server
+视频缓存节点地域: LGA(LGA25S82)
+Youtube识别地域: 无信息(null)
+----------------Netflix----------------
+[IPv4]
+您的出口IP可以使用Netflix，但仅可看Netflix自制剧
+NF所识别的IP地域信息：美国
+[IPv6]
+您的出口IP可以使用Netflix，但仅可看Netflix自制剧
+NF所识别的IP地域信息：美国
+---------------DisneyPlus---------------
+[IPv4]
+当前IPv4出口解锁DisneyPlus
+区域：美国区
+[IPv6]
+当前IPv6出口解锁DisneyPlus
+区域：美国区
+解锁Youtube，Netflix，DisneyPlus上面和下面进行比较，不同之处自行判断
+----------------流媒体解锁--感谢RegionRestrictionCheck开源--------------
+ 以下为IPV4网络测试，若无IPV4网络则无输出
+============[ Multination ]============
+ Dazn:					Yes (Region: US)
+ HotStar:				No
+ Disney+:				No
+ Netflix:				Originals Only
+ YouTube Premium:			Yes
+ Amazon Prime Video:			Yes (Region: US)
+ TVBAnywhere+:				Yes
+ iQyi Oversea Region:			US
+ Viu.com:				No
+ YouTube CDN:				New York, NY 
+ Netflix Preferred CDN:			New York, NY  
+ Spotify Registration:			Yes (Region: US)
+ Steam Currency:			USD
+ ChatGPT:				Yes
+=======================================
+ 以下为IPV6网络测试，若无IPV6网络则无输出
+============[ Multination ]============
+ Dazn:					Failed (Network Connection)
+ HotStar:				Yes (Region: US)
+ Disney+:				Yes (Region: US)
+ Netflix:				Yes (Region: US)
+ YouTube Premium:			Yes
+ Amazon Prime Video:			Unsupported
+ TVBAnywhere+:				Failed (Network Connection)
+ iQyi Oversea Region:			Failed
+ Viu.com:				Failed
+ YouTube CDN:				New York, NY 
+ Netflix Preferred CDN:			Newark, NJ  
+ Spotify Registration:			Yes (Region: US)
+ Steam Currency:			Failed (Network Connection)
+ ChatGPT:				Yes
+=======================================
+---------------TikTok解锁--感谢lmc999的源脚本及fscarmen PR--------------
+ Tiktok Region:		【US】
+-------------------欺诈分数以及IP质量检测--本脚本原创-------------------
+数据仅作参考，不代表100%准确，如果和实际情况不一致请手动查询多个数据库比对
+以下为各数据库编号，输出结果后将自带数据库来源对应的编号
+ipinfo数据库 ①  | scamalytics数据库 ②  | virustotal数据库 ③  | abuseipdb数据库 ④  | ip2location数据库   ⑤
+ip-api数据库 ⑥  | ipwhois数据库     ⑦  | ipregistry数据库 ⑧  | ipdata数据库    ⑨  | ipgeolocation数据库 ⑩
+欺诈分数(越低越好): 28②
+abuse得分(越低越好): 0④
+IP类型: 
+  使用类型(usage_type):hosting①  Data Center/Web Hosting/Transit⑤  hosting⑧  business⑨  
+  公司类型(company_type):hosting①  hosting⑧  
+  云服务提供商(cloud_provider):  Yes⑧ 
+  数据中心(datacenter):  Yes② ⑥   No⑨ 
+  移动网络(mobile):  No⑥ 
+  代理(proxy):  No① ② ⑥ ⑦ ⑧ ⑨ 
+  VPN(vpn):  No① ② ⑦ ⑧ 
+  TOR(tor):  No① ② ⑦ ⑧ ⑨ 
+  TOR出口(tor_exit):  No⑧ 
+  搜索引擎机器人(search_engine_robot):  No② 
+  匿名代理(anonymous):  No⑦ ⑧ ⑨ 
+  攻击方(attacker):  No⑧ ⑨ 
+  滥用者(abuser):  No⑧ ⑨ 
+  威胁(threat):  No⑧ ⑨ 
+  iCloud中继(icloud_relay):  No① ⑧ ⑨ 
+  未分配IP(bogon):  No⑧ ⑨ 
+Google搜索可行性：NO
+端口25检测:
+  本地: No
+  163邮箱：No
+------以下为IPV6检测------
+欺诈分数(越低越好): 33②
+abuse得分(越低越好): 0④
+IP类型: Data Center/Web Hosting/Transit⑤
+----------------三网回程--感谢zhanghanyun/backtrace开源-----------------
+国家: US 城市: Clifton 服务商: AS14061 DigitalOcean, LLC
+北京电信 219.141.136.12  电信163 [普通线路]           
+北京联通 202.106.50.1    联通4837[普通线路]           
+北京移动 221.179.155.161 移动CMI [普通线路]           
+上海电信 202.96.209.133  电信163 [普通线路]           
+上海联通 210.22.97.1     联通4837[普通线路]           
+上海移动 211.136.112.200 移动CMI [普通线路]           
+广州电信 58.60.188.222   电信163 [普通线路]           
+广州联通 210.21.196.6    联通4837[普通线路]           
+广州移动 120.196.165.24  移动CMI [普通线路]           
+成都电信 61.139.2.69     电信163 [普通线路]           
+成都联通 119.6.6.6       联通4837[普通线路]           
+成都移动 211.137.96.205  移动CMI [普通线路]           
+---------------------回程路由--感谢fscarmen开源及PR---------------------
+依次测试电信/联通/移动经过的地区及线路，核心程序来自ipip.net或nexttrace，请知悉!
+广州电信 58.60.188.222
+0.62 ms 	* RFC1918
+0.97 ms 	* 美国 新泽西州 克利夫顿
+0.65 ms 	* 美国 新泽西州州 泽西市
+1.05 ms 	AS1299 [ARELION-NET] 美国 纽约州 纽约 arelion.com
+9.57 ms 	AS4134 [CHINANET-US] 美国 新泽西州 纽瓦克 CT-POP chinatelecom.com.cn 电信
+67.22 ms 	AS4134 [CHINANET-BB] 美国 加利福尼亚州 圣何塞 上海 → 圣何塞 chinatelecom.com.cn 电信
+427.96 ms 	AS4134 [CHINANET-BB] 中国 广东省 广州市 chinatelecom.com.cn 电信
+223.56 ms 	AS4134 [CHINANET-BB] 中国 广东省 广州市 chinatelecom.com.cn 电信
+230.92 ms 	AS134774 [CHINANET-GD] 中国 广东省 深圳市 chinatelecom.cn 电信
+226.41 ms 	AS4134 中国 广东省 深圳市 福田区 chinatelecom.com.cn 电信
+广州联通 210.21.196.6
+1.52 ms 	* RFC1918
+2.09 ms 	* 美国 新泽西州 克利夫顿
+1.64 ms 	* 美国 纽约州 纽约
+1.17 ms 	AS1299 [ARELION-NET] 美国 纽约州 纽约 arelion.com
+2.29 ms 	AS1299 [ARELION-NET] 美国 纽约州 纽约 arelion.com
+7.51 ms 	AS1299 [ARELION-NET] 美国 弗吉尼亚州 阿什本 arelion.com
+60.85 ms 	AS1299 [ARELION-NET] 美国 加利福尼亚州 洛杉矶 arelion.com
+432.51 ms 	AS1299 [TELIANET] 美国 内华达州 拉斯维加斯 arelion.com
+370.57 ms 	AS4837 [CU169-BACKBONE] 中国 北京市 chinaunicom.cn 联通
+368.90 ms 	AS4837 [CU169-BACKBONE] 中国 广东省 广州市 chinaunicom.cn 联通
+470.43 ms 	AS4837 [CU169-BACKBONE] 中国 广东省 广州市 chinaunicom.cn 联通
+372.09 ms 	AS4837 [CU169-BACKBONE] 中国 山西省 太原市 chinaunicom.cn 联通
+475.83 ms 	AS17816 [APNIC-AP] 中国 广东省 茂名市 chinaunicom.cn 联通
+386.77 ms 	AS17623 [APNIC-AP] 中国 广东省 深圳市 chinaunicom.cn 联通
+336.83 ms 	AS17623 [APNIC-AP] 中国 广东省 深圳市 宝安区 chinaunicom.cn 联通
+广州移动 120.196.165.24
+2.01 ms 	* RFC1918
+2.71 ms 	* 美国 新泽西州 莫里斯普莱恩斯
+0.53 ms 	* 美国 加利福尼亚州 圣克拉拉
+1.83 ms 	AS1299 [ARELION-NET] 美国 纽约州 纽约 arelion.com
+2.51 ms 	AS1299 [ARELION-NET] 美国 纽约州 纽约 arelion.com
+71.35 ms 	AS1299 [ARELION-NET] 美国 加利福尼亚州 圣何塞 arelion.com
+82.09 ms 	AS1299 [ARELION-NET] 美国 加利福尼亚州 圣何塞 Telia-CMI-Peer arelion.com
+81.18 ms 	AS58453 [CMI-INT] 美国 加利福尼亚州 圣何塞 cmi.chinamobile.com 移动
+232.87 ms 	AS58453 [CMI-INT] 美国 加利福尼亚州 旧金山 cmi.chinamobile.com 移动
+230.72 ms 	AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+224.52 ms 	AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+431.90 ms 	AS9808 [CMNET] 中国 上海市 chinamobile.com 移动
+227.48 ms 	AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+234.99 ms 	AS9808 [CMNET] 中国 北京市 chinamobile.com 移动
+228.84 ms 	AS56040 [APNIC-AP] 中国 广东省 深圳市 chinamobile.com 移动
+--------------------自动更新测速节点列表--本脚本原创--------------------
+位置		 上传速度	 下载速度	 延迟	  丢包率
+Speedtest.net	 1994.35 Mbps	 10308.23 Mbps	 1.41	  0.0%
+法兰克福	 661.26 Mbps	 1212.29 Mbps	 100.18	  0.0%
+洛杉矶		 46.98 Mbps	 2251.73 Mbps	 81.55	  1.8%
+联通海南	 77.13 Mbps	 6.16 Mbps	 350.43	  NULL
+电信合肥5G	 157.62 Mbps	 791.52 Mbps	 226.41	  0.3%
+电信Nanjing5G	 7.87 Mbps	 1573.14 Mbps	 228.10	  27.5%
+------------------------------------------------------------------------
+ 总共花费      : 6 分 34 秒
+ 时间          : Tue Nov 14 05:01:20 UTC 2023
+------------------------------------------------------------------------
+
+----------------------------------------------------------------------
+北京电信
+traceroute to 219.141.147.210 (219.141.147.210), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.74.196.63  1.27 ms  *  LAN Address
+ 3  138.197.248.230  1.51 ms  *  United States, New York, New York City, digitalocean.com
+ 4  138.197.248.54  6.94 ms  *  United States, New York, New York City, digitalocean.com
+ 5  nyk-b11-link.ip.twelve99.net (62.115.45.9)  1.54 ms  AS1299  United States, New York, New York City, telia.com
+ 6  218.30.54.104  4.06 ms  AS4134  United States, New York, New York City, ChinaTelecom
+ 7  202.97.49.177  71.04 ms  AS4134  United States, California, Los Angeles, ChinaTelecom
+ 8  202.97.41.49  227.45 ms  AS4134  China, Beijing, ChinaTelecom
+ 9  202.97.12.113  230.27 ms  AS4134  China, Beijing, ChinaTelecom
+10  *
+11  *
+12  *
+13  *
+14  bj141-147-210.bjtelecom.net (219.141.147.210)  243.20 ms  AS4847  China, Beijing, ChinaTelecom
+
+----------------------------------------------------------------------
+上海电信
+traceroute to 202.96.209.133 (202.96.209.133), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.74.196.71  1.07 ms  *  LAN Address
+ 3  138.197.248.242  1.46 ms  *  United States, New York, New York City, digitalocean.com
+ 4  138.197.248.14  0.50 ms  *  United States, New York, New York City, digitalocean.com
+ 5  nyk-b11-link.ip.twelve99.net (62.115.45.5)  1.77 ms  AS1299  United States, New York, New York City, telia.com
+ 6  218.30.54.104  5.58 ms  AS4134  United States, New York, New York City, ChinaTelecom
+ 7  202.97.63.98  66.06 ms  AS4134  United States, California, Los Angeles, ChinaTelecom
+ 8  *
+ 9  *
+10  *
+11  *
+12  *
+13  180.169.255.122  221.31 ms  AS4812  China, Shanghai, ChinaTelecom
+14  ns-pd.online.sh.cn (202.96.209.133)  219.78 ms  AS4812  China, Shanghai, ChinaTelecom
+
+----------------------------------------------------------------------
+深圳电信
+traceroute to 58.60.188.222 (58.60.188.222), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.74.196.69  1.01 ms  *  LAN Address
+ 3  138.197.248.228  0.85 ms  *  United States, New York, New York City, digitalocean.com
+ 4  138.197.248.12  36.73 ms  *  United States, New York, New York City, digitalocean.com
+ 5  nyk-b11-link.ip.twelve99.net (62.115.45.5)  1.02 ms  AS1299  United States, New York, New York City, telia.com
+ 6  218.30.54.104  1.44 ms  AS4134  United States, New York, New York City, ChinaTelecom
+ 7  202.97.18.61  66.88 ms  AS4134  United States, California, Los Angeles, ChinaTelecom
+ 8  *
+ 9  202.97.65.90  223.74 ms  AS4134  China, Guangdong, Guangzhou, ChinaTelecom
+10  *
+11  14.147.127.30  229.85 ms  AS4134  China, Guangdong, Shenzhen, ChinaTelecom
+12  *
+13  58.60.188.222  226.43 ms  AS4134  China, Guangdong, Shenzhen, ChinaTelecom
+
+----------------------------------------------------------------------
+北京联通
+traceroute to 202.106.50.1 (202.106.50.1), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.74.196.49  19.56 ms  *  LAN Address
+ 3  138.197.251.10  3.03 ms  *  United States, New York, New York City, digitalocean.com
+ 4  138.197.248.18  22.71 ms  *  United States, New York, New York City, digitalocean.com
+ 5  nyk-b11-link.ip.twelve99.net (62.115.45.5)  1.05 ms  AS1299  United States, New York, New York City, telia.com
+ 6  nyk-bb2-link.ip.twelve99.net (62.115.112.70)  1.75 ms  AS1299  United States, New York, New York City, telia.com
+ 7  ldn-bb1-link.ip.twelve99.net (62.115.113.21)  76.44 ms  AS1299  United Kingdom, London, telia.com
+ 8  prs-bb1-link.ip.twelve99.net (62.115.135.25)  83.13 ms  AS1299  France, Ile-de-France, Paris, telia.com
+ 9  ffm-bb1-link.ip.twelve99.net (62.115.123.12)  91.33 ms  AS1299  Germany, Hesse, Frankfurt, telia.com
+10  ffm-b14-link.ip.twelve99.net (62.115.132.209)  93.23 ms  AS1299  Germany, Hesse, Frankfurt, telia.com
+11  *
+12  219.158.6.21  348.37 ms  AS4837  China, Beijing, ChinaUnicom
+13  219.158.9.218  338.99 ms  AS4837  China, Beijing, ChinaUnicom
+14  *
+15  *
+16  202.106.50.1  346.97 ms  AS4808  China, Beijing, ChinaUnicom
+
+----------------------------------------------------------------------
+上海联通
+traceroute to 210.22.97.1 (210.22.97.1), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.74.196.79  1.08 ms  *  LAN Address
+ 3  138.197.251.10  2.63 ms  *  United States, New York, New York City, digitalocean.com
+ 4  138.197.248.60  3.47 ms  *  United States, New York, New York City, digitalocean.com
+ 5  nyk-b11-link.ip.twelve99.net (62.115.45.9)  1.15 ms  AS1299  United States, New York, New York City, telia.com
+ 6  nyk-bb2-link.ip.twelve99.net (62.115.112.70)  1.75 ms  AS1299  United States, New York, New York City, telia.com
+ 7  ash-bb2-link.ip.twelve99.net (62.115.136.201)  6.37 ms  AS1299  United States, Virginia, Ashburn, telia.com
+ 8  lax-b22-link.ip.twelve99.net (62.115.121.220)  60.86 ms  AS1299  United States, California, Los Angeles, telia.com
+ 9  chinaunicom-ic-155914.ip.twelve99-cust.net (213.248.82.206)  350.19 ms  AS1299  United States, California, Los Angeles, telia.com
+10  *
+11  219.158.111.218  348.65 ms  AS4837  China, Shanghai, ChinaUnicom
+12  219.158.113.122  353.14 ms  AS4837  China, Shanghai, ChinaUnicom
+13  *
+14  *
+15  *
+16  210.22.97.1  390.48 ms  AS17621  China, Shanghai, ChinaUnicom
+
+----------------------------------------------------------------------
+深圳联通
+traceroute to 210.21.196.6 (210.21.196.6), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.74.196.69  1.02 ms  *  LAN Address
+ 3  138.197.251.0  1.59 ms  *  United States, New York, New York City, digitalocean.com
+ 4  138.197.248.58  1.37 ms  *  United States, New York, New York City, digitalocean.com
+ 5  nyk-b11-link.ip.twelve99.net (62.115.45.9)  1.63 ms  AS1299  United States, New York, New York City, telia.com
+ 6  nyk-bb2-link.ip.twelve99.net (62.115.112.70)  4.72 ms  AS1299  United States, New York, New York City, telia.com
+ 7  ash-bb2-link.ip.twelve99.net (62.115.136.201)  18.74 ms  AS1299  United States, Virginia, Ashburn, telia.com
+ 8  lax-b22-link.ip.twelve99.net (62.115.121.220)  60.71 ms  AS1299  United States, California, Los Angeles, telia.com
+ 9  213.248.94.126  328.77 ms  AS1299  United States, California, Los Angeles, telia.com
+10  219.158.4.9  316.84 ms  AS4837  China, Beijing, ChinaUnicom
+11  219.158.115.122  360.59 ms  AS4837  China, Guangdong, Guangzhou, ChinaUnicom
+12  219.158.4.101  353.93 ms  AS4837  China, Guangdong, Guangzhou, ChinaUnicom
+13  *
+14  112.92.0.82  369.82 ms  AS17816  China, Guangdong, Shenzhen, ChinaUnicom
+15  120.80.144.34  363.74 ms  AS17623  China, Guangdong, Shenzhen, ChinaUnicom
+16  dns2-ftcg.gdsz.cncnet.net (210.21.196.6)  352.12 ms  AS17623  China, Guangdong, Shenzhen, ChinaUnicom
+
+----------------------------------------------------------------------
+北京移动
+traceroute to 221.179.155.161 (221.179.155.161), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.74.196.63  1.08 ms  *  LAN Address
+ 3  138.197.248.230  1.59 ms  *  United States, New York, New York City, digitalocean.com
+ 4  138.197.248.12  15.53 ms  *  United States, New York, New York City, digitalocean.com
+ 5  nyk-b11-link.ip.twelve99.net (62.115.45.5)  1.66 ms  AS1299  United States, New York, New York City, telia.com
+ 6  nyk-bb2-link.ip.twelve99.net (62.115.112.70)  1.77 ms  AS1299  United States, New York, New York City, telia.com
+ 7  sjo-b23-link.ip.twelve99.net (62.115.119.229)  71.47 ms  AS1299  United States, California, San Jose, telia.com
+ 8  chinamobile-ic-342121.ip.twelve99-cust.net (62.115.171.215)  81.68 ms  AS1299  United States, California, San Jose, telia.com
+ 9  223.120.6.225  82.27 ms  AS58453  United States, ChinaMobile
+10  223.120.12.34  254.49 ms  AS58453  China, Beijing, ChinaMobile
+11  221.183.55.110  259.02 ms  AS9808  China, Beijing, ChinaMobile
+12  221.183.25.201  253.60 ms  AS9808  China, Beijing, ChinaMobile
+13  221.183.89.122  260.71 ms  AS9808  China, Beijing, ChinaMobile
+14  221.183.46.178  267.21 ms  AS9808  China, Beijing, ChinaMobile
+15  *
+16  cachedns03.bj.chinamobile.com (221.179.155.161)  267.86 ms  AS56048  China, Beijing, ChinaMobile
+
+----------------------------------------------------------------------
+上海移动
+traceroute to 211.136.112.200 (211.136.112.200), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.74.196.63  0.98 ms  *  LAN Address
+ 3  138.197.251.2  6.10 ms  *  United States, New York, New York City, digitalocean.com
+ 4  138.197.248.16  0.58 ms  *  United States, New York, New York City, digitalocean.com
+ 5  nyk-b11-link.ip.twelve99.net (62.115.45.5)  2.41 ms  AS1299  United States, New York, New York City, telia.com
+ 6  nyk-bb1-link.ip.twelve99.net (62.115.112.68)  2.27 ms  AS1299  United States, New York, New York City, telia.com
+ 7  rest-bb1-link.ip.twelve99.net (62.115.141.244)  9.04 ms  AS1299  United States, Virginia, Reston, telia.com
+ 8  lax-b23-link.ip.twelve99.net (62.115.137.37)  67.10 ms  AS1299  United States, California, Los Angeles, telia.com
+ 9  chinamobile-ic-342122.ip.twelve99-cust.net (62.115.171.217)  67.98 ms  AS1299  United States, California, Los Angeles, telia.com
+10  223.120.6.217  67.25 ms  AS58453  United States, California, Los Angeles, ChinaMobile
+11  223.120.14.158  285.05 ms  AS58453  China, Shanghai, ChinaMobile
+12  221.183.89.178  277.17 ms  AS9808  China, Shanghai, ChinaMobile
+13  221.183.89.33  284.65 ms  AS9808  China, Shanghai, ChinaMobile
+14  *
+15  *
+16  221.181.125.178  286.52 ms  AS24400  China, Shanghai, ChinaMobile
+17  *
+18  211.136.112.200  287.58 ms  AS24400  China, Shanghai, ChinaMobile
+
+----------------------------------------------------------------------
+深圳移动
+traceroute to 120.196.165.24 (120.196.165.24), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.74.196.79  1.23 ms  *  LAN Address
+ 3  138.197.248.230  1.33 ms  *  United States, New York, New York City, digitalocean.com
+ 4  138.197.248.54  0.43 ms  *  United States, New York, New York City, digitalocean.com
+ 5  nyk-b11-link.ip.twelve99.net (62.115.45.9)  1.03 ms  AS1299  United States, New York, New York City, telia.com
+ 6  nyk-bb2-link.ip.twelve99.net (62.115.112.70)  3.09 ms  AS1299  United States, New York, New York City, telia.com
+ 7  sjo-b23-link.ip.twelve99.net (62.115.137.171)  71.57 ms  AS1299  United States, California, San Jose, telia.com
+ 8  chinamobile-ic-342121.ip.twelve99-cust.net (62.115.171.215)  81.70 ms  AS1299  United States, California, San Jose, telia.com
+ 9  223.120.6.69  80.73 ms  AS58453  United States, California, San Jose, ChinaMobile
+10  223.120.13.150  231.17 ms  AS58453  China, Guangdong, Guangzhou, ChinaMobile
+11  221.183.68.125  230.53 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+12  221.183.92.17  224.42 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+13  *
+14  221.183.71.78  227.17 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+15  221.183.110.166  233.95 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+16  ns6.gd.cnmobile.net (120.196.165.24)  228.61 ms  AS56040  China, Guangdong, Shenzhen, ChinaMobile
+
+----------------------------------------------------------------------
+成都教育网
+traceroute to 202.112.14.151 (202.112.14.151), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.74.196.49  1.40 ms  *  LAN Address
+ 3  138.197.251.10  0.90 ms  *  United States, New York, New York City, digitalocean.com
+ 4  138.197.248.60  16.76 ms  *  United States, New York, New York City, digitalocean.com
+ 5  port-channel2.core2.nyc5.he.net (184.105.64.142)  3.79 ms  AS6939  United States, New Jersey, Secaucus, he.net
+ 6  *
+ 7  *
+ 8  e0-72.core2.lax1.he.net (64.71.176.97)  64.12 ms  AS6939  United States, California, Los Angeles, he.net
+ 9  *
+10  erx-cernet-bkb-as4538.e0-25.switch7.lax2.he.net (216.218.244.106)  67.93 ms  AS6939  United States, California, Los Angeles, he.net
+11  101.4.117.185  71.71 ms  AS4538  United States, California, Los Angeles, CHINAEDU
+12  101.4.117.213  290.60 ms  AS4538  China, Beijing, CHINAEDU
+13  101.4.114.129  321.38 ms  AS4538  China, Beijing, CHINAEDU
+14  *
+15  *
+16  101.4.116.106  270.07 ms  AS4538  China, Hubei, Wuhan, CHINAEDU
+17  *
+18  101.4.117.53  351.05 ms  AS4538  China, Sichuan, Chengdu, CHINAEDU
+19  101.4.112.194  357.80 ms  AS4538  China, Ningxia, Yinchuan, CHINAEDU
+20  *
+21  *
+22  *
+23  *
+24  202.112.14.151  354.53 ms  AS24355  China, Sichuan, Chengdu, CHINAEDU
+
+----------------------------------------------------------------------
