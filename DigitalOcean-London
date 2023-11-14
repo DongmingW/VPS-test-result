@@ -1,0 +1,413 @@
+--------------------- A Bench Script By spiritlhl ----------------------
+                   测评频道: https://t.me/vps_reviews                    
+版本：2023.11.07
+更新日志：VPS融合怪测试(集百家之长)                       
+---------------------基础信息查询--感谢所有开源项目---------------------
+ CPU 型号          : DO-Regular
+ CPU 核心数        : 1
+ CPU 频率          : 2494.138 MHz
+ CPU 缓存          : L1: 32.00 KB / L2: 4.00 MB / L3: 0.00 KB
+ 硬盘空间          : 1.65 GiB / 24.05 GiB
+ 启动盘路径        : /dev/vda1
+ 内存              : 255.40 MiB / 969.45 MiB
+ Swap              : [ no swap partition or swap file detected ]
+ 系统在线时间      : 0 days, 0 hour 5 min
+ 负载              : 0.63, 0.43, 0.21
+ 系统              : Ubuntu 22.04.2 LTS (x86_64)
+ AES-NI指令集      : ✔ Enabled
+ VM-x/AMD-V支持    : ✔ Enabled
+ 架构              : x86_64 (64 Bit)
+ 内核              : 5.15.0-67-generic
+ TCP加速方式       : cubic
+ 虚拟化架构        : KVM
+ NAT类型           : 开放型
+ IPV4 ASN          : AS14061 DigitalOcean, LLC
+ IPV4 位置         : London / England / GB
+ IPV6 ASN          : AS14061 Digital Ocean
+ IPV6 位置         : Slough / England
+---------------------CPU测试--感谢lemonbench开源------------------------
+ -> CPU 测试中 (Fast Mode, 1-Pass @ 5sec)
+ 1 线程测试(1核)得分:           1009 Scores
+---------------------内存测试--感谢lemonbench开源-----------------------
+ -> 内存测试 Test (Fast Mode, 1-Pass @ 5sec)
+ 单线程读测试:          17946.76 MB/s
+ 单线程写测试:          12678.38 MB/s
+------------------磁盘dd读写测试--感谢lemonbench开源--------------------
+ -> 磁盘IO测试中 (4K Block/1M Block, Direct Mode)
+ 测试操作               写速度                                  读速度
+ 100MB-4K Block         10.7 MB/s (2608 IOPS, 9.82s)            25.0 MB/s (6100 IOPS, 4.20s)
+ 1GB-1M Block           168 MB/s (160 IOPS, 6.26s)              672 MB/s (640 IOPS, 1.56s)
+---------------------磁盘fio读写测试--感谢yabs开源----------------------
+Block Size | 4k            (IOPS) | 64k           (IOPS)
+  ------   | ---            ----  | ----           ---- 
+Read       | 102.66 MB/s  (25.6k) | 425.99 MB/s   (6.6k)
+Write      | 102.93 MB/s  (25.7k) | 428.23 MB/s   (6.6k)
+Total      | 205.59 MB/s  (51.3k) | 854.23 MB/s  (13.3k)           |                      |                     
+Block Size | 512k          (IOPS) | 1m            (IOPS)
+  ------   | ---            ----  | ----           ---- 
+Read       | 351.37 MB/s    (686) | 235.31 MB/s    (229)
+Write      | 370.04 MB/s    (722) | 250.98 MB/s    (245)
+Total      | 721.41 MB/s   (1.4k) | 486.29 MB/s    (474)
+---------------------流媒体解锁--感谢sjlleo开源-------------------------
+以下测试的解锁地区是准确的，但是不是完整解锁的判断可能有误，这方面仅作参考使用
+----------------Youtube----------------
+[IPv4]
+连接方式: Youtube Video Server
+视频缓存节点地域: LHR(LHR48S34)
+Youtube识别地域: 无信息(null)
+[IPv6]
+连接方式: Youtube Video Server
+视频缓存节点地域: LHR(LHR25S41)
+Youtube识别地域: 无信息(null)
+----------------Netflix----------------
+[IPv4]
+您的出口IP可以使用Netflix，但仅可看Netflix自制剧
+NF所识别的IP地域信息：英国
+[IPv6]
+您的出口IP可以使用Netflix，但仅可看Netflix自制剧
+NF所识别的IP地域信息：英国
+---------------DisneyPlus---------------
+[IPv4]
+当前IPv4出口解锁DisneyPlus
+区域：英国区
+[IPv6]
+当前IPv6出口解锁DisneyPlus
+区域：英国区
+解锁Youtube，Netflix，DisneyPlus上面和下面进行比较，不同之处自行判断
+----------------流媒体解锁--感谢RegionRestrictionCheck开源--------------
+ 以下为IPV4网络测试，若无IPV4网络则无输出
+============[ Multination ]============
+ Dazn:                                  No
+ HotStar:                               No
+ Disney+:                               No
+ Netflix:                               Originals Only
+ YouTube Premium:                       Failed
+ Amazon Prime Video:                    Yes (Region: GB)
+ TVBAnywhere+:                          Yes
+ iQyi Oversea Region:                   GB
+ Viu.com:                               No
+ YouTube CDN:                           London 
+ Netflix Preferred CDN:                 London  
+ Spotify Registration:                  Yes (Region: GB)
+ Steam Currency:                        GBP
+ ChatGPT:                               Yes
+=======================================
+ 以下为IPV6网络测试，若无IPV6网络则无输出
+============[ Multination ]============
+ Dazn:                                  Failed (Network Connection)
+ HotStar:                               Yes (Region: GB)
+ Disney+:                               Yes (Region: GB)
+ Netflix:                               Originals Only
+ YouTube Premium:                       Failed
+ Amazon Prime Video:                    Unsupported
+ TVBAnywhere+:                          Failed (Network Connection)
+ iQyi Oversea Region:                   Failed
+ Viu.com:                               Failed
+ YouTube CDN:                           London 
+ Netflix Preferred CDN:                 London  
+ Spotify Registration:                  Yes (Region: GB)
+ Steam Currency:                        Failed (Network Connection)
+ ChatGPT:                               Yes
+=======================================
+---------------TikTok解锁--感谢lmc999的源脚本及fscarmen PR--------------
+ Tiktok Region:         【GB】
+-------------------欺诈分数以及IP质量检测--本脚本原创-------------------
+数据仅作参考，不代表100%准确，如果和实际情况不一致请手动查询多个数据库比对
+以下为各数据库编号，输出结果后将自带数据库来源对应的编号
+ipinfo数据库 ①  | scamalytics数据库 ②  | virustotal数据库 ③  | abuseipdb数据库 ④  | ip2location数据库   ⑤
+ip-api数据库 ⑥  | ipwhois数据库     ⑦  | ipregistry数据库 ⑧  | ipdata数据库    ⑨  | ipgeolocation数据库 ⑩
+欺诈分数(越低越好): 28②
+abuse得分(越低越好): 0④
+IP类型: 
+  使用类型(usage_type):hosting①  Data Center/Web Hosting/Transit⑤  hosting⑧  business⑨  
+  公司类型(company_type):hosting①  business⑧  
+  云服务提供商(cloud_provider):  Yes⑧ 
+  数据中心(datacenter):  No②   Yes⑥ ⑨ 
+  移动网络(mobile):  No⑥ 
+  代理(proxy):  No① ②   Yes⑥ ⑦ ⑧ ⑨ ⑩ 
+  VPN(vpn):  No①   Yes② ⑦ ⑧ 
+  TOR(tor):  No① ② ⑦ ⑧ ⑨ 
+  TOR出口(tor_exit):  No⑧ 
+  搜索引擎机器人(search_engine_robot):  No② 
+  匿名代理(anonymous):  Yes⑦ ⑧   No⑨ 
+  攻击方(attacker):  No⑧ ⑨ 
+  滥用者(abuser):  No⑧ ⑨ 
+  威胁(threat):  No⑧ ⑨ 
+  iCloud中继(icloud_relay):  No① ⑧ ⑨ 
+  未分配IP(bogon):  No⑧ ⑨ 
+黑名单记录统计(有多少个黑名单网站有记录): 无害0 恶意0 可疑0 未检测88 ③
+Google搜索可行性：YES
+端口25检测:
+  本地: No
+  163邮箱：No
+------以下为IPV6检测------
+欺诈分数(越低越好): 33②
+abuse得分(越低越好): 0④
+IP类型: Data Center/Web Hosting/Transit⑤
+----------------三网回程--感谢zhanghanyun/backtrace开源-----------------
+国家: GB 城市: London 服务商: AS14061 DigitalOcean, LLC
+北京电信 219.141.136.12  测试超时
+北京联通 202.106.50.1    联通4837[普通线路]           
+北京移动 221.179.155.161 移动CMI [普通线路]           
+上海电信 202.96.209.133  电信163 [普通线路]           
+上海联通 210.22.97.1     联通4837[普通线路]           
+上海移动 211.136.112.200 移动CMI [普通线路]           
+广州电信 58.60.188.222   电信163 [普通线路]           
+广州联通 210.21.196.6    联通4837[普通线路]           
+广州移动 120.196.165.24  移动CMI [普通线路]           
+成都电信 61.139.2.69     电信163 [普通线路]           
+成都联通 119.6.6.6       联通4837[普通线路]           
+成都移动 211.137.96.205  移动CMI [普通线路]           
+---------------------回程路由--感谢fscarmen开源及PR---------------------
+依次测试电信/联通/移动经过的地区及线路，核心程序来自ipip.net或nexttrace，请知悉!
+广州电信 58.60.188.222
+0.57 ms         * RFC1918
+0.96 ms         * 加拿大 安大略省 多伦多
+1.20 ms         * 美国 加利福尼亚州 圣克拉拉
+80.01 ms        AS4134 [LINX-PEER] 英国 英格兰 伦敦 LINX LON1 - China Telecom - 100Gbps chinatelecom.com.cn
+80.17 ms        AS4134 [LINX-PEER] 英国 英格兰 伦敦 LINX LON1 - China Telecom - 100Gbps chinatelecom.com.cn
+331.38 ms       AS4134 [CHINANET-BB] 中国 广东省 广州市 chinatelecom.com.cn 电信
+431.44 ms       AS4134 [CHINANET-BB] 中国 广东省 广州市 chinatelecom.com.cn 电信
+337.36 ms       AS4134 [APNIC-AP] 中国 广东省 深圳市 chinatelecom.com.cn 电信
+325.39 ms       AS4134 [APNIC-AP] 中国 广东省 深圳市 chinatelecom.com.cn 电信
+338.19 ms       AS4134 中国 广东省 深圳市 福田区 chinatelecom.com.cn 电信
+广州联通 210.21.196.6
+1.14 ms         * RFC1918
+1.06 ms         * 加拿大 安大略省 多伦多
+2.57 ms         * 美国 加利福尼亚州 圣克拉拉
+2.41 ms         AS3356 [UK-LVLT] 英国 英格兰 伦敦 level3.com
+137.31 ms       AS3356 美国 加利福尼亚州 洛杉矶 level3.com
+465.43 ms       AS3356 美国 加利福尼亚州 圣何塞 Level3-CU-Peer level3.com
+383.84 ms       AS4837 [CU169-BACKBONE] 中国 广东省 广州市 chinaunicom.cn 联通
+410.99 ms       AS4837 [CU169-BACKBONE] 中国 广东省 广州市 chinaunicom.cn 联通
+418.44 ms       AS17816 [APNIC-AP] 中国 广东省 深圳市 chinaunicom.cn 联通
+465.58 ms       AS17623 [APNIC-AP] 中国 广东省 深圳市 chinaunicom.cn 联通
+413.32 ms       AS17623 [APNIC-AP] 中国 广东省 深圳市 宝安区 chinaunicom.cn 联通
+广州移动 120.196.165.24
+0.91 ms         * RFC1918
+1.22 ms         * 加拿大 安大略省 多伦多
+0.79 ms         * 美国 加利福尼亚州 圣克拉拉
+1.37 ms         AS1299 [ARELION-NET] 英国 英格兰 斯劳 arelion.com
+202.85 ms       AS1299 [ARELION-NET] 英国 英格兰 伦敦 arelion.com
+2.68 ms         AS1299 [ARELION-NET] 英国 英格兰 伦敦 arelion.com
+2.97 ms         AS1299 [ARELION-NET] 英国 英格兰 伦敦 arelion.com
+204.11 ms       AS58453 [CMI-INT] 中国 广东省 广州市 cmi.chinamobile.com 移动
+240.96 ms       AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+246.76 ms       AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+206.57 ms       AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+204.53 ms       AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+202.23 ms       AS9808 [CMNET] 中国 海南省 海口市 chinamobile.com 移动
+244.80 ms       AS56040 [APNIC-AP] 中国 广东省 深圳市 chinamobile.com 移动
+--------------------自动更新测速节点列表--本脚本原创--------------------
+位置             上传速度        下载速度        延迟     丢包率
+Speedtest.net    1994.14 Mbps    8131.28 Mbps    0.90     0.0%
+法兰克福         1945.02 Mbps    1558.28 Mbps    13.21    0.0%
+洛杉矶           176.31 Mbps     1784.08 Mbps    145.09   0.0%
+联通湖南5G       93.41 Mbps      2.97 Mbps       353.64   NULL
+联通Fuzhou       83.29 Mbps      4.06 Mbps       381.62   0.0%
+电信重庆         0.38 Mbps       0.28 Mbps       278.75   0.0%
+电信天津5G       2.87 Mbps       37.11 Mbps      239.79   8.7%
+移动硬核通信     0.31 Mbps       426.81 Mbps     202.46   NULL
+------------------------------------------------------------------------
+ 总共花费      : 6 分 38 秒
+ 时间          : Tue Nov 14 05:13:24 UTC 2023
+------------------------------------------------------------------------
+
+----------------------------------------------------------------------
+北京电信
+traceroute to 219.141.147.210 (219.141.147.210), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.80.9.0  0.85 ms  *  LAN Address
+ 3  138.197.249.120  1.53 ms  *  United Kingdom, London, digitalocean.com
+ 4  138.197.251.142  3.47 ms  *  United Kingdom, London, digitalocean.com
+ 5  212.187.195.149  1.58 ms  AS3356  United Kingdom, London, level3.com
+ 6  195.50.126.218  4.44 ms  AS3356  United Kingdom, London, level3.com
+ 7  202.97.76.33  232.83 ms  AS4134  China, Beijing, ChinaTelecom
+ 8  202.97.53.57  231.54 ms  AS4134  China, Beijing, ChinaTelecom
+ 9  *
+10  *
+11  6.254.120.106.static.bjtelecom.net (106.120.254.6)  240.91 ms  AS4847  China, Beijing, ChinaTelecom
+12  *
+13  bj141-147-210.bjtelecom.net (219.141.147.210)  245.91 ms  AS4847  China, Beijing, ChinaTelecom
+
+----------------------------------------------------------------------
+上海电信
+traceroute to 202.96.209.133 (202.96.209.133), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.80.9.10  0.55 ms  *  LAN Address
+ 3  138.197.249.122  1.35 ms  *  United Kingdom, London, digitalocean.com
+ 4  138.197.251.142  0.68 ms  *  United Kingdom, London, digitalocean.com
+ 5  slou-b2-link.ip.twelve99.net (62.115.44.253)  1.48 ms  AS1299  United Kingdom, Slough, telia.com
+ 6  ldn-bb1-link.ip.twelve99.net (62.115.127.6)  1.88 ms  AS1299  United Kingdom, London, telia.com
+ 7  ldn-b2-link.ip.twelve99.net (62.115.122.189)  1.68 ms  AS1299  United Kingdom, London, telia.com
+ 8  chinatelecom-ic-335946.ip.twelve99-cust.net (62.115.14.114)  2.68 ms  AS1299  United Kingdom, London, telia.com
+ 9  *
+10  202.97.33.133  251.74 ms  AS4134  China, Shanghai, ChinaTelecom
+11  202.97.50.173  255.19 ms  AS4134  China, Shanghai, ChinaTelecom
+12  *
+13  101.95.40.90  287.97 ms  AS4812  China, Shanghai, ChinaTelecom
+14  124.74.229.230  277.75 ms  AS4812  China, Shanghai, ChinaTelecom
+15  ns-pd.online.sh.cn (202.96.209.133)  254.68 ms  AS4812  China, Shanghai, ChinaTelecom
+
+----------------------------------------------------------------------
+深圳电信
+traceroute to 58.60.188.222 (58.60.188.222), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.80.9.0  0.39 ms  *  LAN Address
+ 3  138.197.249.112  1.00 ms  *  United Kingdom, London, digitalocean.com
+ 4  138.197.251.140  0.95 ms  *  United Kingdom, London, digitalocean.com
+ 5  195.66.225.54  80.96 ms  AS1031,AS34984  United Kingdom, London, linx.net
+ 6  202.97.98.129  331.59 ms  AS4134  China, Guangdong, Guangzhou, ChinaTelecom
+ 7  202.97.94.113  331.53 ms  AS4134  China, Guangdong, Guangzhou, ChinaTelecom
+ 8  *
+ 9  183.56.65.10  337.68 ms  AS4134  China, Guangdong, Shenzhen, ChinaTelecom
+10  *
+11  58.60.188.222  331.54 ms  AS4134  China, Guangdong, Shenzhen, ChinaTelecom
+
+----------------------------------------------------------------------
+北京联通
+traceroute to 202.106.50.1 (202.106.50.1), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.80.9.12  1.02 ms  *  LAN Address
+ 3  138.197.249.114  1.07 ms  *  United Kingdom, London, digitalocean.com
+ 4  138.197.251.140  0.75 ms  *  United Kingdom, London, digitalocean.com
+ 5  212.187.195.149  5.99 ms  AS3356  United Kingdom, London, level3.com
+ 6  *
+ 7  CHINA-NETCO.ear1.LosAngeles6.Level3.net (4.26.2.162)  148.81 ms  AS3356  United States, California, Los Angeles, level3.com
+ 8  219.158.6.46  395.66 ms  AS4837  United States, California, Los Angeles, ChinaUnicom
+ 9  219.158.16.97  392.44 ms  AS4837  China, Beijing, ChinaUnicom
+10  219.158.16.77  398.85 ms  AS4837  China, Beijing, ChinaUnicom
+11  *
+12  *
+13  202.106.50.1  389.38 ms  AS4808  China, Beijing, ChinaUnicom
+
+----------------------------------------------------------------------
+上海联通
+traceroute to 210.22.97.1 (210.22.97.1), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.80.9.6  0.97 ms  *  LAN Address
+ 3  138.197.249.96  8.08 ms  *  United Kingdom, London, digitalocean.com
+ 4  138.197.251.128  1.46 ms  *  United Kingdom, London, digitalocean.com
+ 5  212.187.195.85  1.45 ms  AS3356  United Kingdom, London, level3.com
+ 6  4.69.209.165  138.41 ms  AS3356  United States, California, San Jose, level3.com
+ 7  CHINA-UNICO.edge1.SanJose3.Level3.net (4.53.209.78)  436.27 ms  AS3356  United States, California, San Jose, level3.com
+ 8  219.158.116.237  415.64 ms  AS4837  China, Shanghai, ChinaUnicom
+ 9  219.158.8.177  382.28 ms  AS4837  China, Shanghai, ChinaUnicom
+10  *
+11  *
+12  112.64.250.202  410.43 ms  AS17621  China, Shanghai, ChinaUnicom
+13  210.22.97.1  378.73 ms  AS17621  China, Shanghai, ChinaUnicom
+
+----------------------------------------------------------------------
+深圳联通
+traceroute to 210.21.196.6 (210.21.196.6), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.80.9.14  0.58 ms  *  LAN Address
+ 3  138.197.249.114  1.04 ms  *  United Kingdom, London, digitalocean.com
+ 4  138.197.251.132  0.69 ms  *  United Kingdom, London, digitalocean.com
+ 5  212.187.195.85  1.26 ms  AS3356  United Kingdom, London, level3.com
+ 6  ae3.30.edge1.LosAngeles6.level3.net (4.69.153.125)  133.47 ms  AS3356  United States, California, Los Angeles, level3.com
+ 7  CHINA-UNICO.edge1.LosAngeles6.Level3.net (4.26.1.134)  453.41 ms  AS3356  United States, California, Los Angeles, level3.com
+ 8  219.158.97.205  424.37 ms  AS4837  China, Guangdong, Guangzhou, ChinaUnicom
+ 9  219.158.4.33  397.40 ms  AS4837  China, Guangdong, Guangzhou, ChinaUnicom
+10  *
+11  120.82.0.162  416.81 ms  AS17816  China, Guangdong, Shenzhen, ChinaUnicom
+12  120.80.147.254  412.28 ms  AS17623  China, Guangdong, Shenzhen, ChinaUnicom
+13  dns2-ftcg.gdsz.cncnet.net (210.21.196.6)  389.87 ms  AS17623  China, Guangdong, Shenzhen, ChinaUnicom
+
+----------------------------------------------------------------------
+北京移动
+traceroute to 221.179.155.161 (221.179.155.161), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.80.9.8  0.94 ms  *  LAN Address
+ 3  138.197.249.122  1.00 ms  *  United Kingdom, London, digitalocean.com
+ 4  138.197.251.134  0.60 ms  *  United Kingdom, London, digitalocean.com
+ 5  slou-b2-link.ip.twelve99.net (62.115.44.249)  1.32 ms  AS1299  United Kingdom, Slough, telia.com
+ 6  *
+ 7  ldn-b3-link.ip.twelve99.net (62.115.122.181)  145.31 ms  AS1299  United Kingdom, London, telia.com
+ 8  ldn-bb1-link.ip.twelve99.net (62.115.120.74)  146.04 ms  AS1299  United Kingdom, London, telia.com
+ 9  nyk-bb2-link.ip.twelve99.net (62.115.113.20)  157.20 ms  AS1299  United States, New York, New York City, telia.com
+10  nyk-b1-link.ip.twelve99.net (62.115.135.133)  145.18 ms  AS1299  United States, New York, New York City, telia.com
+11  nyk-bb1-link.ip.twelve99.net (62.115.135.130)  84.50 ms  AS1299  United States, New York, New York City, telia.com
+12  sjo-b23-link.ip.twelve99.net (62.115.137.169)  152.58 ms  AS1299  United States, California, San Jose, telia.com
+13  chinamobile-ic-342121.ip.twelve99-cust.net (62.115.171.215)  153.11 ms  AS1299  United States, California, San Jose, telia.com
+14  223.120.6.225  152.71 ms  AS58453  United States, ChinaMobile
+15  223.120.12.34  330.15 ms  AS58453  China, Beijing, ChinaMobile
+16  221.183.55.110  324.54 ms  AS9808  China, Beijing, ChinaMobile
+17  221.183.25.201  329.95 ms  AS9808  China, Beijing, ChinaMobile
+18  221.183.89.118  287.22 ms  AS9808  China, Beijing, ChinaMobile
+19  221.183.46.174  242.68 ms  AS9808  China, Beijing, ChinaMobile
+20  *
+21  cachedns03.bj.chinamobile.com (221.179.155.161)  244.07 ms  AS56048  China, Beijing, ChinaMobile
+
+----------------------------------------------------------------------
+上海移动
+traceroute to 211.136.112.200 (211.136.112.200), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.80.9.10  1.03 ms  *  LAN Address
+ 3  138.197.249.106  1.42 ms  *  United Kingdom, London, digitalocean.com
+ 4  138.197.251.138  0.79 ms  *  United Kingdom, London, digitalocean.com
+ 5  slou-b2-link.ip.twelve99.net (62.115.44.253)  1.45 ms  AS1299  United Kingdom, Slough, telia.com
+ 6  ldn-bb1-link.ip.twelve99.net (62.115.127.6)  1.50 ms  AS1299  United Kingdom, London, telia.com
+ 7  ldn-b3-link.ip.twelve99.net (62.115.120.75)  1.99 ms  AS1299  United Kingdom, London, telia.com
+ 8  chinamobile-ic-311724.ip.twelve99-cust.net (62.115.12.242)  3.12 ms  AS1299  United Kingdom, London, telia.com
+ 9  223.120.15.78  227.00 ms  AS58453  China, Shanghai, ChinaMobile
+10  221.183.89.182  234.63 ms  AS9808  China, Shanghai, ChinaMobile
+11  *
+12  *
+13  221.183.39.130  270.62 ms  AS9808  China, Shanghai, ChinaMobile
+14  221.181.125.138  228.48 ms  AS24400  China, Shanghai, ChinaMobile
+15  211.136.112.252  278.61 ms  AS24400  China, Shanghai, ChinaMobile
+16  211.136.112.200  236.73 ms  AS24400  China, Shanghai, ChinaMobile
+
+----------------------------------------------------------------------
+深圳移动
+traceroute to 120.196.165.24 (120.196.165.24), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.80.9.14  0.96 ms  *  LAN Address
+ 3  138.197.249.114  1.53 ms  *  United Kingdom, London, digitalocean.com
+ 4  138.197.251.132  0.50 ms  *  United Kingdom, London, digitalocean.com
+ 5  slou-b2-link.ip.twelve99.net (62.115.44.249)  0.83 ms  AS1299  United Kingdom, Slough, telia.com
+ 6  *
+ 7  ldn-b3-link.ip.twelve99.net (62.115.122.181)  2.57 ms  AS1299  United Kingdom, London, telia.com
+ 8  chinamobile-ic-311724.ip.twelve99-cust.net (62.115.12.242)  2.86 ms  AS1299  United Kingdom, London, telia.com
+ 9  223.120.15.46  202.60 ms  AS58453  China, Guangdong, Guangzhou, ChinaMobile
+10  221.183.55.58  240.94 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+11  221.183.92.21  246.60 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+12  221.183.89.246  206.19 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+13  221.183.71.82  204.47 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+14  221.183.110.170  202.24 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+15  ns6.gd.cnmobile.net (120.196.165.24)  244.64 ms  AS56040  China, Guangdong, Shenzhen, ChinaMobile
+
+----------------------------------------------------------------------
+成都教育网
+traceroute to 202.112.14.151 (202.112.14.151), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.80.9.12  1.02 ms  *  LAN Address
+ 3  138.197.249.98  1.35 ms  *  United Kingdom, London, digitalocean.com
+ 4  138.197.251.128  0.91 ms  *  United Kingdom, London, digitalocean.com
+ 5  212.187.195.85  1.58 ms  AS3356  United Kingdom, London, level3.com
+ 6  ae1.3115.edge7.London1.level3.net (4.69.166.2)  2.64 ms  AS3356  United Kingdom, London, level3.com
+ 7  HurricaneElectric-level3-London1.Level3.net (4.68.127.238)  2.44 ms  AS3356  United Kingdom, London, level3.com
+ 8  *
+ 9  *
+10  *
+11  *
+12  *
+13  erx-cernet-bkb-as4538.e0-25.switch7.lax2.he.net (216.218.244.106)  138.88 ms  AS6939  United States, California, Los Angeles, he.net
+14  101.4.117.185  146.62 ms  AS4538  United States, California, Los Angeles, CHINAEDU
+15  101.4.117.213  392.44 ms  AS4538  China, Beijing, CHINAEDU
+16  101.4.115.181  385.09 ms  AS4538  China, Beijing, CHINAEDU
+17  *
+18  101.4.117.81  288.66 ms  AS4538  China, Beijing, CHINAEDU
+19  101.4.112.2  382.17 ms  AS4538  China, Henan, Zhengzhou, CHINAEDU
+20  101.4.117.37  408.78 ms  AS4538  China, Hubei, Wuhan, CHINAEDU
+21  101.4.112.29  416.06 ms  AS4538  China, Chongqing, CHINAEDU
+22  101.4.117.53  380.64 ms  AS4538  China, Sichuan, Chengdu, CHINAEDU
+23  101.4.112.194  355.66 ms  AS4538  China, Ningxia, Yinchuan, CHINAEDU
+24  *
+25  *
+26  *
+27  202.112.14.151  408.24 ms  AS24355  China, Sichuan, Chengdu, CHINAEDU
+
+----------------------------------------------------------------------
