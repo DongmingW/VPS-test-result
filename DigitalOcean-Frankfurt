@@ -1,0 +1,409 @@
+--------------------- A Bench Script By spiritlhl ----------------------
+                   测评频道: https://t.me/vps_reviews                    
+版本：2023.11.07
+更新日志：VPS融合怪测试(集百家之长)                       
+---------------------基础信息查询--感谢所有开源项目---------------------
+ CPU 型号          : DO-Regular
+ CPU 核心数        : 1
+ CPU 频率          : 2294.608 MHz
+ CPU 缓存          : L1: 32.00 KB / L2: 4.00 MB / L3: 0.00 KB
+ 硬盘空间          : 1.65 GiB / 24.05 GiB
+ 启动盘路径        : /dev/vda1
+ 内存              : 255.27 MiB / 969.45 MiB
+ Swap              : [ no swap partition or swap file detected ]
+ 系统在线时间      : 0 days, 0 hour 5 min
+ 负载              : 1.33, 0.68, 0.30
+ 系统              : Ubuntu 22.04.2 LTS (x86_64)
+ AES-NI指令集      : ✔ Enabled
+ VM-x/AMD-V支持    : ✔ Enabled
+ 架构              : x86_64 (64 Bit)
+ 内核              : 5.15.0-67-generic
+ TCP加速方式       : cubic
+ 虚拟化架构        : KVM
+ NAT类型           : 开放型
+ IPV4 ASN          : AS14061 DigitalOcean, LLC
+ IPV4 位置         : Frankfurt am Main / Hesse / DE
+ IPV6 ASN          : AS14061 Digital Ocean
+ IPV6 位置         : Frankfurt am Main / Hesse
+---------------------CPU测试--感谢lemonbench开源------------------------
+ -> CPU 测试中 (Fast Mode, 1-Pass @ 5sec)
+ 1 线程测试(1核)得分:           1004 Scores
+---------------------内存测试--感谢lemonbench开源-----------------------
+ -> 内存测试 Test (Fast Mode, 1-Pass @ 5sec)
+ 单线程读测试:          19083.03 MB/s
+ 单线程写测试:          15478.61 MB/s
+------------------磁盘dd读写测试--感谢lemonbench开源--------------------
+ -> 磁盘IO测试中 (4K Block/1M Block, Direct Mode)
+ 测试操作               写速度                                  读速度
+ 100MB-4K Block         26.6 MB/s (6506 IOPS, 3.93s)            23.2 MB/s (5667 IOPS, 4.52s)
+ 1GB-1M Block           431 MB/s (411 IOPS, 2.43s)              665 MB/s (634 IOPS, 1.58s)
+---------------------磁盘fio读写测试--感谢yabs开源----------------------
+Block Size | 4k            (IOPS) | 64k           (IOPS)
+  ------   | ---            ----  | ----           ---- 
+Read       | 72.09 MB/s   (18.0k) | 327.48 MB/s   (5.1k)
+Write      | 72.28 MB/s   (18.0k) | 329.20 MB/s   (5.1k)
+Total      | 144.37 MB/s  (36.0k) | 656.69 MB/s  (10.2k)           |                      |                     
+Block Size | 512k          (IOPS) | 1m            (IOPS)
+  ------   | ---            ----  | ----           ---- 
+Read       | 359.59 MB/s    (702) | 468.72 MB/s    (457)
+Write      | 378.70 MB/s    (739) | 499.93 MB/s    (488)
+Total      | 738.30 MB/s   (1.4k) | 968.66 MB/s    (945)
+---------------------流媒体解锁--感谢sjlleo开源-------------------------
+以下测试的解锁地区是准确的，但是不是完整解锁的判断可能有误，这方面仅作参考使用
+----------------Youtube----------------
+[IPv4]
+连接方式: Youtube Video Server
+视频缓存节点地域: 德国法兰克福(FRA16S31)
+Youtube识别地域: 无信息(null)
+[IPv6]
+连接方式: Youtube Video Server
+视频缓存节点地域: 德国法兰克福(FRA15S37)
+Youtube识别地域: 无信息(null)
+----------------Netflix----------------
+[IPv4]
+您的出口IP可以使用Netflix，但仅可看Netflix自制剧
+NF所识别的IP地域信息：德国
+[IPv6]
+您的出口IP可以使用Netflix，但仅可看Netflix自制剧
+NF所识别的IP地域信息：德国
+---------------DisneyPlus---------------
+[IPv4]
+当前IPv4出口解锁DisneyPlus
+区域：德国区
+[IPv6]
+当前IPv6出口解锁DisneyPlus
+区域：德国区
+解锁Youtube，Netflix，DisneyPlus上面和下面进行比较，不同之处自行判断
+----------------流媒体解锁--感谢RegionRestrictionCheck开源--------------
+ 以下为IPV4网络测试，若无IPV4网络则无输出
+============[ Multination ]============
+ Dazn:                                  Yes (Region: DE)
+ HotStar:                               No
+ Disney+:                               No
+ Netflix:                               Originals Only
+ YouTube Premium:                       Failed
+ Amazon Prime Video:                    Yes (Region: DE)
+ TVBAnywhere+:                          Yes
+ iQyi Oversea Region:                   DE
+ Viu.com:                               No
+ YouTube CDN:                           Frankfurt 
+ Netflix Preferred CDN:                 Frankfurt  
+ Spotify Registration:                  Yes (Region: DE)
+ Steam Currency:                        EUR
+ ChatGPT:                               Yes
+=======================================
+ 以下为IPV6网络测试，若无IPV6网络则无输出
+============[ Multination ]============
+ Dazn:                                  Failed (Network Connection)
+ HotStar:                               No
+ Disney+:                               Yes (Region: DE)
+ Netflix:                               Originals Only
+ YouTube Premium:                       Failed
+ Amazon Prime Video:                    Unsupported
+ TVBAnywhere+:                          Failed (Network Connection)
+ iQyi Oversea Region:                   Failed
+ Viu.com:                               Failed
+ YouTube CDN:                           Frankfurt 
+ Netflix Preferred CDN:                 Frankfurt  
+ Spotify Registration:                  Yes (Region: DE)
+ Steam Currency:                        Failed (Network Connection)
+ ChatGPT:                               Yes
+=======================================
+---------------TikTok解锁--感谢lmc999的源脚本及fscarmen PR--------------
+ Tiktok Region:         【DE】
+-------------------欺诈分数以及IP质量检测--本脚本原创-------------------
+数据仅作参考，不代表100%准确，如果和实际情况不一致请手动查询多个数据库比对
+以下为各数据库编号，输出结果后将自带数据库来源对应的编号
+ipinfo数据库 ①  | scamalytics数据库 ②  | virustotal数据库 ③  | abuseipdb数据库 ④  | ip2location数据库   ⑤
+ip-api数据库 ⑥  | ipwhois数据库     ⑦  | ipregistry数据库 ⑧  | ipdata数据库    ⑨  | ipgeolocation数据库 ⑩
+欺诈分数(越低越好): 28②
+abuse得分(越低越好): 0④
+IP类型: 
+  使用类型(usage_type):hosting①  Data Center/Web Hosting/Transit⑤  hosting⑧  business⑨  
+  公司类型(company_type):hosting①  hosting⑧  
+  云服务提供商(cloud_provider):  Yes⑧ 
+  数据中心(datacenter):  Yes② ⑥   No⑨ 
+  移动网络(mobile):  No⑥ 
+  代理(proxy):  No① ② ⑥ ⑦ ⑧ ⑨ ⑩ 
+  VPN(vpn):  No① ② ⑦ ⑧ 
+  TOR(tor):  No① ② ⑦ ⑧ ⑨ 
+  TOR出口(tor_exit):  No⑧ 
+  搜索引擎机器人(search_engine_robot):  No② 
+  匿名代理(anonymous):  No⑦ ⑧ ⑨ 
+  攻击方(attacker):  No⑧ ⑨ 
+  滥用者(abuser):  No⑧ ⑨ 
+  威胁(threat):  No⑧ ⑨ 
+  iCloud中继(icloud_relay):  No① ⑧ ⑨ 
+  未分配IP(bogon):  No⑧ ⑨ 
+黑名单记录统计(有多少个黑名单网站有记录): 无害0 恶意0 可疑0 未检测88 ③
+Google搜索可行性：NO
+端口25检测:
+  本地: No
+  163邮箱：No
+------以下为IPV6检测------
+欺诈分数(越低越好): 33②
+abuse得分(越低越好): 0④
+IP类型: Data Center/Web Hosting/Transit⑤
+----------------三网回程--感谢zhanghanyun/backtrace开源-----------------
+国家: DE 城市: Frankfurt am Main 服务商: AS14061 DigitalOcean, LLC
+北京电信 219.141.136.12  测试超时
+北京联通 202.106.50.1    联通4837[普通线路]           
+北京移动 221.179.155.161 移动CMI [普通线路]           
+上海电信 202.96.209.133  测试超时
+上海联通 210.22.97.1     联通4837[普通线路]           
+上海移动 211.136.112.200 移动CMI [普通线路]           
+广州电信 58.60.188.222   电信163 [普通线路]           
+广州联通 210.21.196.6    联通4837[普通线路]           
+广州移动 120.196.165.24  移动CMI [普通线路]           
+成都电信 61.139.2.69     电信163 [普通线路]           
+成都联通 119.6.6.6       联通4837[普通线路]           
+成都移动 211.137.96.205  移动CMI [普通线路]           
+---------------------回程路由--感谢fscarmen开源及PR---------------------
+依次测试电信/联通/移动经过的地区及线路，核心程序来自ipip.net或nexttrace，请知悉!
+广州电信 58.60.188.222
+0.50 ms         * RFC1918
+0.96 ms         * 德国 黑森州 美因河畔法兰克福
+0.50 ms         * 德国 黑森州 美因河畔法兰克福
+1.62 ms         * 德国 黑森州 美因河畔法兰克福
+18.45 ms        * [DIGITALOCEAN-BACKBONE] 荷兰 北荷兰省 阿姆斯特丹
+97.24 ms        AS4134 [LINX-PEER] 英国 英格兰 伦敦 LINX LON1 - China Telecom - 100Gbps chinatelecom.com.cn
+* ms    AS4134 [CHINANET-BB] 中国 广东省 广州市 chinatelecom.com.cn 电信
+444.22 ms       AS4134 [CHINANET-BB] 中国 广东省 广州市 chinatelecom.com.cn 电信
+457.86 ms       AS4134 [CHINANET-BB] 中国 广东省 广州市 chinatelecom.com.cn 电信
+359.91 ms       AS134774 [CHINANET-GD] 中国 广东省 深圳市 chinatelecom.cn 电信
+352.76 ms       AS4134 中国 广东省 深圳市 福田区 chinatelecom.com.cn 电信
+广州联通 210.21.196.6
+0.87 ms         * RFC1918
+1.01 ms         * 德国 黑森州 美因河畔法兰克福
+0.47 ms         * 德国 黑森州 美因河畔法兰克福
+0.92 ms         AS6453 [FRN-FRO] 德国 黑森州 美因河畔法兰克福 tatacommunications.com
+1.39 ms         AS6453 德国 黑森州 美因河畔法兰克福 tatacommunications.com
+311.35 ms       AS6453 [FRN-FRO] 德国 黑森州 美因河畔法兰克福 tatacommunications.com
+313.58 ms       AS4837 [CU169-BACKBONE] 中国 北京市 chinaunicom.cn 联通
+344.08 ms       AS4837 [CU169-BACKBONE] 中国 广东省 广州市 chinaunicom.cn 联通
+336.89 ms       AS4837 [CU169-BACKBONE] 中国 广东省 广州市 chinaunicom.cn 联通
+427.75 ms       AS4837 [CU169-BACKBONE] 中国 广东省 广州市 chinaunicom.cn 联通
+330.50 ms       AS17816 [APNIC-AP] 中国 广东省 深圳市 chinaunicom.cn 联通
+345.91 ms       AS17623 [APNIC-AP] 中国 广东省 深圳市 chinaunicom.cn 联通
+352.48 ms       AS17623 [APNIC-AP] 中国 广东省 深圳市 宝安区 chinaunicom.cn 联通
+广州移动 120.196.165.24
+1.02 ms         * RFC1918
+1.44 ms         * 德国 黑森州 美因河畔法兰克福
+1.06 ms         * 德国 黑森州 美因河畔法兰克福
+1.01 ms         AS1299 德国 黑森州 美因河畔法兰克福 arelion.com
+15.17 ms        AS1299 [ARELION-NET] 德国 黑森州 美因河畔法兰克福 Telia-CM-Cust arelion.com
+16.96 ms        AS58453 [CMI-INT] 德国 黑森州 美茵河畔法兰克福 cmi.chinamobile.com 移动
+221.24 ms       AS58453 [CMI-INT] 德国 黑森州 美因河畔法兰克福 cmi.chinamobile.com 移动
+205.94 ms       AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+207.51 ms       AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+223.73 ms       AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+226.04 ms       AS9808 [CMNET] 中国 北京市 chinamobile.com 移动
+225.51 ms       AS56040 [APNIC-AP] 中国 广东省 深圳市 chinamobile.com 移动
+--------------------自动更新测速节点列表--本脚本原创--------------------
+位置             上传速度        下载速度        延迟     丢包率
+Speedtest.net    1991.09 Mbps    9347.71 Mbps    0.83     NULL
+法兰克福         1997.43 Mbps    1906.05 Mbps    0.70     0.0%
+洛杉矶           121.82 Mbps     2095.38 Mbps    156.43   0.0%
+联通上海5G       440.11 Mbps     4.34 Mbps       330.87   0.0%
+联通海南         50.57 Mbps      2.84 Mbps       376.82   NULL
+电信重庆         0.38 Mbps       0.30 Mbps       266.40   10.3%
+电信浙江         2.18 Mbps       80.80 Mbps      344.93   NULL
+移动硬核通信     311.08 Mbps     626.95 Mbps     231.31   NULL
+------------------------------------------------------------------------
+ 总共花费      : 6 分 33 秒
+ 时间          : Tue Nov 14 05:13:34 UTC 2023
+------------------------------------------------------------------------
+
+----------------------------------------------------------------------
+北京电信
+traceroute to 219.141.147.210 (219.141.147.210), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.68.67.63  1.20 ms  *  LAN Address
+ 3  138.197.249.42  1.15 ms  *  Germany, Hesse, Frankfurt, digitalocean.com
+ 4  138.197.250.143  0.78 ms  *  Germany, Hesse, Frankfurt, digitalocean.com
+ 5  ix-hge-0-0-0-20.ecore1.fr0-frankfurt.as6453.net (195.219.50.41)  1.16 ms  AS6453  Germany, Hesse, Frankfurt, tatacommunications.com
+ 6  if-ae-24-2.tcore1.fr0-frankfurt.as6453.net (195.219.50.68)  0.94 ms  AS6453  Germany, Hesse, Frankfurt, tatacommunications.com
+ 7  195.219.219.5  1.69 ms  AS6453  Germany, Hesse, Frankfurt, tatacommunications.com
+ 8  *
+ 9  202.97.85.37  227.53 ms  AS4134  China, Beijing, ChinaTelecom
+10  *
+11  *
+12  *
+13  6.254.120.106.static.bjtelecom.net (106.120.254.6)  239.70 ms  AS4847  China, Beijing, ChinaTelecom
+14  bj141-147-210.bjtelecom.net (219.141.147.210)  244.57 ms  AS4847  China, Beijing, ChinaTelecom
+
+----------------------------------------------------------------------
+上海电信
+traceroute to 202.96.209.133 (202.96.209.133), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.68.67.23  0.86 ms  *  LAN Address
+ 3  138.197.249.36  1.41 ms  *  Germany, Hesse, Frankfurt, digitalocean.com
+ 4  138.197.250.141  14.64 ms  *  Germany, Hesse, Frankfurt, digitalocean.com
+ 5  ce-1-3-3.a02.frnkge13.de.bb.gin.ntt.net (168.143.229.121)  19.73 ms  AS2914  Germany, Hesse, Frankfurt, ntt.com
+ 6  ae-3.r20.frnkge13.de.bb.gin.ntt.net (129.250.3.22)  2.04 ms  AS2914  Germany, Hesse, Frankfurt, ntt.com
+ 7  ae-0.a03.frnkge13.de.bb.gin.ntt.net (129.250.3.30)  0.85 ms  AS2914  Germany, Hesse, Frankfurt, ntt.com
+ 8  ae-0.chinanet.frnkge13.de.bb.gin.ntt.net (129.250.9.154)  2.72 ms  AS2914  Germany, Hesse, Frankfurt, ntt.com
+ 9  202.97.43.37  233.01 ms  AS4134  China, Shanghai, ChinaTelecom
+10  *
+11  202.97.24.253  227.42 ms  AS4134  China, Shanghai, ChinaTelecom
+12  *
+13  180.169.255.122  232.76 ms  AS4812  China, Shanghai, ChinaTelecom
+14  ns-pd.online.sh.cn (202.96.209.133)  233.14 ms  AS4812  China, Shanghai, ChinaTelecom
+
+----------------------------------------------------------------------
+深圳电信
+traceroute to 58.60.188.222 (58.60.188.222), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.68.67.1  0.51 ms  *  LAN Address
+ 3  138.197.249.40  1.42 ms  *  Germany, Hesse, Frankfurt, digitalocean.com
+ 4  138.197.250.149  0.39 ms  *  Germany, Hesse, Frankfurt, digitalocean.com
+ 5  138.197.250.188  0.88 ms  *  Germany, Hesse, Frankfurt, digitalocean.com
+ 6  138.197.244.66  17.65 ms  *  United Kingdom, London, digitalocean.com
+ 7  195.66.225.54  97.68 ms  AS1031,AS34984  United Kingdom, London, linx.net
+ 8  202.97.70.109  341.82 ms  AS4134  China, Guangdong, Guangzhou, ChinaTelecom
+ 9  202.97.12.46  343.52 ms  AS4134  China, Guangdong, Guangzhou, ChinaTelecom
+10  202.97.71.253  348.87 ms  AS4134  China, Guangdong, Guangzhou, ChinaTelecom
+11  14.147.127.82  352.32 ms  AS4134  China, Guangdong, Shenzhen, ChinaTelecom
+12  *
+13  58.60.188.222  351.92 ms  AS4134  China, Guangdong, Shenzhen, ChinaTelecom
+
+----------------------------------------------------------------------
+北京联通
+traceroute to 202.106.50.1 (202.106.50.1), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.68.67.25  3.63 ms  *  LAN Address
+ 3  138.197.249.38  0.96 ms  *  Germany, Hesse, Frankfurt, digitalocean.com
+ 4  138.197.250.141  0.55 ms  *  Germany, Hesse, Frankfurt, digitalocean.com
+ 5  ix-hge-0-0-0-30.ecore1.fr0-frankfurt.as6453.net (195.219.50.89)  54.91 ms  AS6453  Germany, Hesse, Frankfurt, tatacommunications.com
+ 6  if-ae-25-2.tcore2.fr0-frankfurt.as6453.net (80.231.65.20)  1.23 ms  AS6453  Germany, Hesse, Frankfurt, tatacommunications.com
+ 7  195.219.50.49  327.34 ms  AS6453  Germany, Hesse, Frankfurt, tatacommunications.com
+ 8  219.158.6.77  322.71 ms  AS4837  China, ChinaUnicom
+ 9  219.158.9.214  323.65 ms  AS4837  China, Beijing, ChinaUnicom
+10  *
+11  125.33.186.18  310.23 ms  AS4808  China, Beijing, ChinaUnicom
+12  202.106.50.1  338.01 ms  AS4808  China, Beijing, ChinaUnicom
+
+----------------------------------------------------------------------
+上海联通
+traceroute to 210.22.97.1 (210.22.97.1), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.68.67.3  0.81 ms  *  LAN Address
+ 3  138.197.249.38  6.08 ms  *  Germany, Hesse, Frankfurt, digitalocean.com
+ 4  138.197.250.139  0.41 ms  *  Germany, Hesse, Frankfurt, digitalocean.com
+ 5  ix-hge-0-0-0-20.ecore1.fr0-frankfurt.as6453.net (195.219.50.41)  1.14 ms  AS6453  Germany, Hesse, Frankfurt, tatacommunications.com
+ 6  if-ae-25-2.tcore2.fr0-frankfurt.as6453.net (80.231.65.20)  0.97 ms  AS6453  Germany, Hesse, Frankfurt, tatacommunications.com
+ 7  195.219.50.49  280.70 ms  AS6453  Germany, Hesse, Frankfurt, tatacommunications.com
+ 8  219.158.15.157  253.29 ms  AS4837  China, Beijing, ChinaUnicom
+ 9  219.158.22.142  311.72 ms  AS4837  China, Shanghai, ChinaUnicom
+10  219.158.113.118  344.97 ms  AS4837  China, Shanghai, ChinaUnicom
+11  *
+12  *
+13  *
+14  210.22.97.1  359.28 ms  AS17621  China, Shanghai, ChinaUnicom
+
+----------------------------------------------------------------------
+深圳联通
+traceroute to 210.21.196.6 (210.21.196.6), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.68.67.3  0.76 ms  *  LAN Address
+ 3  138.197.249.34  4.25 ms  *  Germany, Hesse, Frankfurt, digitalocean.com
+ 4  138.197.250.137  0.35 ms  *  Germany, Hesse, Frankfurt, digitalocean.com
+ 5  ix-hge-0-0-0-30.ecore1.fr0-frankfurt.as6453.net (195.219.50.89)  0.94 ms  AS6453  Germany, Hesse, Frankfurt, tatacommunications.com
+ 6  if-ae-25-2.tcore2.fr0-frankfurt.as6453.net (80.231.65.20)  0.82 ms  AS6453  Germany, Hesse, Frankfurt, tatacommunications.com
+ 7  195.219.50.49  328.18 ms  AS6453  Germany, Hesse, Frankfurt, tatacommunications.com
+ 8  219.158.3.117  311.74 ms  AS4837  China, Beijing, ChinaUnicom
+ 9  219.158.115.158  352.97 ms  AS4837  China, Guangdong, Guangzhou, ChinaUnicom
+10  219.158.103.29  348.05 ms  AS4837  China, Guangdong, Guangzhou, ChinaUnicom
+11  *
+12  120.86.0.58  344.80 ms  AS17816  China, Guangdong, Shenzhen, ChinaUnicom
+13  120.80.147.254  345.16 ms  AS17623  China, Guangdong, Shenzhen, ChinaUnicom
+14  dns2-ftcg.gdsz.cncnet.net (210.21.196.6)  352.14 ms  AS17623  China, Guangdong, Shenzhen, ChinaUnicom
+
+----------------------------------------------------------------------
+北京移动
+traceroute to 221.179.155.161 (221.179.155.161), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.68.67.61  11.81 ms  *  LAN Address
+ 3  138.197.249.32  7.16 ms  *  Germany, Hesse, Frankfurt, digitalocean.com
+ 4  138.197.250.137  0.56 ms  *  Germany, Hesse, Frankfurt, digitalocean.com
+ 5  ffm-b5-link.ip.twelve99.net (80.239.128.22)  0.64 ms  AS1299  Germany, Hesse, Frankfurt, telia.com
+ 6  ffm-bb1-link.ip.twelve99.net (62.115.114.88)  1.20 ms  AS1299  Germany, Hesse, Frankfurt, telia.com
+ 7  prs-bb1-link.ip.twelve99.net (62.115.123.13)  9.73 ms  AS1299  France, Ile-de-France, Paris, telia.com
+ 8  ash-bb2-link.ip.twelve99.net (62.115.112.242)  92.33 ms  AS1299  United States, Virginia, Ashburn, telia.com
+ 9  lax-b22-link.ip.twelve99.net (62.115.121.220)  156.79 ms  AS1299  United States, California, Los Angeles, telia.com
+10  chinamobile-ic-342123.ip.twelve99-cust.net (62.115.171.219)  163.55 ms  AS1299  United States, California, Los Angeles, telia.com
+11  223.120.6.22  163.96 ms  AS58453  United States, California, Los Angeles, ChinaMobile
+12  223.120.12.214  298.09 ms  AS58453  China, Shanghai, ChinaMobile
+13  221.183.55.106  294.78 ms  AS9808  China, Beijing, ChinaMobile
+14  221.183.46.250  294.71 ms  AS9808  China, Beijing, ChinaMobile
+15  221.183.89.102  296.90 ms  AS9808  China, Beijing, ChinaMobile
+16  221.183.46.178  294.96 ms  AS9808  China, Beijing, ChinaMobile
+17  221.183.130.142  298.32 ms  AS9808  China, Beijing, ChinaMobile
+18  cachedns03.bj.chinamobile.com (221.179.155.161)  299.34 ms  AS56048  China, Beijing, ChinaMobile
+
+----------------------------------------------------------------------
+上海移动
+traceroute to 211.136.112.200 (211.136.112.200), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.68.67.23  1.14 ms  *  LAN Address
+ 3  138.197.249.40  1.36 ms  *  Germany, Hesse, Frankfurt, digitalocean.com
+ 4  138.197.250.149  0.40 ms  *  Germany, Hesse, Frankfurt, digitalocean.com
+ 5  ffm-b5-link.ip.twelve99.net (80.239.128.22)  0.97 ms  AS1299  Germany, Hesse, Frankfurt, telia.com
+ 6  chinamobile-ic-355891.ip.twelve99-cust.net (62.115.47.45)  15.60 ms  AS1299  Germany, Hesse, Frankfurt, telia.com
+ 7  223.120.10.85  17.54 ms  AS58453  Germany, Hesse, Frankfurt, ChinaMobile
+ 8  223.120.16.222  234.06 ms  AS58453  China, Shanghai, ChinaMobile
+ 9  221.183.89.178  227.99 ms  AS9808  China, Shanghai, ChinaMobile
+10  221.183.89.33  223.92 ms  AS9808  China, Shanghai, ChinaMobile
+11  221.183.89.10  236.07 ms  AS9808  China, Shanghai, ChinaMobile
+12  *
+13  211.136.190.242  227.43 ms  AS24400  China, Shanghai, ChinaMobile
+14  211.136.112.252  228.43 ms  AS24400  China, Shanghai, ChinaMobile
+15  211.136.112.200  234.97 ms  AS24400  China, Shanghai, ChinaMobile
+
+----------------------------------------------------------------------
+深圳移动
+traceroute to 120.196.165.24 (120.196.165.24), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.68.67.25  0.78 ms  *  LAN Address
+ 3  138.197.249.34  1.38 ms  *  Germany, Hesse, Frankfurt, digitalocean.com
+ 4  138.197.250.135  0.69 ms  *  Germany, Hesse, Frankfurt, digitalocean.com
+ 5  ffm-b5-link.ip.twelve99.net (80.239.128.20)  0.71 ms  AS1299  Germany, Hesse, Frankfurt, telia.com
+ 6  chinamobile-ic-355891.ip.twelve99-cust.net (62.115.47.45)  14.83 ms  AS1299  Germany, Hesse, Frankfurt, telia.com
+ 7  223.120.10.85  27.99 ms  AS58453  Germany, Hesse, Frankfurt, ChinaMobile
+ 8  223.120.15.226  221.43 ms  AS58453  China, Guangdong, Guangzhou, ChinaMobile
+ 9  221.183.55.82  205.63 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+10  221.183.92.21  207.57 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+11  *
+12  221.183.71.78  223.54 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+13  221.183.110.166  226.23 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+14  ns6.gd.cnmobile.net (120.196.165.24)  225.67 ms  AS56040  China, Guangdong, Shenzhen, ChinaMobile
+
+----------------------------------------------------------------------
+成都教育网
+traceroute to 202.112.14.151 (202.112.14.151), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.68.67.3  0.83 ms  *  LAN Address
+ 3  138.197.249.46  1.44 ms  *  Germany, Hesse, Frankfurt, digitalocean.com
+ 4  138.197.250.157  0.45 ms  *  Germany, Hesse, Frankfurt, digitalocean.com
+ 5  *
+ 6  223.118.18.46  26.49 ms  AS58453  Germany, Hesse, Frankfurt, ChinaMobile
+ 7  *
+ 8  *
+ 9  223.120.3.86  299.22 ms  AS58453  China, Hong Kong, ChinaMobile
+10  223.119.81.94  276.88 ms  AS58453  China, Hong Kong, ChinaMobile
+11  101.4.114.221  322.41 ms  AS4538  China, Beijing, CHINAEDU
+12  101.4.114.129  341.76 ms  AS4538  China, Beijing, CHINAEDU
+13  *
+14  *
+15  101.4.112.2  343.35 ms  AS4538  China, Henan, Zhengzhou, CHINAEDU
+16  101.4.117.37  366.91 ms  AS4538  China, Hubei, Wuhan, CHINAEDU
+17  101.4.112.29  399.41 ms  AS4538  China, Chongqing, CHINAEDU
+18  *
+19  101.4.112.194  379.02 ms  AS4538  China, Ningxia, Yinchuan, CHINAEDU
+20  *
+21  *
+22  *
+23  *
+24  202.112.14.151  402.10 ms  AS24355  China, Sichuan, Chengdu, CHINAEDU
+
+----------------------------------------------------------------------
