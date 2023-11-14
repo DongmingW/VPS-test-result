@@ -1,0 +1,416 @@
+测评频道: https://t.me/vps_reviews                    
+版本：2023.11.07
+更新日志：VPS融合怪测试(集百家之长)                       
+---------------------基础信息查询--感谢所有开源项目---------------------
+ CPU 型号          : DO-Regular
+ CPU 核心数        : 1
+ CPU 频率          : 2199.998 MHz
+ CPU 缓存          : L1: 32.00 KB / L2: 4.00 MB / L3: 0.00 KB
+ 硬盘空间          : 1.65 GiB / 24.05 GiB
+ 启动盘路径        : /dev/vda1
+ 内存              : 259.54 MiB / 969.45 MiB
+ Swap              : [ no swap partition or swap file detected ]
+ 系统在线时间      : 0 days, 0 hour 8 min
+ 负载              : 0.46, 0.25, 0.13
+ 系统              : Ubuntu 22.04.2 LTS (x86_64)
+ AES-NI指令集      : ✔ Enabled
+ VM-x/AMD-V支持    : ✔ Enabled
+ 架构              : x86_64 (64 Bit)
+ 内核              : 5.15.0-67-generic
+ TCP加速方式       : cubic
+ 虚拟化架构        : KVM
+ NAT类型           : 开放型
+ IPV4 ASN          : AS14061 DigitalOcean, LLC
+ IPV4 位置         : Amsterdam / North Holland / NL
+ IPV6 ASN          : AS14061 Digital Ocean
+ IPV6 位置         : Amsterdam / North Holland
+---------------------CPU测试--感谢lemonbench开源------------------------
+ -> CPU 测试中 (Fast Mode, 1-Pass @ 5sec)
+ 1 线程测试(1核)得分: 		773 Scores
+---------------------内存测试--感谢lemonbench开源-----------------------
+ -> 内存测试 Test (Fast Mode, 1-Pass @ 5sec)
+ 单线程读测试:		16040.51 MB/s
+ 单线程写测试:		10880.17 MB/s
+------------------磁盘dd读写测试--感谢lemonbench开源--------------------
+ -> 磁盘IO测试中 (4K Block/1M Block, Direct Mode)
+ 测试操作		写速度					读速度
+ 100MB-4K Block		14.5 MB/s (3533 IOPS, 7.25s)		13.3 MB/s (3253 IOPS, 7.87s)
+ 1GB-1M Block		229 MB/s (218 IOPS, 4.59s)		432 MB/s (411 IOPS, 2.43s)
+---------------------磁盘fio读写测试--感谢yabs开源----------------------
+Block Size | 4k            (IOPS) | 64k           (IOPS)
+  ------   | ---            ----  | ----           ---- 
+Read       | 60.84 MB/s   (15.2k) | 169.55 MB/s   (2.6k)
+Write      | 60.96 MB/s   (15.2k) | 170.44 MB/s   (2.6k)
+Total      | 121.80 MB/s  (30.4k) | 340.00 MB/s   (5.3k)           |                      |                     
+Block Size | 512k          (IOPS) | 1m            (IOPS)
+  ------   | ---            ----  | ----           ---- 
+Read       | 190.90 MB/s    (372) | 195.11 MB/s    (190)
+Write      | 201.04 MB/s    (392) | 208.10 MB/s    (203)
+Total      | 391.95 MB/s    (764) | 403.22 MB/s    (393)
+---------------------流媒体解锁--感谢sjlleo开源-------------------------
+以下测试的解锁地区是准确的，但是不是完整解锁的判断可能有误，这方面仅作参考使用
+----------------Youtube----------------
+[IPv4]
+连接方式: Youtube Video Server
+视频缓存节点地域: 荷兰阿姆斯特丹(AMS17S06)
+Youtube识别地域: 无信息(null)
+[IPv6]
+连接方式: Youtube Video Server
+视频缓存节点地域: 荷兰阿姆斯特丹(AMS15S45)
+Youtube识别地域: 无信息(null)
+----------------Netflix----------------
+[IPv4]
+您的出口IP可以使用Netflix，但仅可看Netflix自制剧
+NF所识别的IP地域信息：荷兰
+[IPv6]
+您的出口IP可以使用Netflix，但仅可看Netflix自制剧
+NF所识别的IP地域信息：荷兰
+---------------DisneyPlus---------------
+[IPv4]
+当前IPv4出口解锁DisneyPlus
+区域：荷兰区
+[IPv6]
+当前IPv6出口解锁DisneyPlus
+区域：荷兰区
+解锁Youtube，Netflix，DisneyPlus上面和下面进行比较，不同之处自行判断
+----------------流媒体解锁--感谢RegionRestrictionCheck开源--------------
+ 以下为IPV4网络测试，若无IPV4网络则无输出
+============[ Multination ]============
+ Dazn:					No
+ HotStar:				Failed
+ Disney+:				No
+ Netflix:				Originals Only
+ YouTube Premium:			Failed
+ Amazon Prime Video:			Yes (Region: NL)
+ TVBAnywhere+:				Yes
+ iQyi Oversea Region:			INTL
+ Viu.com:				No
+ YouTube CDN:				Amsterdam 
+ Netflix Preferred CDN:			Amsterdam  
+ Spotify Registration:			Yes (Region: NL)
+ Steam Currency:			EUR
+ ChatGPT:				Yes
+=======================================
+ 以下为IPV6网络测试，若无IPV6网络则无输出
+============[ Multination ]============
+ Dazn:					Failed (Network Connection)
+ HotStar:				No
+ Disney+:				Yes (Region: NL)
+ Netflix:				Originals Only
+ YouTube Premium:			Failed
+ Amazon Prime Video:			Unsupported
+ TVBAnywhere+:				Failed (Network Connection)
+ iQyi Oversea Region:			Failed
+ Viu.com:				Failed
+ YouTube CDN:				Amsterdam 
+ Netflix Preferred CDN:			Amsterdam  
+ Spotify Registration:			Yes (Region: NL)
+ Steam Currency:			Failed (Network Connection)
+ ChatGPT:				Yes
+=======================================
+---------------TikTok解锁--感谢lmc999的源脚本及fscarmen PR--------------
+ Tiktok Region:		【NL】
+-------------------欺诈分数以及IP质量检测--本脚本原创-------------------
+数据仅作参考，不代表100%准确，如果和实际情况不一致请手动查询多个数据库比对
+以下为各数据库编号，输出结果后将自带数据库来源对应的编号
+ipinfo数据库 ①  | scamalytics数据库 ②  | virustotal数据库 ③  | abuseipdb数据库 ④  | ip2location数据库   ⑤
+ip-api数据库 ⑥  | ipwhois数据库     ⑦  | ipregistry数据库 ⑧  | ipdata数据库    ⑨  | ipgeolocation数据库 ⑩
+欺诈分数(越低越好): 28②
+abuse得分(越低越好): 0④
+IP类型: 
+  使用类型(usage_type):hosting①  Data Center/Web Hosting/Transit⑤  hosting⑧  business⑨  
+  公司类型(company_type):hosting①  hosting⑧  
+  云服务提供商(cloud_provider):  Yes⑧ 
+  数据中心(datacenter):  Yes② ⑥   No⑨ 
+  移动网络(mobile):  No⑥ 
+  代理(proxy):  No① ② ⑥ ⑦ ⑧   Yes⑨ 
+  VPN(vpn):  No① ② ⑦ ⑧ 
+  TOR(tor):  No① ② ⑦ ⑧ ⑨ 
+  TOR出口(tor_exit):  No⑧ 
+  搜索引擎机器人(search_engine_robot):  No② 
+  匿名代理(anonymous):  No⑦ ⑧   Yes⑨ 
+  攻击方(attacker):  No⑧ ⑨ 
+  滥用者(abuser):  No⑧ ⑨ 
+  威胁(threat):  No⑧ ⑨ 
+  iCloud中继(icloud_relay):  No① ⑧ ⑨ 
+  未分配IP(bogon):  No⑧ ⑨ 
+黑名单记录统计(有多少个黑名单网站有记录): 无害55 恶意0 可疑0 未检测33 ③
+Google搜索可行性：NO
+端口25检测:
+  本地: No
+  163邮箱：No
+------以下为IPV6检测------
+欺诈分数(越低越好): 33②
+abuse得分(越低越好): 0④
+IP类型: Data Center/Web Hosting/Transit⑤
+----------------三网回程--感谢zhanghanyun/backtrace开源-----------------
+国家: NL 城市: Amsterdam 服务商: AS14061 DigitalOcean, LLC
+北京电信 219.141.136.12  电信163 [普通线路]           
+北京联通 202.106.50.1    联通4837[普通线路]           
+北京移动 221.179.155.161 移动CMI [普通线路]           
+上海电信 202.96.209.133  电信163 [普通线路]           
+上海联通 210.22.97.1     联通4837[普通线路]           
+上海移动 211.136.112.200 移动CMI [普通线路]           
+广州电信 58.60.188.222   电信163 [普通线路]           
+广州联通 210.21.196.6    联通4837[普通线路]           
+广州移动 120.196.165.24  移动CMI [普通线路]           
+成都电信 61.139.2.69     电信163 [普通线路]           
+成都联通 119.6.6.6       联通4837[普通线路]           
+成都移动 211.137.96.205  移动CMI [普通线路]           
+---------------------回程路由--感谢fscarmen开源及PR---------------------
+依次测试电信/联通/移动经过的地区及线路，核心程序来自ipip.net或nexttrace，请知悉!
+广州电信 58.60.188.222
+26.25 ms 	* RFC1918
+0.53 ms 	* 荷兰 北荷兰省 阿姆斯特丹
+0.62 ms 	* 荷兰 北荷兰省 阿姆斯特丹
+6.41 ms 	* [DIGITALOCEAN-BACKBONE] 荷兰 北荷兰省 阿姆斯特丹
+85.38 ms 	AS4134 [LINX-PEER] 英国 英格兰 伦敦 LINX LON1 - China Telecom - 100Gbps chinatelecom.com.cn
+322.76 ms 	AS4134 [CHINANET-BB] 中国 广东省 广州市 chinatelecom.com.cn 电信
+424.23 ms 	AS4134 [CHINANET-BB] 中国 广东省 广州市 chinatelecom.com.cn 电信
+332.09 ms 	AS134774 [CHINANET-GD] 中国 广东省 深圳市 chinatelecom.cn 电信
+332.92 ms 	AS4134 中国 广东省 深圳市 福田区 chinatelecom.com.cn 电信
+广州联通 210.21.196.6
+2.27 ms 	* RFC1918
+0.59 ms 	* 荷兰 北荷兰省 阿姆斯特丹
+0.78 ms 	* 荷兰 北荷兰省 阿姆斯特丹
+1.28 ms 	AS6453 荷兰 北荷兰省 阿姆斯特丹 tatacommunications.com
+12.82 ms 	AS6453 荷兰 北荷兰省 阿姆斯特丹 tatacommunications.com
+7.64 ms 	AS6453 [AMSTDM-AV2] 德国 黑森州 美因河畔法兰克福 tatacommunications.com
+12.97 ms 	AS6453 [FRN-FNM] 德国 黑森州 美因河畔法兰克福 tatacommunications.com
+13.21 ms 	AS6453 [TATA-R] 德国 黑森州 美因河畔法兰克福 tatacommunications.com
+319.19 ms 	AS4837 [CU169-BACKBONE] 中国 广东省 广州市 chinaunicom.cn 联通
+438.65 ms 	AS4837 [CU169-BACKBONE] 中国 广东省 广州市 chinaunicom.cn 联通
+357.13 ms 	AS17816 [APNIC-AP] 中国 广东省 深圳市 chinaunicom.cn 联通
+329.48 ms 	AS17623 [APNIC-AP] 中国 广东省 深圳市 chinaunicom.cn 联通
+356.18 ms 	AS17623 [APNIC-AP] 中国 广东省 深圳市 宝安区 chinaunicom.cn 联通
+广州移动 120.196.165.24
+1.17 ms 	* RFC1918
+1.03 ms 	* 荷兰 北荷兰省 阿姆斯特丹
+0.96 ms 	* 荷兰 北荷兰省 阿姆斯特丹
+1.26 ms 	AS1299 [TELIANET] 荷兰 北荷兰省 阿姆斯特丹 arelion.com
+1.83 ms 	AS1299 [ARELION-NET] 荷兰 北荷兰省 阿姆斯特丹 arelion.com
+9.79 ms 	AS1299 [TELIANET] 英国 英格兰 伦敦 arelion.com
+8.56 ms 	AS1299 [ARELION-NET] 英国 英格兰 伦敦 arelion.com
+8.35 ms 	AS1299 [ARELION-NET] 英国 英格兰 伦敦 arelion.com
+202.51 ms 	AS58453 [CMI-INT] 中国 广东省 广州市 cmi.chinamobile.com 移动
+218.54 ms 	AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+302.54 ms 	AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+422.03 ms 	AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+219.96 ms 	AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+223.69 ms 	AS9808 [CMNET] 中国 海南省 海口市 chinamobile.com 移动
+205.70 ms 	AS56040 [APNIC-AP] 中国 广东省 深圳市 chinamobile.com 移动
+--------------------自动更新测速节点列表--本脚本原创--------------------
+位置		 上传速度	 下载速度	 延迟	  丢包率
+Speedtest.net	 1989.86 Mbps	 7915.09 Mbps	 0.67	  0.0%
+法兰克福	 1934.32 Mbps	 1376.09 Mbps	 12.69	  0.0%
+洛杉矶		 71.77 Mbps	 2327.72 Mbps	 150.29	  0.0%
+联通沈阳	 5.45 Mbps	 0.80 Mbps	 338.36	  0.4%
+联通郑州5G	 438.92 Mbps	 90.78 Mbps	 313.34	  NULL
+电信天津5G	 4.82 Mbps	 40.87 Mbps	 239.34	  4.7%
+------------------------------------------------------------------------
+ 总共花费      : 6 分 20 秒
+ 时间          : Tue Nov 14 05:06:41 UTC 2023
+------------------------------------------------------------------------
+
+----------------------------------------------------------------------
+北京电信
+traceroute to 219.141.147.210 (219.141.147.210), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.82.4.48  1.09 ms  *  LAN Address
+ 3  138.197.250.112  0.98 ms  *  Netherlands, North Holland, Amsterdam, digitalocean.com
+ 4  138.197.250.92  1.16 ms  *  Netherlands, North Holland, Amsterdam, digitalocean.com
+ 5  ix-ae-5-0.tcore1.ad1-amsterdam.as6453.net (195.219.150.109)  1.22 ms  AS6453  Netherlands, North Holland, Amsterdam, tatacommunications.com
+ 6  if-ae-7-2.tcore1.av2-amsterdam.as6453.net (195.219.194.45)  6.85 ms  AS6453  Netherlands, North Holland, Amsterdam, tatacommunications.com
+ 7  *
+ 8  *
+ 9  if-ae-4-2.tcore1.fr0-frankfurt.as6453.net (195.219.87.18)  12.75 ms  AS6453  Germany, Hesse, Frankfurt, tatacommunications.com
+10  195.219.219.5  6.98 ms  AS6453  Germany, Hesse, Frankfurt, tatacommunications.com
+11  *
+12  202.97.12.85  229.21 ms  AS4134  China, Beijing, ChinaTelecom
+13  202.97.94.185  247.67 ms  AS4134  China, Beijing, ChinaTelecom
+14  *
+15  2.254.120.106.static.bjtelecom.net (106.120.254.2)  249.21 ms  AS4847  China, Beijing, ChinaTelecom
+16  bj141-147-210.bjtelecom.net (219.141.147.210)  241.66 ms  AS4847  China, Beijing, ChinaTelecom
+
+----------------------------------------------------------------------
+上海电信
+traceroute to 202.96.209.133 (202.96.209.133), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.82.4.40  3.46 ms  *  LAN Address
+ 3  138.197.250.112  0.46 ms  *  Netherlands, North Holland, Amsterdam, digitalocean.com
+ 4  138.197.250.92  0.62 ms  *  Netherlands, North Holland, Amsterdam, digitalocean.com
+ 5  ix-ae-5-0.tcore1.ad1-amsterdam.as6453.net (195.219.150.109)  6.08 ms  AS6453  Netherlands, North Holland, Amsterdam, tatacommunications.com
+ 6  *
+ 7  if-ae-6-2.tcore1.fnm-frankfurt.as6453.net (195.219.194.150)  8.22 ms  AS6453  Germany, Hesse, Frankfurt, tatacommunications.com
+ 8  *
+ 9  if-ae-4-2.tcore1.fr0-frankfurt.as6453.net (195.219.87.18)  12.46 ms  AS6453  Germany, Hesse, Frankfurt, tatacommunications.com
+10  195.219.219.5  9.07 ms  AS6453  Germany, Hesse, Frankfurt, tatacommunications.com
+11  202.97.43.37  234.29 ms  AS4134  China, Shanghai, ChinaTelecom
+12  202.97.51.242  242.33 ms  AS4134  China, Shanghai, ChinaTelecom
+13  202.97.24.161  240.60 ms  AS4134  China, Shanghai, ChinaTelecom
+14  *
+15  180.169.255.114  238.65 ms  AS4812  China, Shanghai, ChinaTelecom
+16  ns-pd.online.sh.cn (202.96.209.133)  232.13 ms  AS4812  China, Shanghai, ChinaTelecom
+
+----------------------------------------------------------------------
+深圳电信
+traceroute to 58.60.188.222 (58.60.188.222), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.82.4.40  0.46 ms  *  LAN Address
+ 3  138.197.250.104  0.43 ms  *  Netherlands, North Holland, Amsterdam, digitalocean.com
+ 4  138.197.250.94  1.43 ms  *  Netherlands, North Holland, Amsterdam, digitalocean.com
+ 5  138.197.244.88  6.31 ms  *  United Kingdom, London, digitalocean.com
+ 6  195.66.225.54  85.16 ms  AS1031,AS34984  United Kingdom, London, linx.net
+ 7  *
+ 8  *
+ 9  *
+10  *
+11  *
+12  58.60.188.222  332.48 ms  AS4134  China, Guangdong, Shenzhen, ChinaTelecom
+
+----------------------------------------------------------------------
+北京联通
+traceroute to 202.106.50.1 (202.106.50.1), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.82.4.40  0.35 ms  *  LAN Address
+ 3  138.197.250.104  0.41 ms  *  Netherlands, North Holland, Amsterdam, digitalocean.com
+ 4  138.197.250.76  0.60 ms  *  Netherlands, North Holland, Amsterdam, digitalocean.com
+ 5  ix-ae-8-0.tcore1.ad1-amsterdam.as6453.net (80.231.80.5)  1.22 ms  AS6453  Netherlands, North Holland, Amsterdam, tatacommunications.com
+ 6  if-ae-7-2.tcore1.av2-amsterdam.as6453.net (195.219.194.45)  7.97 ms  AS6453  Netherlands, North Holland, Amsterdam, tatacommunications.com
+ 7  if-ae-6-2.tcore1.fnm-frankfurt.as6453.net (195.219.194.150)  6.96 ms  AS6453  Germany, Hesse, Frankfurt, tatacommunications.com
+ 8  *
+ 9  *
+10  *
+11  *
+12  202.106.50.1  326.48 ms  AS4808  China, Beijing, ChinaUnicom
+
+----------------------------------------------------------------------
+上海联通
+traceroute to 210.22.97.1 (210.22.97.1), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.82.4.40  0.47 ms  *  LAN Address
+ 3  138.197.250.120  0.46 ms  *  Netherlands, North Holland, Amsterdam, digitalocean.com
+ 4  138.197.250.74  0.82 ms  *  Netherlands, North Holland, Amsterdam, digitalocean.com
+ 5  ix-ae-8-0.tcore1.ad1-amsterdam.as6453.net (80.231.80.5)  2.66 ms  AS6453  Netherlands, North Holland, Amsterdam, tatacommunications.com
+ 6  if-ae-7-2.tcore1.av2-amsterdam.as6453.net (195.219.194.45)  6.74 ms  AS6453  Netherlands, North Holland, Amsterdam, tatacommunications.com
+ 7  if-ae-6-2.tcore1.fnm-frankfurt.as6453.net (195.219.194.150)  6.89 ms  AS6453  Germany, Hesse, Frankfurt, tatacommunications.com
+ 8  *
+ 9  *
+10  219.158.19.86  358.52 ms  AS4837  China, Shanghai, ChinaUnicom
+11  *
+12  *
+13  *
+14  210.22.97.1  329.75 ms  AS17621  China, Shanghai, ChinaUnicom
+
+----------------------------------------------------------------------
+深圳联通
+traceroute to 210.21.196.6 (210.21.196.6), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.82.4.46  0.94 ms  *  LAN Address
+ 3  138.197.250.112  0.50 ms  *  Netherlands, North Holland, Amsterdam, digitalocean.com
+ 4  138.197.250.84  1.21 ms  *  Netherlands, North Holland, Amsterdam, digitalocean.com
+ 5  ix-ae-8-0.tcore1.ad1-amsterdam.as6453.net (80.231.80.5)  0.68 ms  AS6453  Netherlands, North Holland, Amsterdam, tatacommunications.com
+ 6  if-ae-7-2.tcore1.av2-amsterdam.as6453.net (195.219.194.45)  8.29 ms  AS6453  Netherlands, North Holland, Amsterdam, tatacommunications.com
+ 7  *
+ 8  *
+ 9  if-ae-59-2.tcore1.fr0-frankfurt.as6453.net (195.219.87.195)  12.75 ms  AS6453  Germany, Hesse, Frankfurt, tatacommunications.com
+10  219.158.4.1  353.68 ms  AS4837  China, Guangdong, Guangzhou, ChinaUnicom
+11  219.158.3.93  354.12 ms  AS4837  China, Guangdong, Guangzhou, ChinaUnicom
+12  120.82.0.166  356.40 ms  AS17816  China, Guangdong, Shenzhen, ChinaUnicom
+13  120.80.147.254  349.15 ms  AS17623  China, Guangdong, Shenzhen, ChinaUnicom
+14  dns2-ftcg.gdsz.cncnet.net (210.21.196.6)  356.43 ms  AS17623  China, Guangdong, Shenzhen, ChinaUnicom
+
+----------------------------------------------------------------------
+北京移动
+traceroute to 221.179.155.161 (221.179.155.161), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.82.4.46  0.39 ms  *  LAN Address
+ 3  138.197.250.90  0.56 ms  *  Netherlands, North Holland, Amsterdam, digitalocean.com
+ 4  138.197.250.88  0.59 ms  *  Netherlands, North Holland, Amsterdam, digitalocean.com
+ 5  adm-b3-link.ip.twelve99.net (213.248.81.74)  1.03 ms  AS1299  Netherlands, North Holland, Amsterdam, telia.com
+ 6  adm-bb1-link.ip.twelve99.net (62.115.136.220)  2.12 ms  AS1299  Netherlands, North Holland, Amsterdam, telia.com
+ 7  ldn-bb1-link.ip.twelve99.net (213.155.136.98)  9.56 ms  AS1299  United Kingdom, London, telia.com
+ 8  nyk-bb2-link.ip.twelve99.net (62.115.113.20)  91.33 ms  AS1299  United States, New York, New York City, telia.com
+ 9  sjo-b23-link.ip.twelve99.net (62.115.119.229)  159.34 ms  AS1299  United States, California, San Jose, telia.com
+10  chinamobile-ic-342121.ip.twelve99-cust.net (62.115.171.215)  159.81 ms  AS1299  United States, California, San Jose, telia.com
+11  223.120.6.225  168.82 ms  AS58453  United States, ChinaMobile
+12  223.120.12.34  291.17 ms  AS58453  China, Beijing, ChinaMobile
+13  221.183.55.106  291.31 ms  AS9808  China, Beijing, ChinaMobile
+14  221.183.46.250  291.40 ms  AS9808  China, Beijing, ChinaMobile
+15  221.183.89.98  293.21 ms  AS9808  China, Beijing, ChinaMobile
+16  221.183.46.174  293.55 ms  AS9808  China, Beijing, ChinaMobile
+17  *
+18  cachedns03.bj.chinamobile.com (221.179.155.161)  295.83 ms  AS56048  China, Beijing, ChinaMobile
+
+----------------------------------------------------------------------
+上海移动
+traceroute to 211.136.112.200 (211.136.112.200), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.82.4.46  1.00 ms  *  LAN Address
+ 3  138.197.250.120  0.91 ms  *  Netherlands, North Holland, Amsterdam, digitalocean.com
+ 4  138.197.250.74  0.54 ms  *  Netherlands, North Holland, Amsterdam, digitalocean.com
+ 5  adm-b3-link.ip.twelve99.net (213.248.68.168)  1.32 ms  AS1299  Netherlands, North Holland, Amsterdam, telia.com
+ 6  adm-bb1-link.ip.twelve99.net (62.115.136.220)  1.99 ms  AS1299  Netherlands, North Holland, Amsterdam, telia.com
+ 7  ldn-bb1-link.ip.twelve99.net (213.155.136.98)  9.47 ms  AS1299  United Kingdom, London, telia.com
+ 8  ldn-b3-link.ip.twelve99.net (62.115.120.75)  10.07 ms  AS1299  United Kingdom, London, telia.com
+ 9  chinamobile-ic-311724.ip.twelve99-cust.net (62.115.12.242)  8.26 ms  AS1299  United Kingdom, London, telia.com
+10  223.120.15.90  233.46 ms  AS58453  China, Shanghai, ChinaMobile
+11  221.183.89.178  233.20 ms  AS9808  China, Shanghai, ChinaMobile
+12  221.183.89.33  229.86 ms  AS9808  China, Shanghai, ChinaMobile
+13  *
+14  *
+15  221.181.125.178  234.84 ms  AS24400  China, Shanghai, ChinaMobile
+16  211.136.112.252  231.52 ms  AS24400  China, Shanghai, ChinaMobile
+17  211.136.112.200  235.89 ms  AS24400  China, Shanghai, ChinaMobile
+
+----------------------------------------------------------------------
+深圳移动
+traceroute to 120.196.165.24 (120.196.165.24), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.82.4.48  0.31 ms  *  LAN Address
+ 3  138.197.250.120  0.51 ms  *  Netherlands, North Holland, Amsterdam, digitalocean.com
+ 4  138.197.250.74  0.90 ms  *  Netherlands, North Holland, Amsterdam, digitalocean.com
+ 5  adm-b3-link.ip.twelve99.net (213.248.68.168)  0.96 ms  AS1299  Netherlands, North Holland, Amsterdam, telia.com
+ 6  adm-bb1-link.ip.twelve99.net (62.115.136.220)  0.99 ms  AS1299  Netherlands, North Holland, Amsterdam, telia.com
+ 7  ldn-bb1-link.ip.twelve99.net (213.155.136.98)  9.67 ms  AS1299  United Kingdom, London, telia.com
+ 8  ldn-b3-link.ip.twelve99.net (62.115.120.75)  7.96 ms  AS1299  United Kingdom, London, telia.com
+ 9  chinamobile-ic-311724.ip.twelve99-cust.net (62.115.12.242)  8.75 ms  AS1299  United Kingdom, London, telia.com
+10  223.120.15.58  202.68 ms  AS58453  China, Guangdong, Guangzhou, ChinaMobile
+11  221.183.68.125  218.91 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+12  221.183.92.17  201.77 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+13  *
+14  221.183.71.82  219.90 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+15  221.183.110.170  223.27 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+16  ns6.gd.cnmobile.net (120.196.165.24)  205.81 ms  AS56040  China, Guangdong, Shenzhen, ChinaMobile
+
+----------------------------------------------------------------------
+成都教育网
+traceroute to 202.112.14.151 (202.112.14.151), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.82.4.36  0.40 ms  *  LAN Address
+ 3  138.197.250.104  0.50 ms  *  Netherlands, North Holland, Amsterdam, digitalocean.com
+ 4  138.197.250.76  1.18 ms  *  Netherlands, North Holland, Amsterdam, digitalocean.com
+ 5  138.197.244.86  19.69 ms  *  Germany, Hesse, Frankfurt, digitalocean.com
+ 6  *
+ 7  223.118.18.46  18.64 ms  AS58453  Germany, Hesse, Frankfurt, ChinaMobile
+ 8  *
+ 9  223.120.2.42  288.53 ms  AS58453  China, Hong Kong, ChinaMobile
+10  223.120.3.86  291.41 ms  AS58453  China, Hong Kong, ChinaMobile
+11  223.119.81.94  274.20 ms  AS58453  China, Hong Kong, ChinaMobile
+12  101.4.114.221  345.07 ms  AS4538  China, Beijing, CHINAEDU
+13  101.4.116.217  346.05 ms  AS4538  China, Beijing, CHINAEDU
+14  *
+15  *
+16  101.4.112.2  347.48 ms  AS4538  China, Henan, Zhengzhou, CHINAEDU
+17  101.4.117.37  373.23 ms  AS4538  China, Hubei, Wuhan, CHINAEDU
+18  101.4.112.29  377.76 ms  AS4538  China, Chongqing, CHINAEDU
+19  *
+20  101.4.112.194  379.32 ms  AS4538  China, Ningxia, Yinchuan, CHINAEDU
+21  *
+22  *
+23  *
+24  *
+25  *
+26  202.112.14.151  386.55 ms  AS24355  China, Sichuan, Chengdu, CHINAEDU
+
+----------------------------------------------------------------------
