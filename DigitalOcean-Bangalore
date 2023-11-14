@@ -1,0 +1,452 @@
+测评频道: https://t.me/vps_reviews                    
+版本：2023.11.07
+更新日志：VPS融合怪测试(集百家之长)                       
+---------------------基础信息查询--感谢所有开源项目---------------------
+ CPU 型号          : DO-Regular
+ CPU 核心数        : 1
+ CPU 频率          : 1996.247 MHz
+ CPU 缓存          : L1: 32.00 KB / L2: 512.00 KB / L3: 16.00 MB
+ 硬盘空间          : 1.65 GiB / 24.05 GiB
+ 启动盘路径        : /dev/vda1
+ 内存              : 258.35 MiB / 969.45 MiB
+ Swap              : [ no swap partition or swap file detected ]
+ 系统在线时间      : 0 days, 0 hour 4 min
+ 负载              : 0.32, 0.23, 0.11
+ 系统              : Ubuntu 22.04.2 LTS (x86_64)
+ AES-NI指令集      : ✔ Enabled
+ VM-x/AMD-V支持    : ✔ Enabled
+ 架构              : x86_64 (64 Bit)
+ 内核              : 5.15.0-67-generic
+ TCP加速方式       : cubic
+ 虚拟化架构        : KVM
+ NAT类型           : 开放型
+ IPV4 ASN          : AS14061 DigitalOcean, LLC
+ IPV4 位置         : Doddaballapura / Karnataka / IN
+ IPV6 ASN          : AS14061 Digital Ocean
+ IPV6 位置         : Bengaluru / Karnataka
+---------------------CPU测试--感谢lemonbench开源------------------------
+ -> CPU 测试中 (Fast Mode, 1-Pass @ 5sec)
+ 1 线程测试(1核)得分: 		1489 Scores
+---------------------内存测试--感谢lemonbench开源-----------------------
+ -> 内存测试 Test (Fast Mode, 1-Pass @ 5sec)
+ 单线程读测试:		37935.43 MB/s
+ 单线程写测试:		17547.82 MB/s
+------------------磁盘dd读写测试--感谢lemonbench开源--------------------
+ -> 磁盘IO测试中 (4K Block/1M Block, Direct Mode)
+ 测试操作		写速度					读速度
+ 100MB-4K Block		19.9 MB/s (4858 IOPS, 5.27s)		46.8 MB/s (11419 IOPS, 2.24s)
+ 1GB-1M Block		389 MB/s (371 IOPS, 2.70s)		985 MB/s (939 IOPS, 1.06s)
+---------------------磁盘fio读写测试--感谢yabs开源----------------------
+Block Size | 4k            (IOPS) | 64k           (IOPS)
+  ------   | ---            ----  | ----           ---- 
+Read       | 130.01 MB/s  (32.5k) | 963.89 MB/s  (15.0k)
+Write      | 130.35 MB/s  (32.5k) | 968.96 MB/s  (15.1k)
+Total      | 260.36 MB/s  (65.0k) | 1.93 GB/s    (30.2k)           |                      |                     
+Block Size | 512k          (IOPS) | 1m            (IOPS)
+  ------   | ---            ----  | ----           ---- 
+Read       | 1.15 GB/s     (2.2k) | 1.11 GB/s     (1.0k)
+Write      | 1.21 GB/s     (2.3k) | 1.19 GB/s     (1.1k)
+Total      | 2.37 GB/s     (4.6k) | 2.30 GB/s     (2.2k)
+---------------------流媒体解锁--感谢sjlleo开源-------------------------
+以下测试的解锁地区是准确的，但是不是完整解锁的判断可能有误，这方面仅作参考使用
+----------------Youtube----------------
+[IPv4]
+连接方式: Google Global CacheCDN (ISP Cooperation)
+ISP运营商: BHARTI
+视频缓存节点地域: 印度 班加罗尔(BLR6)
+Youtube识别地域: 印度(IN)
+[IPv6]
+连接方式: Youtube Video Server
+视频缓存节点地域: 印度 马德拉斯(MAA05S27)
+Youtube识别地域: 印度(IN)
+----------------Netflix----------------
+[IPv4]
+您的出口IP可以使用Netflix，但仅可看Netflix自制剧
+NF所识别的IP地域信息：印度
+[IPv6]
+您的出口IP可以使用Netflix，但仅可看Netflix自制剧
+NF所识别的IP地域信息：印度
+---------------DisneyPlus---------------
+[IPv4]
+当前IPv4出口所在地区即将开通DisneyPlus，尽请期待哦！
+[IPv6]
+当前IPv6出口所在地区即将开通DisneyPlus，尽请期待哦！
+解锁Youtube，Netflix，DisneyPlus上面和下面进行比较，不同之处自行判断
+----------------流媒体解锁--感谢RegionRestrictionCheck开源--------------
+ 以下为IPV4网络测试，若无IPV4网络则无输出
+============[ Multination ]============
+ Dazn:					Yes (Region: IN)
+ HotStar:				No
+ Disney+:				No
+ Netflix:				Originals Only
+ YouTube Premium:			Yes (Region: IN)
+ Amazon Prime Video:			Yes (Region: IN)
+ TVBAnywhere+:				Yes
+ iQyi Oversea Region:			IN
+ Viu.com:				No
+ YouTube CDN:				BHARTI in Bangalore 
+ Netflix Preferred CDN:			Associated with [Airtel] in [Bangalore ]
+ Spotify Registration:			Yes (Region: IN)
+ Steam Currency:			INR
+ ChatGPT:				Yes
+=======================================
+ 以下为IPV6网络测试，若无IPV6网络则无输出
+============[ Multination ]============
+ Dazn:					Failed (Network Connection)
+ HotStar:				No
+ Disney+:				Available For [Disney+ IN] Soon
+ Netflix:				Originals Only
+ YouTube Premium:			Yes (Region: IN)
+ Amazon Prime Video:			Unsupported
+ TVBAnywhere+:				Failed (Network Connection)
+ iQyi Oversea Region:			Failed
+ Viu.com:				Failed
+ YouTube CDN:				Chennai (Madras) 
+ Netflix Preferred CDN:			Associated with [Airtel] in [Bangalore ]
+ Spotify Registration:			Yes (Region: IN)
+ Steam Currency:			Failed (Network Connection)
+ ChatGPT:				Yes
+=======================================
+---------------TikTok解锁--感谢lmc999的源脚本及fscarmen PR--------------
+ Tiktok Region:		Failed
+-------------------欺诈分数以及IP质量检测--本脚本原创-------------------
+数据仅作参考，不代表100%准确，如果和实际情况不一致请手动查询多个数据库比对
+以下为各数据库编号，输出结果后将自带数据库来源对应的编号
+ipinfo数据库 ①  | scamalytics数据库 ②  | virustotal数据库 ③  | abuseipdb数据库 ④  | ip2location数据库   ⑤
+ip-api数据库 ⑥  | ipwhois数据库     ⑦  | ipregistry数据库 ⑧  | ipdata数据库    ⑨  | ipgeolocation数据库 ⑩
+欺诈分数(越低越好): 28②
+abuse得分(越低越好): 3④
+IP类型: 
+  使用类型(usage_type):hosting①  Data Center/Web Hosting/Transit⑤  hosting⑧  hosting⑨  
+  公司类型(company_type):hosting①  hosting⑧  
+  云服务提供商(cloud_provider):  Yes⑧ 
+  数据中心(datacenter):  Yes② ⑥ ⑨ 
+  移动网络(mobile):  No⑥ 
+  代理(proxy):  No① ② ⑥ ⑦ ⑧ ⑨ ⑩ 
+  VPN(vpn):  No① ② ⑦ ⑧ 
+  TOR(tor):  No① ② ⑦ ⑧ ⑨ 
+  TOR出口(tor_exit):  No⑧ 
+  搜索引擎机器人(search_engine_robot):  No② 
+  匿名代理(anonymous):  No⑦ ⑧ ⑨ 
+  攻击方(attacker):  No⑧ ⑨ 
+  滥用者(abuser):  No⑧ ⑨ 
+  威胁(threat):  No⑧ ⑨ 
+  iCloud中继(icloud_relay):  No① ⑧ ⑨ 
+  未分配IP(bogon):  No⑧ ⑨ 
+黑名单记录统计(有多少个黑名单网站有记录): 无害0 恶意0 可疑0 未检测88 ③
+Google搜索可行性：NO
+端口25检测:
+  本地: No
+  163邮箱：No
+------以下为IPV6检测------
+欺诈分数(越低越好): 33②
+abuse得分(越低越好): 0④
+IP类型: Data Center/Web Hosting/Transit⑤
+----------------三网回程--感谢zhanghanyun/backtrace开源-----------------
+国家: IN 城市: Doddaballapura 服务商: AS14061 DigitalOcean, LLC
+北京电信 219.141.136.12  测试超时
+北京联通 202.106.50.1    联通4837[普通线路]           
+北京移动 221.179.155.161 移动CMI [普通线路]           
+上海电信 202.96.209.133  电信163 [普通线路]           
+上海联通 210.22.97.1     联通4837[普通线路]           
+上海移动 211.136.112.200 移动CMI [普通线路]           
+广州电信 58.60.188.222   测试超时
+广州联通 210.21.196.6    联通4837[普通线路]           
+广州移动 120.196.165.24  移动CMI [普通线路]           
+成都电信 61.139.2.69     电信163 [普通线路]           
+成都联通 119.6.6.6       联通4837[普通线路]           
+成都移动 211.137.96.205  移动CMI [普通线路]           
+---------------------回程路由--感谢fscarmen开源及PR---------------------
+依次测试电信/联通/移动经过的地区及线路，核心程序来自ipip.net或nexttrace，请知悉!
+广州电信 58.60.188.222
+4.85 ms 	* RFC1918
+0.62 ms 	* [DIGITALOCEAN-143] 印度 卡纳塔克邦 班加罗尔
+0.67 ms 	* 印度 卡纳塔克邦 班加罗尔
+0.76 ms 	AS14061 印度 卡纳塔克邦 班加罗尔 digitalocean.com
+* ms 	AS4755 [TATACOMM-IN] 印度 卡纳塔克邦 班加罗尔 tatacommunications.com
+6.29 ms 	AS6453 [TATA-COMMUNICATIONS] 印度 泰米尔纳德邦 钦奈 tatacommunications.com
+313.07 ms 	AS6453 [TATA-COMMUNICATIONS] 日本 东京都 东京 tatacommunications.com
+116.79 ms 	AS6453 [TATA-COMMUNICATIONS] 日本 千叶县 千叶 tatacommunications.com
+* ms 	AS6453 [APNIC-AP] 日本 千叶县 千叶 tatacommunications.com
+213.54 ms 	AS6453 [TATAC-ARIN] 美国 加利福尼亚州 圣克拉拉 tatacommunications.com
+210.08 ms 	AS6453 美国 加利福尼亚州 圣何塞 tatacommunications.com
+215.50 ms 	AS4134 [CHINANET-US] 美国 加利福尼亚州 圣何塞 CT-Tata-PoP chinatelecom.com.cn 电信
+* ms 	AS4134 [CHINANET-BB] 中国 广东省 广州市 chinatelecom.com.cn 电信
+* ms 	AS4134 [CHINANET-BB] 中国 广东省 广州市 chinatelecom.com.cn 电信
+267.84 ms 	AS134774 [CHINANET-GD] 中国 广东省 深圳市 chinatelecom.cn 电信
+274.24 ms 	AS4134 中国 广东省 深圳市 福田区 chinatelecom.com.cn 电信
+广州联通 210.21.196.6
+1.10 ms 	* RFC1918
+1.00 ms 	* [DIGITALOCEAN-143] 印度 卡纳塔克邦 班加罗尔
+1.02 ms 	* 印度 卡纳塔克邦 班加罗尔
+0.70 ms 	AS14061 印度 卡纳塔克邦 班加罗尔 digitalocean.com
+2.41 ms 	AS9498 [BHARTI-IN] 印度 卡纳塔克邦 班加罗尔 Airtel.in
+117.74 ms 	AS9498 [BHARTITELESONIC] 法国 普罗旺斯-阿尔卑斯-蔚蓝海岸大区 马赛 Airtel.in
+182.99 ms 	AS4837 [CU169-BACKBONE] 中国 广东省 广州市 chinaunicom.cn 联通
+177.84 ms 	AS4837 [CU169-BACKBONE] 中国 广东省 广州市 chinaunicom.cn 联通
+179.53 ms 	AS4837 [CU169-BACKBONE] 中国 广东省 广州市 chinaunicom.cn 联通
+182.36 ms 	AS17816 [UNICOM-GD] 中国 广东省 深圳市 chinaunicom.cn 联通
+186.75 ms 	AS17623 [APNIC-AP] 中国 广东省 深圳市 chinaunicom.cn 联通
+181.60 ms 	AS17623 [APNIC-AP] 中国 广东省 深圳市 宝安区 chinaunicom.cn 联通
+广州移动 120.196.165.24
+1.01 ms 	* RFC1918
+1.33 ms 	* [DIGITALOCEAN-143] 印度 卡纳塔克邦 班加罗尔
+1.37 ms 	* 印度 卡纳塔克邦 班加罗尔
+0.52 ms 	AS14061 印度 卡纳塔克邦 班加罗尔 digitalocean.com
+1.98 ms 	AS9498 [BHARTI-IN] 印度 卡纳塔克邦 班加罗尔 Airtel.in
+153.17 ms 	AS9498 [BHARTITELESONIC] 印度 马哈拉施特拉邦 孟买 Airtel.in
+300.02 ms 	AS58453 [CMI-INT] 中国 广东省 广州市 cmi.chinamobile.com 移动
+284.87 ms 	AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+309.43 ms 	AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+266.23 ms 	AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+301.41 ms 	AS9808 [CMNET] 中国 北京市 chinamobile.com 移动
+300.36 ms 	AS56040 [APNIC-AP] 中国 广东省 深圳市 chinamobile.com 移动
+--------------------自动更新测速节点列表--本脚本原创--------------------
+位置		 上传速度	 下载速度	 延迟	  丢包率
+Speedtest.net	 1995.75 Mbps	 115.98 Mbps	 1.25	  NULL
+中国香港	 132.52 Mbps	 3592.30 Mbps	 394.52	  NULL
+日本东京	 659.08 Mbps	 473.90 Mbps	 117.61	  0.0%
+联通海南	 910.71 Mbps	 3454.71 Mbps	 93.00	  NULL
+联通郑州5G	 630.00 Mbps	 674.10 Mbps	 148.92	  NULL
+电信重庆	 0.44 Mbps	 0.29 Mbps	 398.19	  0.0%
+移动硬核通信	 22.71 Mbps	 9.04 Mbps	 297.57	  NULL
+------------------------------------------------------------------------
+ 总共花费      : 6 分 15 秒
+ 时间          : Tue Nov 14 05:13:32 UTC 2023
+------------------------------------------------------------------------
+
+----------------------------------------------------------------------
+北京电信
+traceroute to 219.141.147.210 (219.141.147.210), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.66.6.237  1.00 ms  *  LAN Address
+ 3  143.198.252.66  1.12 ms  *  India, Karnataka, Bangalore, digitalocean.com
+ 4  143.244.192.16  1.02 ms  *  United States, digitalocean.com
+ 5  143.244.225.132  1.31 ms  AS14061  DIGITALOCEAN.COM 骨干网, digitalocean.com
+ 6  *
+ 7  *
+ 8  ix-ae-4-2.tcore2.cxr-chennai.as6453.net (180.87.37.1)  6.71 ms  AS6453  India, Tamil Nadu, Chennai, tatacommunications.com
+ 9  *
+10  if-ae-36-786.tcore2.tv2-tokyo.as6453.net (180.87.15.17)  212.77 ms  AS6453  Japan, Tokyo, tatacommunications.com
+11  if-et-24-2.hcore2.kv8-chiba.as6453.net (180.87.181.73)  114.60 ms  AS6453  Japan, Chiba, tatacommunications.com
+12  if-et-1-2.hcore1.kv8-chiba.as6453.net (120.29.211.2)  110.30 ms  AS6453  Japan, Chiba, tatacommunications.com
+13  if-ae-28-2.tcore2.sv1-santaclara.as6453.net (209.58.86.200)  212.80 ms  AS6453  United States, California, Santa Clara, tatacommunications.com
+14  *
+15  if-ae-1-2.tcore2.sqn-sanjose.as6453.net (63.243.205.2)  209.86 ms  AS6453  United States, California, San Jose, tatacommunications.com
+16  218.30.54.244  217.17 ms  AS4134  United States, California, San Jose, ChinaTelecom
+17  *
+18  *
+19  *
+20  *
+21  *
+22  *
+23  *
+24  *
+25  *
+26  *
+27  *
+28  *
+29  *
+30  *
+
+----------------------------------------------------------------------
+上海电信
+traceroute to 202.96.209.133 (202.96.209.133), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.66.7.21  1.16 ms  *  LAN Address
+ 3  143.198.252.90  1.01 ms  *  India, Karnataka, Bangalore, digitalocean.com
+ 4  143.244.192.14  1.22 ms  *  United States, digitalocean.com
+ 5  143.244.225.130  0.99 ms  AS14061  DIGITALOCEAN.COM 骨干网, digitalocean.com
+ 6  dsl-tn-189.97.246.61.airtelbroadband.in (61.246.97.189)  2.26 ms  AS9498  India, Karnataka, Bangalore, airtel.com
+ 7  116.119.73.100  135.80 ms  AS9498  United Kingdom, London, airtel.com
+ 8  *
+ 9  be2054.ccr42.lon13.atlas.cogentco.com (130.117.48.205)  140.17 ms  AS174  United Kingdom, London, cogentco.com
+10  be2382.rcr21.b015533-1.lon13.atlas.cogentco.com (154.54.61.162)  135.92 ms  AS174  United Kingdom, London, cogentco.com
+11  chinatelecom.demarc.cogentco.com (149.14.81.226)  140.24 ms  AS174  United Kingdom, London, cogentco.com
+12  202.97.70.33  259.80 ms  AS4134  China, Shanghai, ChinaTelecom
+13  *
+14  *
+15  61.152.25.121  264.45 ms  AS4812  China, Shanghai, ChinaTelecom
+16  124.74.229.234  252.53 ms  AS4812  China, Shanghai, ChinaTelecom
+17  ns-pd.online.sh.cn (202.96.209.133)  257.79 ms  AS4812  China, Shanghai, ChinaTelecom
+
+----------------------------------------------------------------------
+深圳电信
+traceroute to 58.60.188.222 (58.60.188.222), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.66.6.247  1.09 ms  *  LAN Address
+ 3  143.198.252.82  1.15 ms  *  India, Karnataka, Bangalore, digitalocean.com
+ 4  143.244.192.12  1.01 ms  *  United States, digitalocean.com
+ 5  143.244.225.130  1.23 ms  AS14061  DIGITALOCEAN.COM 骨干网, digitalocean.com
+ 6  *
+ 7  *
+ 8  ix-ae-4-2.tcore2.cxr-chennai.as6453.net (180.87.37.1)  6.19 ms  AS6453  India, Tamil Nadu, Chennai, tatacommunications.com
+ 9  *
+10  if-ae-36-786.tcore2.tv2-tokyo.as6453.net (180.87.15.17)  213.75 ms  AS6453  Japan, Tokyo, tatacommunications.com
+11  if-et-24-4.hcore2.kv8-chiba.as6453.net (180.87.181.27)  116.60 ms  AS6453  Japan, Chiba, tatacommunications.com
+12  *
+13  *
+14  *
+15  if-ae-1-2.tcore2.sqn-sanjose.as6453.net (63.243.205.2)  209.80 ms  AS6453  United States, California, San Jose, tatacommunications.com
+16  218.30.54.244  218.14 ms  AS4134  United States, California, San Jose, ChinaTelecom
+17  *
+18  202.97.94.97  264.01 ms  AS4134  China, Guangdong, Guangzhou, ChinaTelecom
+19  *
+20  14.147.127.78  274.47 ms  AS4134  China, Guangdong, Shenzhen, ChinaTelecom
+21  *
+22  58.60.188.222  273.90 ms  AS4134  China, Guangdong, Shenzhen, ChinaTelecom
+
+----------------------------------------------------------------------
+北京联通
+traceroute to 202.106.50.1 (202.106.50.1), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.66.7.7  1.25 ms  *  LAN Address
+ 3  143.198.252.90  0.51 ms  *  India, Karnataka, Bangalore, digitalocean.com
+ 4  143.244.192.22  0.64 ms  *  United States, digitalocean.com
+ 5  143.244.225.132  0.62 ms  AS14061  DIGITALOCEAN.COM 骨干网, digitalocean.com
+ 6  dsl-tn-189.97.246.61.airtelbroadband.in (61.246.97.189)  1.51 ms  AS9498  India, Karnataka, Bangalore, airtel.com
+ 7  116.119.68.58  135.28 ms  AS9498  United Kingdom, London, airtel.com
+ 8  be6391.rcr21.b015591-1.lon13.atlas.cogentco.com (149.14.224.161)  147.78 ms  AS174  United Kingdom, London, cogentco.com
+ 9  be2053.ccr41.lon13.atlas.cogentco.com (130.117.2.65)  142.20 ms  AS174  United Kingdom, London, cogentco.com
+10  be12194.ccr41.ams03.atlas.cogentco.com (154.54.56.94)  140.90 ms  AS174  Netherlands, North Holland, Amsterdam, cogentco.com
+11  be2813.ccr41.fra03.atlas.cogentco.com (130.117.0.122)  150.03 ms  AS174  Germany, Hesse, Frankfurt, cogentco.com
+12  be3186.agr41.fra03.atlas.cogentco.com (130.117.0.2)  137.59 ms  AS174  Germany, Hesse, Frankfurt, cogentco.com
+13  *
+14  219.158.98.137  230.47 ms  AS4837  China, Beijing, ChinaUnicom
+15  219.158.16.77  228.83 ms  AS4837  China, Beijing, ChinaUnicom
+16  *
+17  *
+18  202.106.50.1  229.51 ms  AS4808  China, Beijing, ChinaUnicom
+
+----------------------------------------------------------------------
+上海联通
+traceroute to 210.22.97.1 (210.22.97.1), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.66.7.17  1.00 ms  *  LAN Address
+ 3  143.198.252.90  0.58 ms  *  India, Karnataka, Bangalore, digitalocean.com
+ 4  143.244.192.14  0.61 ms  *  United States, digitalocean.com
+ 5  143.244.225.130  0.59 ms  AS14061  DIGITALOCEAN.COM 骨干网, digitalocean.com
+ 6  115.117.125.253.static-mumbai.vsnl.net.in (115.117.125.253)  1.95 ms  AS4755  India, Maharashtra, Mumbai, tatacommunications.com
+ 7  *
+ 8  *
+ 9  *
+10  219.158.100.29  82.61 ms  AS4837  China, Guangdong, Guangzhou, ChinaUnicom
+11  219.158.97.26  76.15 ms  AS4837  China, Guangdong, Guangzhou, ChinaUnicom
+12  *
+13  *
+14  *
+15  112.64.250.202  153.34 ms  AS17621  China, Shanghai, ChinaUnicom
+16  210.22.97.1  152.48 ms  AS17621  China, Shanghai, ChinaUnicom
+
+----------------------------------------------------------------------
+深圳联通
+traceroute to 210.21.196.6 (210.21.196.6), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.66.7.5  1.24 ms  *  LAN Address
+ 3  143.198.252.66  1.13 ms  *  India, Karnataka, Bangalore, digitalocean.com
+ 4  143.244.192.16  0.78 ms  *  United States, digitalocean.com
+ 5  143.244.225.132  0.54 ms  AS14061  DIGITALOCEAN.COM 骨干网, digitalocean.com
+ 6  dsl-tn-189.97.246.61.airtelbroadband.in (61.246.97.189)  2.11 ms  AS9498  India, Karnataka, Bangalore, airtel.com
+ 7  116.119.57.88  116.96 ms  AS9498  France, Provence-Alpes-Cote d'Azur, Marseille, airtel.com
+ 8  ix-be-22.ecore4.emrs2-marseille.as6453.net (80.231.200.0)  115.08 ms  AS6453  France, Provence-Alpes-Cote d'Azur, Marseille, tatacommunications.com
+ 9  *
+10  *
+11  *
+12  219.158.111.122  178.00 ms  AS4837  China, Guangdong, Guangzhou, ChinaUnicom
+13  219.158.4.125  184.08 ms  AS4837  China, Guangdong, Guangzhou, ChinaUnicom
+14  *
+15  157.18.0.154  182.87 ms  AS17816  China, Guangdong, Shenzhen, ChinaUnicom
+16  120.80.144.34  190.70 ms  AS17623  China, Guangdong, Shenzhen, ChinaUnicom
+17  dns2-ftcg.gdsz.cncnet.net (210.21.196.6)  181.56 ms  AS17623  China, Guangdong, Shenzhen, ChinaUnicom
+
+----------------------------------------------------------------------
+北京移动
+traceroute to 221.179.155.161 (221.179.155.161), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.66.6.247  1.17 ms  *  LAN Address
+ 3  143.198.252.74  1.10 ms  *  India, Karnataka, Bangalore, digitalocean.com
+ 4  143.244.192.10  0.57 ms  *  United States, digitalocean.com
+ 5  143.244.225.126  0.56 ms  AS14061  DIGITALOCEAN.COM 骨干网, digitalocean.com
+ 6  182.79.27.225  2.11 ms  AS9498  India, Karnataka, Bangalore, airtel.com
+ 7  116.119.106.116  156.97 ms  AS9498  United Kingdom, London, airtel.com
+ 8  *
+ 9  223.120.22.18  346.98 ms  AS58453  China, Beijing, ChinaMobile
+10  221.183.55.110  344.31 ms  AS9808  China, Beijing, ChinaMobile
+11  221.183.25.201  333.35 ms  AS9808  China, Beijing, ChinaMobile
+12  *
+13  221.183.46.174  300.82 ms  AS9808  China, Beijing, ChinaMobile
+14  221.183.130.134  310.75 ms  AS9808  China, Beijing, ChinaMobile
+15  cachedns03.bj.chinamobile.com (221.179.155.161)  316.56 ms  AS56048  China, Beijing, ChinaMobile
+
+----------------------------------------------------------------------
+上海移动
+traceroute to 211.136.112.200 (211.136.112.200), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.66.6.245  0.59 ms  *  LAN Address
+ 3  143.198.252.82  0.63 ms  *  India, Karnataka, Bangalore, digitalocean.com
+ 4  143.244.192.12  0.52 ms  *  United States, digitalocean.com
+ 5  143.244.225.126  0.51 ms  AS14061  DIGITALOCEAN.COM 骨干网, digitalocean.com
+ 6  182.79.27.225  1.59 ms  AS9498  India, Karnataka, Bangalore, airtel.com
+ 7  116.119.57.84  118.52 ms  AS9498  France, Provence-Alpes-Cote d'Azur, Marseille, airtel.com
+ 8  *
+ 9  *
+10  223.120.10.145  141.04 ms  AS58453  Germany, Hesse, Frankfurt, ChinaMobile
+11  *
+12  *
+13  221.183.89.69  235.94 ms  AS9808  China, Shanghai, ChinaMobile
+14  *
+15  *
+16  221.181.125.138  249.42 ms  AS24400  China, Shanghai, ChinaMobile
+17  211.136.112.252  235.24 ms  AS24400  China, Shanghai, ChinaMobile
+18  211.136.112.200  236.24 ms  AS24400  China, Shanghai, ChinaMobile
+
+----------------------------------------------------------------------
+深圳移动
+traceroute to 120.196.165.24 (120.196.165.24), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.66.7.5  1.13 ms  *  LAN Address
+ 3  143.198.252.90  0.52 ms  *  India, Karnataka, Bangalore, digitalocean.com
+ 4  143.244.192.22  0.53 ms  *  United States, digitalocean.com
+ 5  143.244.225.128  0.48 ms  AS14061  DIGITALOCEAN.COM 骨干网, digitalocean.com
+ 6  182.79.27.225  1.84 ms  AS9498  India, Karnataka, Bangalore, airtel.com
+ 7  116.119.121.30  159.85 ms  AS9498  United Kingdom, London, airtel.com
+ 8  *
+ 9  223.120.15.46  300.34 ms  AS58453  China, Guangdong, Guangzhou, ChinaMobile
+10  221.183.55.58  318.18 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+11  221.183.92.21  323.25 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+12  *
+13  221.183.71.78  305.10 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+14  221.183.110.166  277.42 ms  AS9808  China, Guangdong, Guangzhou, ChinaMobile
+15  ns6.gd.cnmobile.net (120.196.165.24)  267.21 ms  AS56040  China, Guangdong, Shenzhen, ChinaMobile
+
+----------------------------------------------------------------------
+成都教育网
+traceroute to 202.112.14.151 (202.112.14.151), 30 hops max, 32 byte packets
+ 1  *
+ 2  10.66.6.237  1.18 ms  *  LAN Address
+ 3  143.198.252.90  0.51 ms  *  India, Karnataka, Bangalore, digitalocean.com
+ 4  143.244.192.22  0.41 ms  *  United States, digitalocean.com
+ 5  143.244.225.128  0.41 ms  AS14061  DIGITALOCEAN.COM 骨干网, digitalocean.com
+ 6  182.79.27.225  2.14 ms  AS9498  India, Karnataka, Bangalore, airtel.com
+ 7  182.79.245.6  234.06 ms  AS9498  United States, New York, New York City, airtel.com
+ 8  as6939.core1.nyc4.he.net (198.32.118.57)  242.20 ms  AS46887  United States, New York, New York City, equinix.com
+ 9  port-channel1.core2.nyc4.he.net (184.104.199.222)  224.51 ms  AS6939  United States, New York, New York City, he.net
+10  *
+11  *
+12  *
+13  erx-cernet-bkb-as4538.e0-25.switch7.lax2.he.net (216.218.244.106)  254.46 ms  AS6939  United States, California, Los Angeles, he.net
+14  101.4.117.185  257.01 ms  AS4538  United States, California, Los Angeles, CHINAEDU
+15  101.4.117.213  492.32 ms  AS4538  China, Beijing, CHINAEDU
+16  101.4.115.181  482.61 ms  AS4538  China, Beijing, CHINAEDU
+17  *
+18  *
+19  101.4.116.106  504.41 ms  AS4538  China, Hubei, Wuhan, CHINAEDU
+20  101.4.112.29  522.13 ms  AS4538  China, Chongqing, CHINAEDU
+21  *
+22  101.4.112.194  532.02 ms  AS4538  China, Ningxia, Yinchuan, CHINAEDU
+23  *
+24  *
+25  *
+26  202.112.14.151  527.98 ms  AS24355  China, Sichuan, Chengdu, CHINAEDU
+
+----------------------------------------------------------------------
