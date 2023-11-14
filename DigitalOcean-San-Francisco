@@ -1,0 +1,98 @@
+--------------------- A Bench Script By spiritlhl ----------------------
+                   测评频道: https://t.me/vps_reviews                    
+版本：2023.11.07
+更新日志：VPS融合怪测试(集百家之长)                       
+-------------------欺诈分数以及IP质量检测--本脚本原创-------------------
+数据仅作参考，不代表100%准确，如果和实际情况不一致请手动查询多个数据库比对
+以下为各数据库编号，输出结果后将自带数据库来源对应的编号
+ipinfo数据库 ①  | scamalytics数据库 ②  | virustotal数据库 ③  | abuseipdb数据库 ④  | ip2location数据库   ⑤
+ip-api数据库 ⑥  | ipwhois数据库     ⑦  | ipregistry数据库 ⑧  | ipdata数据库    ⑨  | ipgeolocation数据库 ⑩
+欺诈分数(越低越好): 28②
+abuse得分(越低越好): 0④
+IP类型: 
+  使用类型(usage_type):hosting①  Data Center/Web Hosting/Transit⑤  hosting⑧  business⑨  
+  公司类型(company_type):hosting①  hosting⑧  
+  云服务提供商(cloud_provider):  Yes⑧ 
+  数据中心(datacenter):  Yes② ⑥   No⑨ 
+  移动网络(mobile):  No⑥ 
+  代理(proxy):  No① ② ⑥ ⑦ ⑧   Yes⑨ ⑩ 
+  VPN(vpn):  No① ② ⑦ ⑧ 
+  TOR(tor):  No① ② ⑦ ⑧ ⑨ 
+  TOR出口(tor_exit):  No⑧ 
+  搜索引擎机器人(search_engine_robot):  No② 
+  匿名代理(anonymous):  No⑦ ⑧   Yes⑨ 
+  攻击方(attacker):  No⑧ ⑨ 
+  滥用者(abuser):  No⑧ ⑨ 
+  威胁(threat):  No⑧ ⑨ 
+  iCloud中继(icloud_relay):  No① ⑧ ⑨ 
+  未分配IP(bogon):  No⑧ ⑨ 
+黑名单记录统计(有多少个黑名单网站有记录): 无害0 恶意0 可疑0 未检测88 ③
+Google搜索可行性：NO
+端口25检测:
+  本地: No
+  163邮箱：No
+------以下为IPV6检测------
+欺诈分数(越低越好): 33②
+abuse得分(越低越好): 0④
+IP类型: Data Center/Web Hosting/Transit⑤
+----------------三网回程--感谢zhanghanyun/backtrace开源-----------------
+国家: US 城市: Santa Clara 服务商: AS14061 DigitalOcean, LLC
+北京电信 219.141.136.12  测试超时
+北京联通 202.106.50.1    联通4837[普通线路]           
+北京移动 221.179.155.161 移动CMI [普通线路]           
+上海电信 202.96.209.133  电信163 [普通线路]           
+上海联通 210.22.97.1     联通4837[普通线路]           
+上海移动 211.136.112.200 移动CMI [普通线路]           
+广州电信 58.60.188.222   电信163 [普通线路]           
+广州联通 210.21.196.6    联通4837[普通线路]           
+广州移动 120.196.165.24  移动CMI [普通线路]           
+成都电信 61.139.2.69     电信163 [普通线路]           
+成都联通 119.6.6.6       联通4837[普通线路]           
+成都移动 211.137.96.205  移动CMI [普通线路]           
+---------------------回程路由--感谢fscarmen开源及PR---------------------
+依次测试电信/联通/移动经过的地区及线路，核心程序来自ipip.net或nexttrace，请知悉!
+广州电信 58.60.188.222
+0.72 ms         * RFC1918
+1.00 ms         AS3356 美国 加利福尼亚州 圣何塞 level3.com
+2.44 ms         AS3356 美国 加利福尼亚州 圣何塞 Level3-CT-Peer level3.com
+152.84 ms       AS4134 [CHINANET-BB] 中国 广东省 广州市 chinatelecom.com.cn 电信
+355.64 ms       AS4134 [CHINANET-BB] 中国 广东省 广州市 chinatelecom.com.cn 电信
+159.18 ms       AS4134 [APNIC-AP] 中国 广东省 深圳市 chinatelecom.com.cn 电信
+158.87 ms       AS4134 中国 广东省 深圳市 福田区 chinatelecom.com.cn 电信
+广州联通 210.21.196.6
+0.87 ms         * RFC1918
+5.54 ms         AS3356 美国 加利福尼亚州 圣何塞 level3.com
+11.19 ms        AS3356 美国 加利福尼亚州 洛杉矶 level3.com
+217.14 ms       AS3356 美国 加利福尼亚州 洛杉矶 Level3-CU-Peer level3.com
+194.87 ms       AS4837 [CU169-BACKBONE] 中国 广东省 广州市 chinaunicom.cn 联通
+197.38 ms       AS4837 [CU169-BACKBONE] 中国 广东省 广州市 chinaunicom.cn 联通
+368.33 ms       AS4837 [CU169-BACKBONE] 中国 广东省 广州市 chinaunicom.cn 联通
+180.44 ms       AS17816 [APNIC-AP] 中国 广东省 深圳市 chinaunicom.cn 联通
+176.12 ms       AS17623 [APNIC-AP] 中国 广东省 深圳市 chinaunicom.cn 联通
+191.86 ms       AS17623 [APNIC-AP] 中国 广东省 深圳市 宝安区 chinaunicom.cn 联通
+广州移动 120.196.165.24
+1.04 ms         * RFC1918
+0.56 ms         AS3356 美国 加利福尼亚州 圣何塞 level3.com
+9.75 ms         AS3356 美国 加利福尼亚州 洛杉矶 level3.com
+10.94 ms        AS3356 美国 加利福尼亚州 洛杉矶 level3.com
+11.20 ms        AS58453 [CMI-INT] 美国 加利福尼亚州 洛杉矶 cmi.chinamobile.com 移动
+173.07 ms       AS58453 [CMI-INT] 中国 广东省 广州市 cmi.chinamobile.com 移动
+168.24 ms       AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+167.93 ms       AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+170.17 ms       AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+184.38 ms       AS9808 [CMNET] 中国 北京市 chinamobile.com 移动
+178.02 ms       AS56040 [APNIC-AP] 中国 广东省 深圳市 chinamobile.com 移动
+--------------------自动更新测速节点列表--本脚本原创--------------------
+位置             上传速度        下载速度        延迟     丢包率
+Speedtest.net    1994.48 Mbps    6388.34 Mbps    0.98     0.0%
+洛杉矶           144.18 Mbps     3402.45 Mbps    10.28    0.3%
+日本东京         603.58 Mbps     557.23 Mbps     105.91   0.0%
+联通郑州5G       630.18 Mbps     655.32 Mbps     179.47   NULL
+联通WuXi         68.65 Mbps      2021.40 Mbps    161.29   0.0%
+电信浙江         438.51 Mbps     1304.82 Mbps    143.79   NULL
+电信江苏5G       15.14 Mbps      3172.00 Mbps    151.66   0.0%
+移动硬核通信     403.36 Mbps     473.93 Mbps     178.44   NULL
+------------------------------------------------------------------------
+ 总共花费      : 4 分 54 秒
+ 时间          : Tue Nov 14 04:52:26 UTC 2023
+------------------------------------------------------------------------
