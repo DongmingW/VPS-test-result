@@ -1,0 +1,199 @@
+测评频道: https://t.me/vps_reviews                    
+版本：2023.11.07
+更新日志：VPS融合怪测试(集百家之长)                       
+---------------------基础信息查询--感谢所有开源项目---------------------
+ CPU 型号          : Neoverse-N1
+ CPU 核心数        : 4
+ CPU 缓存          : L1: 0.00 KB / L2: 0.00 KB / L3: 0.00 KB
+ 硬盘空间          : 7.68 GiB / 44.96 GiB
+ 启动盘路径        : /dev/sda1
+ 内存              : 322.47 MiB / 23.43 GiB
+ Swap              : [ no swap partition or swap file detected ]
+ 系统在线时间      : 0 days, 0 hour 1 min
+ 负载              : 0.74, 0.46, 0.18
+ 系统              : Ubuntu 22.04.3 LTS (aarch64)
+ AES-NI指令集      : ✔ Enabled
+ VM-x/AMD-V支持    : ❌ Disabled
+ 架构              : aarch64 (64 Bit)
+ 内核              : 5.15.0-1047-oracle
+ TCP加速方式       : bbr
+ 虚拟化架构        : KVM
+ NAT类型           : 独立映射,独立过滤,支持回环
+ IPV4 ASN          : AS31898 Oracle Corporation
+ IPV4 位置         : San Jose / California / US
+ IPV6 ASN          : AS31898 Oracle Cloud
+ IPV6 位置         : San Jose / California
+---------------------CPU测试--感谢lemonbench开源------------------------
+ -> CPU 测试中 (Fast Mode, 1-Pass @ 5sec)
+ 1 线程测试(1核)得分: 		3370 Scores
+ 4 线程测试(多核)得分: 		13276 Scores
+---------------------内存测试--感谢lemonbench开源-----------------------
+ -> 内存测试 Test (Fast Mode, 1-Pass @ 5sec)
+ 单线程读测试:		31346.94 MB/s
+ 单线程写测试:		14626.18 MB/s
+------------------磁盘dd读写测试--感谢lemonbench开源--------------------
+ -> 磁盘IO测试中 (4K Block/1M Block, Direct Mode)
+ 测试操作		写速度					读速度
+ 100MB-4K Block		10.0 MB/s (2431 IOPS, 10.53s)		11.7 MB/s (2866 IOPS, 8.93s)
+ 1GB-1M Block		55.1 MB/s (53 IOPS, 19.02s)		52.6 MB/s (50 IOPS, 19.95s)
+---------------------磁盘fio读写测试--感谢yabs开源----------------------
+Block Size | 4k            (IOPS) | 64k           (IOPS)
+ARM compatibility is considered *experimental*
+  ------   | ---            ----  | ----           ---- 
+Read       | 6.33 MB/s     (1.5k) | 27.39 MB/s     (427)
+Write      | 6.33 MB/s     (1.5k) | 28.20 MB/s     (440)
+Total      | 12.67 MB/s    (3.1k) | 55.59 MB/s     (867)           |                      |                     
+Block Size | 512k          (IOPS) | 1m            (IOPS)
+  ------   | ---            ----  | ----           ---- 
+Read       | 24.39 MB/s      (47) | 23.97 MB/s      (23)
+Write      | 26.48 MB/s      (51) | 26.75 MB/s      (26)
+Total      | 50.87 MB/s      (98) | 50.72 MB/s      (49)
+---------------------流媒体解锁--感谢sjlleo开源-------------------------
+以下测试的解锁地区是准确的，但是不是完整解锁的判断可能有误，这方面仅作参考使用
+----------------Youtube----------------
+[IPv4]
+连接方式: Youtube Video Server
+视频缓存节点地域: NUQ(NUQ04S38)
+Youtube识别地域: 无信息(null)
+[IPv6]
+连接方式: Youtube Video Server
+视频缓存节点地域: 美国  旧金山(SFO03S20)
+Youtube识别地域: 无信息(null)
+----------------Netflix----------------
+[IPv4]
+您的出口IP可以使用Netflix，但仅可看Netflix自制剧
+NF所识别的IP地域信息：美国
+[IPv6]
+您的出口IP可以使用Netflix，但仅可看Netflix自制剧
+NF所识别的IP地域信息：美国
+---------------DisneyPlus---------------
+[IPv4]
+当前IPv4出口解锁DisneyPlus
+区域：美国区
+[IPv6]
+当前IPv6出口解锁DisneyPlus
+区域：美国区
+解锁Youtube，Netflix，DisneyPlus上面和下面进行比较，不同之处自行判断
+----------------流媒体解锁--感谢RegionRestrictionCheck开源--------------
+ 以下为IPV4网络测试，若无IPV4网络则无输出
+============[ Multination ]============
+ Dazn:					Yes (Region: US)
+ HotStar:				No
+ Disney+:				No
+ Netflix:				Originals Only
+ YouTube Premium:			Yes
+ Amazon Prime Video:			Yes (Region: US)
+ TVBAnywhere+:				Yes
+ iQyi Oversea Region:			US
+ Viu.com:				No
+ YouTube CDN:				
+ Netflix Preferred CDN:			Los Angeles, CA  
+ Spotify Registration:			Yes (Region: US)
+ Steam Currency:			USD
+ ChatGPT:				Yes
+=======================================
+ 以下为IPV6网络测试，若无IPV6网络则无输出
+============[ Multination ]============
+ Dazn:					Failed (Network Connection)
+ HotStar:				Yes (Region: US)
+ Disney+:				Yes (Region: US)
+ Netflix:				Originals Only
+ YouTube Premium:			Yes
+ Amazon Prime Video:			Unsupported
+ TVBAnywhere+:				Failed (Network Connection)
+ iQyi Oversea Region:			Failed
+ Viu.com:				Failed
+ YouTube CDN:				San Francisco, CA 
+ Netflix Preferred CDN:			San Jose, CA  
+ Spotify Registration:			Yes (Region: US)
+ Steam Currency:			Failed (Network Connection)
+ ChatGPT:				Yes
+=======================================
+---------------TikTok解锁--感谢lmc999的源脚本及fscarmen PR--------------
+ Tiktok Region:		【US】
+-------------------欺诈分数以及IP质量检测--本脚本原创-------------------
+数据仅作参考，不代表100%准确，如果和实际情况不一致请手动查询多个数据库比对
+以下为各数据库编号，输出结果后将自带数据库来源对应的编号
+ipinfo数据库 ①  | scamalytics数据库 ②  | virustotal数据库 ③  | abuseipdb数据库 ④  | ip2location数据库   ⑤
+ip-api数据库 ⑥  | ipwhois数据库     ⑦  | ipregistry数据库 ⑧  | ipdata数据库    ⑨  | ipgeolocation数据库 ⑩
+欺诈分数(越低越好): 31②
+abuse得分(越低越好): 0④
+IP类型: 
+  使用类型(usage_type):business①  Data Center/Web Hosting/Transit⑤  business⑧  business⑨  
+  公司类型(company_type):business①  hosting⑧  
+  云服务提供商(cloud_provider):  Yes⑧ 
+  数据中心(datacenter):  Yes② ⑥   No⑨ 
+  移动网络(mobile):  No⑥ 
+  代理(proxy):  No① ② ⑥ ⑦ ⑧ ⑨ 
+  VPN(vpn):  No① ② ⑦ ⑧ 
+  TOR(tor):  No① ② ⑦ ⑧ ⑨ 
+  TOR出口(tor_exit):  No⑧ 
+  搜索引擎机器人(search_engine_robot):  No② 
+  匿名代理(anonymous):  No⑦ ⑧ ⑨ 
+  攻击方(attacker):  No⑧ ⑨ 
+  滥用者(abuser):  No⑧ ⑨ 
+  威胁(threat):  No⑧ ⑨ 
+  iCloud中继(icloud_relay):  No① ⑧ ⑨ 
+  未分配IP(bogon):  No⑧ ⑨ 
+黑名单记录统计(有多少个黑名单网站有记录): 无害0 恶意0 可疑0 未检测88 ③
+Google搜索可行性：YES
+端口25检测:
+  本地: No
+  163邮箱：No
+------以下为IPV6检测------
+欺诈分数(越低越好): 45②
+abuse得分(越低越好): 0④
+IP类型: Data Center/Web Hosting/Transit⑤
+----------------三网回程--感谢zhanghanyun/backtrace开源-----------------
+国家: US 城市: San Jose 服务商: AS31898 Oracle Corporation
+北京电信 219.141.136.12  电信163 [普通线路]           
+北京联通 202.106.50.1    联通4837[普通线路]           
+北京移动 221.179.155.161 移动CMI [普通线路]           
+上海电信 202.96.209.133  电信163 [普通线路]           
+上海联通 210.22.97.1     联通4837[普通线路]           
+上海移动 211.136.112.200 移动CMI [普通线路]           
+广州电信 58.60.188.222   电信163 [普通线路]           
+广州联通 210.21.196.6    联通4837[普通线路]           
+广州移动 120.196.165.24  移动CMI [普通线路]           
+成都电信 61.139.2.69     电信163 [普通线路]           
+成都联通 119.6.6.6       联通4837[普通线路]           
+成都移动 211.137.96.205  移动CMI [普通线路]           
+---------------------回程路由--感谢fscarmen开源及PR---------------------
+依次测试电信/联通/移动经过的地区及线路，核心程序来自ipip.net或nexttrace，请知悉!
+广州电信 58.60.188.222
+0.43 ms 	AS31898 [ORACLE-CLOUD] 美国 加利福尼亚州 圣何塞 cloud.oracle.com
+30.69 ms 	AS2914 [NTTA-168] 美国 加利福尼亚州 圣何塞 ntt.net
+1.17 ms 	AS3356 美国 加利福尼亚州 圣何塞 level3.com
+103.41 ms 	AS3356 美国 加利福尼亚州 圣何塞 Level3-CT-Peer level3.com
+147.20 ms 	AS4134 [CHINANET-BB] 中国 广东省 广州市 chinatelecom.com.cn 电信
+155.97 ms 	AS4134 [CHINANET-BB] 中国 广东省 广州市 chinatelecom.com.cn 电信
+广州联通 210.21.196.6
+0.26 ms 	AS31898 [ORACLE-CLOUD] 美国 加利福尼亚州 圣何塞 cloud.oracle.com
+0.87 ms 	AS3356 美国 加利福尼亚州 圣何塞 level3.com
+6.02 ms 	AS3356 美国 加利福尼亚州 圣何塞 level3.com
+10.28 ms 	AS3356 美国 加利福尼亚州 洛杉矶 level3.com
+19.38 ms 	AS3356 美国 加利福尼亚州 洛杉矶 level3.com
+171.37 ms 	AS4837 [CU169-BACKBONE] 中国 广东省 广州市 chinaunicom.cn 联通
+166.65 ms 	AS4837 [CU169-BACKBONE] 中国 广东省 广州市 chinaunicom.cn 联通
+广州移动 120.196.165.24
+0.67 ms 	AS31898 [ORACLE-CLOUD] 美国 加利福尼亚州 圣何塞 cloud.oracle.com
+0.50 ms 	AS2914 [NTTA-168] 美国 加利福尼亚州 圣何塞 ntt.net
+0.61 ms 	AS2914 [NTTA-168] 美国 加利福尼亚州 圣何塞 ntt.net
+5.04 ms 	AS2914 [NTT-BACKBONE] 美国 加利福尼亚州 圣何塞 ntt.net
+107.43 ms 	AS2914 [NTT-BACKBONE] 日本 大阪府 大阪 ntt.net
+262.72 ms 	AS2914 [NTT-BACKBONE] 中国 香港 ntt.net
+166.29 ms 	AS2914 [NTT-BACKBONE] 中国 香港 ntt.net
+166.65 ms 	AS2914 [NTT-BACKBONE] 中国 香港 ntt.net
+164.94 ms 	AS2914 [NTT-GLOBAL] 中国 香港 ntt.net
+164.71 ms 	AS58453 [CMI-INT] 中国 广东省 广州市 cmi.chinamobile.com 移动
+166.06 ms 	AS9808 [CMNET] 中国 广东省 广州市 chinamobile.com 移动
+--------------------自动更新测速节点列表--本脚本原创--------------------
+位置		 上传速度	 下载速度	 延迟	  丢包率
+Speedtest.net	 3989.93 Mbps	 3816.20 Mbps	 0.28	  0.0%
+洛杉矶		 3960.43 Mbps	 3959.48 Mbps	 10.02	  0.0%
+日本东京	 722.24 Mbps	 682.00 Mbps	 151.66	  0.0%
+电信Lanzhou	 16.48 Mbps	 170.90 Mbps	 179.00	  NULL
+------------------------------------------------------------------------
+ 总共花费      : 6 分 54 秒
+ 时间          : Tue Nov 14 06:51:59 UTC 2023
+------------------------------------------------------------------------
